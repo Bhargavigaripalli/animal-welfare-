@@ -1,0 +1,497 @@
+/* ==========================================================================
+   PAWSHAVEN | Responsive Media Queries (Stackly Pets Match)
+   ========================================================================== */
+
+/* Tablet (Max 1024px) */
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 40px;
+  }
+
+  .nav-menu {
+    gap: 20px;
+  }
+
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-grid-5 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+
+  .footer-col:first-child {
+    grid-column: span 2;
+  }
+
+  .masonry-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+  }
+
+  .hero-media-wrapper {
+    max-width: 500px;
+  }
+
+  .hero-img-main {
+    height: 480px;
+    max-width: 100%;
+  }
+
+  .before-after-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .before-box, .after-box {
+    height: 300px;
+  }
+}
+
+/* Mobile (Max 768px) */
+@media (max-width: 768px) {
+  html, body {
+    overflow-x: clip;
+  }
+  html {
+    scroll-padding-top: 68px;
+  }
+  section[id] {
+    scroll-margin-top: 68px;
+  }
+
+  .navbar {
+    position: -webkit-sticky !important;
+    position: sticky !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    z-index: 1000 !important;
+    padding: 10px 0;
+    background-color: rgba(255, 255, 255, 0.98) !important;
+  }
+
+  .logo img {
+    height: 34px;
+  }
+
+  .hero-ambient-paw {
+    display: none !important;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+
+  .nav-icons .btn {
+    display: none;
+  }
+
+  .nav-menu {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .top-bar {
+    display: none;
+  }
+
+  .grid-2 {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .hero-section {
+    padding: 50px 0 70px;
+    border-radius: 0 0 32px 32px;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .hero-stats-row {
+    justify-content: center;
+    border-top: 1px solid rgba(226, 232, 240, 0.8);
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .hero-media {
+    margin-top: 28px;
+    width: 100%;
+  }
+
+  .hero-media-wrapper {
+    max-width: 540px;
+    margin: 0 auto;
+  }
+
+  .hero-img-main {
+    height: 400px;
+  }
+
+  .floating-badge-1 {
+    left: 0;
+  }
+
+  .floating-badge-2 {
+    right: 0;
+  }
+
+  .hero-live-pill-group {
+    justify-content: center;
+  }
+
+  .hero-social-proof {
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .hero-quick-gifts {
+    width: 100%;
+    align-items: center;
+  }
+
+  .quick-gift-pills {
+    justify-content: center;
+  }
+
+  .floating-badge-3 {
+    right: 0;
+    top: 0;
+  }
+
+  .hero-case-card {
+    left: 10px;
+    bottom: -15px;
+    max-width: 250px;
+  }
+
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+}
+
+/* Mobile Devices (max-width: 640px) */
+@media (max-width: 640px) {
+  html, body {
+    overflow-x: clip;
+  }
+  html {
+    scroll-padding-top: 64px;
+  }
+  section[id] {
+    scroll-margin-top: 64px;
+  }
+
+  .floating-badge {
+    display: none !important;
+  }
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .section {
+    padding: 60px 0;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  h2 {
+    font-size: 1.85rem;
+  }
+
+  .grid-4, .grid-3, .grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-stats-row {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .floating-badge {
+    padding: 10px 14px;
+    gap: 10px;
+  }
+
+  .floating-badge-title {
+    font-size: 0.82rem;
+  }
+
+  .hero-media-wrapper {
+    max-width: 100%;
+    padding: 6px;
+  }
+
+  .hero-img-main {
+    height: 330px;
+  }
+
+  .hero-case-card {
+    position: relative;
+    left: auto;
+    bottom: auto;
+    margin: 16px auto 0;
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .floating-badge-3 {
+    display: none;
+  }
+
+  .floating-badge-sub {
+    font-size: 0.72rem;
+  }
+
+  .impact-calculator-card {
+    padding: 24px 18px;
+  }
+
+  .impact-val {
+    font-size: 2.8rem;
+  }
+
+  .preset-pill-group {
+    gap: 8px;
+  }
+
+  .preset-pill {
+    padding: 8px 14px;
+    font-size: 0.85rem;
+  }
+
+  .donation-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-grid-5 {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-col:first-child {
+    grid-column: span 1;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+
+  .cta-banner {
+    padding: 50px 20px;
+    border-radius: var(--radius-lg);
+  }
+
+  .cta-btns {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .cta-btns .btn {
+    width: 100%;
+  }
+
+  .modal-window {
+    max-height: 94vh;
+  }
+
+  .modal-header, .modal-body {
+    padding: 20px;
+  }
+
+  .masonry-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .emergency-hotline-pill span.hotline-text {
+    display: none;
+  }
+}
+
+
+/* Extra Small Mobile (Max 480px / 333px) */
+@media (max-width: 480px) {
+  html, body {
+    overflow-x: clip;
+  }
+  html {
+    scroll-padding-top: 56px;
+  }
+  section[id] {
+    scroll-margin-top: 56px;
+  }
+
+  .navbar {
+    position: -webkit-sticky !important;
+    position: sticky !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    z-index: 1000 !important;
+    padding: 8px 0;
+    background-color: rgba(255, 255, 255, 0.98) !important;
+  }
+
+  .logo img {
+    height: 30px;
+  }
+
+  .container {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .section {
+    padding: 38px 0;
+  }
+
+  .section-header {
+    margin-bottom: 22px;
+    gap: 10px;
+  }
+
+  .badge {
+    font-size: 0.78rem;
+    padding: 4px 10px;
+    margin-bottom: 10px;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+    line-height: 1.25;
+  }
+
+  h2 {
+    font-size: 1.45rem;
+    line-height: 1.25;
+  }
+
+  h3 {
+    font-size: 1.18rem;
+  }
+
+  .hero-section {
+    padding: 32px 0 44px;
+    border-radius: 0 0 24px 24px;
+  }
+
+  .hero-title {
+    font-size: 1.68rem;
+    line-height: 1.25;
+    margin-bottom: 12px;
+  }
+
+  .hero-subtitle {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 18px;
+  }
+
+  .hero-actions {
+    gap: 8px;
+  }
+
+  .hero-actions .btn {
+    padding: 11px 16px;
+    font-size: 0.9rem;
+  }
+
+  .quick-gift-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    justify-content: center;
+  }
+
+  .quick-pill {
+    padding: 5px 9px;
+    font-size: 0.78rem;
+  }
+
+  .hero-img-main {
+    height: 230px;
+  }
+
+  .campaign-image-box {
+    height: 185px;
+  }
+
+  .campaign-body {
+    padding: 16px 12px;
+  }
+
+  .campaign-title {
+    font-size: 1.1rem;
+    margin-bottom: 6px;
+  }
+
+  .pillar-card {
+    padding: 18px 14px;
+    gap: 12px;
+  }
+
+  .before-box, .after-box {
+    height: 210px;
+  }
+
+  .cta-banner {
+    padding: 36px 16px;
+  }
+
+  .cta-title {
+    font-size: 1.5rem;
+  }
+
+  .mobile-menu-overlay {
+    padding: 20px 16px 20px;
+  }
+
+  .mobile-nav-menu {
+    gap: 12px;
+  }
+
+  .mobile-nav-menu .nav-link {
+    font-size: 1.05rem;
+    padding: 4px 0;
+  }
+}

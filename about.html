@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Our Mission & Financial Transparency | PawsHaven</title>
+  <meta name="description" content="Discover how PawsHaven rescues, rehabilitates, and protects thousands of innocent animals. 99.2% of public donations directly fund animal care.">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐾</text></svg>">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <!-- Phosphor Icons -->
+  <script defer src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+
+  <!-- Top Announcement Notification Bar -->
+  <div class="top-bar">
+    <div class="top-bar-content">
+      <span class="badge-live"><span class="dot"></span> FINANCIAL TRANSPARENCY REPORT</span>
+      <span>2025 Audited 990 financials now published. 99.2% of donations directly saved animal lives.</span>
+      <a href="#transparency" class="top-bar-link">View Audit <i class="ph ph-arrow-right"></i></a>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <img src="assets/logo.webp" alt="Stackly Pets Logo" style="height: 40px; width: auto;">
+      </a>
+
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link active">About</a></li>
+        <li><a href="campaigns.html" class="nav-link">Campaigns</a></li>
+        <li><a href="stories.html" class="nav-link">Stories</a></li>
+        <li><a href="donate.html" class="nav-link">Donate</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-icons" style="display: flex; align-items: center; gap: 10px;">
+        <a href="login.html" class="btn btn-outline btn-nav-login" style="padding: 8px 18px; font-size: 0.9rem; font-weight: 600;">Login</a>
+        <a href="get-started.html" class="btn btn-primary btn-nav-getstarted" style="padding: 8px 18px; font-size: 0.9rem; font-weight: 600;">Get Started</a>
+        <button class="hamburger" id="hamburger" aria-label="Menu"><i class="ph ph-list"></i></button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu-overlay" id="mobile-menu">
+    <button class="mobile-menu-close" id="mobile-close"><i class="ph ph-x"></i></button>
+    <div class="logo mb-4">
+      <img src="assets/logo.webp" alt="Stackly Pets Logo" style="height: 40px; width: auto;">
+    </div>
+    <ul class="mobile-nav-menu">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="about.html" class="nav-link active">About</a></li>
+      <li><a href="campaigns.html" class="nav-link">Campaigns</a></li>
+      <li><a href="stories.html" class="nav-link">Stories</a></li>
+      <li><a href="donate.html" class="nav-link">Donate</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+    <div style="margin-top: auto; display: flex; flex-direction: column; gap: 12px; width: 100%; padding-top: 32px; padding-bottom: 24px;">
+      <a href="login.html" class="btn btn-outline" style="width: 100%; justify-content: center;">Login</a>
+      <a href="get-started.html" class="btn btn-primary" style="width: 100%; justify-content: center;">Get Started</a>
+    </div>
+  </div>
+
+  <!-- Hero About Section -->
+  <section class="section section-cream">
+    <div class="container">
+      <div class="grid-2" style="align-items: center; gap: 48px;">
+        <div class="slide-up">
+          <div class="badge badge-emerald">
+            <i class="ph-fill ph-shield-check"></i> Founded in 2018 • Zero-Kill Sanctuary
+          </div>
+          <h1>Built On Compassion. Driven By Results.</h1>
+          <p style="font-size: 1.15rem; line-height: 1.7; margin-bottom: 24px;">
+            PawsHaven was born from a simple conviction: no sentient animal should suffer cold, starvation, or preventable pain because of human neglect. Starting with a single retrofitted van and a 5-acre rescue meadow, we have grown into one of the country's most trusted emergency animal welfare sanctuaries.
+          </p>
+          <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+            <button class="btn btn-primary action-to-404" onclick="window.location.href='404.html'">
+              <i class="ph-fill ph-heart"></i> Support Our Work
+            </button>
+            <a href="404.html" class="btn btn-outline" onclick="window.location.href='404.html'">Our Financials &darr;</a>
+          </div>
+        </div>
+
+        <div class="fade-in delay-200">
+          <img src="assets/images/about-hero.webp" 
+               alt="Dr Sarah caring for rescue dog" 
+               style="border-radius: var(--radius-xl); box-shadow: var(--shadow-lg); width: 100%;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Impact Milestones Counter -->
+  <section class="section-milestones" style="padding: 40px 0 65px;">
+    <div class="container">
+      <div class="grid-4 slide-up">
+        <div class="stat-card card">
+          <div class="stat-icon-wrap" style="color: var(--primary);">
+            <i class="ph-fill ph-paw-print"></i>
+          </div>
+          <h2 class="counter-val" data-target="14850" data-suffix="+">14,850+</h2>
+          <p class="stat-label">Animals Saved</p>
+        </div>
+
+        <div class="stat-card card">
+          <div class="stat-icon-wrap" style="color: var(--emerald);">
+            <i class="ph-fill ph-first-aid-kit"></i>
+          </div>
+          <h2 class="counter-val" data-target="6420" data-suffix="+">6,420+</h2>
+          <p class="stat-label">Surgeries Funded</p>
+        </div>
+
+        <div class="stat-card card">
+          <div class="stat-icon-wrap" style="color: #F59E0B;">
+            <i class="ph-fill ph-hand-heart"></i>
+          </div>
+          <h2 class="counter-val" data-target="9420" data-suffix="+">9,420+</h2>
+          <p class="stat-label">Forever Adoptions</p>
+        </div>
+
+        <div class="stat-card card">
+          <div class="stat-icon-wrap" style="color: var(--danger);">
+            <i class="ph-fill ph-siren"></i>
+          </div>
+          <h2 class="counter-val" data-target="24" data-suffix="/7">24/7</h2>
+          <p class="stat-label">Active Ambulance Squad</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <!-- =========================================================================
+       NEW SECTION 1: Our Unbreakable Guiding Principles (4 Rescue Pillars)
+       ========================================================================= -->
+  <section class="section" style="padding-top: 10px; padding-bottom: 75px;">
+    <div class="container">
+      <div class="section-header text-center fade-in">
+        <div class="badge badge-emerald">
+          <i class="ph-fill ph-compass"></i> Ethical Commitments
+        </div>
+        <h2>Our Unbreakable Guiding Principles</h2>
+        <p class="section-subtitle">
+          Every policy, medical protocol, and sanctuary guideline at PawsHaven is built around the inviolable dignity, safety, and lifelong happiness of every rescued life.
+        </p>
+      </div>
+
+      <div class="grid-4 slide-up">
+        <!-- Pillar 1 -->
+        <div class="pillar-card-about card">
+          <div class="pillar-icon-wrap emerald">
+            <i class="ph-fill ph-shield-check"></i>
+          </div>
+          <h4>Strict Zero-Kill Promise</h4>
+          <p>
+            No healthy or medically treatable animal is ever euthanized for space, length of stay, or age. Every rescue receives restorative care for as long as needed.
+          </p>
+          <div class="pillar-metric">
+            <span class="dot dot-emerald" style="width: 8px; height: 8px; border-radius: 50%; display: inline-block;"></span>
+            <strong>0% Non-Medical Euthanasia</strong>
+          </div>
+        </div>
+
+        <!-- Pillar 2 -->
+        <div class="pillar-card-about card">
+          <div class="pillar-icon-wrap primary">
+            <i class="ph-fill ph-first-aid"></i>
+          </div>
+          <h4>Full Surgical Dignity</h4>
+          <p>
+            We do not put injured animals on palliative waiting lists. Our trauma squads provide board-certified orthopedic, neurological, and emergency trauma surgery 24/7.
+          </p>
+          <div class="pillar-metric">
+            <span class="dot dot-primary" style="width: 8px; height: 8px; border-radius: 50%; display: inline-block;"></span>
+            <strong>24/7 On-Duty Surgical ICU</strong>
+          </div>
+        </div>
+
+        <!-- Pillar 3 -->
+        <div class="pillar-card-about card">
+          <div class="pillar-icon-wrap amber">
+            <i class="ph-fill ph-hand-heart"></i>
+          </div>
+          <h4>Lifetime Return Safety Net</h4>
+          <p>
+            Adoptions are for life. If an adopter ever faces personal hardship, illness, or housing instability, our doors remain permanently open to welcome that pet home.
+          </p>
+          <div class="pillar-metric">
+            <span class="dot dot-amber" style="width: 8px; height: 8px; border-radius: 50%; display: inline-block;"></span>
+            <strong>100% Lifetime Safety Guarantee</strong>
+          </div>
+        </div>
+
+        <!-- Pillar 4 -->
+        <div class="pillar-card-about card">
+          <div class="pillar-icon-wrap blue">
+            <i class="ph-fill ph-scales"></i>
+          </div>
+          <h4>Radical Open Books</h4>
+          <p>
+            We publish quarterly audited IRS Form 990 financials, itemized surgery cost ledgers, and third-party impact reports for absolute public confidence.
+          </p>
+          <div class="pillar-metric">
+            <span class="dot dot-blue" style="width: 8px; height: 8px; border-radius: 50%; display: inline-block;"></span>
+            <strong>99.2% Direct-To-Animal Care</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Financial Transparency & 99.2% Breakdown Section -->
+  <section class="section section-alt" id="transparency">
+    <div class="container">
+      <div class="section-header text-center fade-in">
+        <div class="badge badge-emerald">
+          <i class="ph-fill ph-chart-pie-slice"></i> Platinum Transparency
+        </div>
+        <h2>Where Every Dollar Goes</h2>
+        <p class="section-subtitle">
+          We pride ourselves on gold-standard financial responsibility. Unlike large bureaucracies, 99.2 cents of every dollar donated goes directly into animal rescue and medical treatment.
+        </p>
+      </div>
+
+      <div class="grid-2" style="align-items: center; gap: 48px;">
+        <!-- Visual Progress Bars Breakdown -->
+        <div class="slide-up">
+          <div style="background: #FFFFFF; border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 32px; box-shadow: var(--shadow-sm);">
+            
+            <div style="margin-bottom: 24px;">
+              <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+                <span style="font-weight: 700; color: var(--text-dark); display: flex; align-items: center; gap: 8px;">
+                  <i class="ph-fill ph-first-aid text-emerald"></i> Veterinary Surgery & Critical ICU
+                </span>
+                <span style="font-weight: 800; color: var(--emerald-dark);">52.4%</span>
+              </div>
+              <div class="progress-bar"><div class="progress-fill" style="background: var(--emerald); width: 52.4%;"></div></div>
+            </div>
+
+            <div style="margin-bottom: 24px;">
+              <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+                <span style="font-weight: 700; color: var(--text-dark); display: flex; align-items: center; gap: 8px;">
+                  <i class="ph-fill ph-bowl-food text-primary"></i> High-Nutrition Food & Daily Care
+                </span>
+                <span style="font-weight: 800; color: var(--primary);">28.6%</span>
+              </div>
+              <div class="progress-bar"><div class="progress-fill" style="background: var(--primary); width: 28.6%;"></div></div>
+            </div>
+
+            <div style="margin-bottom: 24px;">
+              <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+                <span style="font-weight: 700; color: var(--text-dark); display: flex; align-items: center; gap: 8px;">
+                  <i class="ph-fill ph-truck text-amber"></i> 24/7 Emergency Ambulance Dispatch
+                </span>
+                <span style="font-weight: 800; color: var(--amber);">18.2%</span>
+              </div>
+              <div class="progress-bar"><div class="progress-fill" style="background: var(--amber); width: 18.2%;"></div></div>
+            </div>
+
+            <div>
+              <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+                <span style="font-weight: 700; color: var(--text-light); display: flex; align-items: center; gap: 8px;">
+                  <i class="ph-fill ph-files"></i> Admin & Public Outreach
+                </span>
+                <span style="font-weight: 800; color: var(--text-light);">0.8%</span>
+              </div>
+              <div class="progress-bar"><div class="progress-fill" style="background: var(--text-light); width: 0.8%;"></div></div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Trust Badges & Accreditations -->
+        <div class="slide-up delay-200">
+          <h3 style="font-size: 1.8rem; margin-bottom: 16px;">Independently Audited & Verified</h3>
+          <p style="margin-bottom: 24px;">
+            PawsHaven holds the highest possible 4-star charity rating from Charity Navigator and the Platinum Seal of Transparency from GuideStar / Candid.
+          </p>
+          <ul style="display: flex; flex-direction: column; gap: 14px; margin-bottom: 28px;">
+            <li style="display: flex; align-items: center; gap: 12px; font-weight: 600;">
+              <i class="ph-fill ph-check-circle text-emerald" style="font-size: 1.4rem;"></i>
+              501(c)(3) Federal Tax Exemption Certificate (EIN: 84-2947190)
+            </li>
+            <li style="display: flex; align-items: center; gap: 12px; font-weight: 600;">
+              <i class="ph-fill ph-check-circle text-emerald" style="font-size: 1.4rem;"></i>
+              GuideStar Platinum Transparency Seal 2026
+            </li>
+            <li style="display: flex; align-items: center; gap: 12px; font-weight: 600;">
+              <i class="ph-fill ph-check-circle text-emerald" style="font-size: 1.4rem;"></i>
+              Strict Zero-Kill Euthanasia Policy
+            </li>
+          </ul>
+          <button class="btn btn-primary action-to-404" onclick="window.location.href='404.html'">
+            <i class="ph-fill ph-heart"></i> Donate with Full Trust
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <!-- =========================================================================
+       NEW SECTION 2: Our Rescue Journey & Campus Evolution (Interactive Roadmap)
+       ========================================================================= -->
+  <section class="section section-cream" style="padding: 85px 0;">
+    <div class="container">
+      <div class="section-header text-center fade-in">
+        <div class="badge badge-amber">
+          <i class="ph-fill ph-clock-counter-clockwise"></i> Our Story & Growth
+        </div>
+        <h2>The Journey From a Meadow to a Sanctuary</h2>
+        <p class="section-subtitle">
+          From a single retrofitted rescue van in 2018 to a 25-acre accredited medical sanctuary today, see how donor support built our nationwide lifeline.
+        </p>
+      </div>
+
+      <!-- Roadmap Timeline Cards Grid -->
+      <div class="grid-4 slide-up" style="gap: 24px; margin-bottom: 52px;">
+        <!-- Year 2018 -->
+        <div class="timeline-step-card">
+          <div class="timeline-year-badge">2018</div>
+          <div class="timeline-icon-box">
+            <i class="ph-fill ph-plant"></i>
+          </div>
+          <h4>The Meadow Awakening</h4>
+          <p>
+            Founded on 5 leased meadow acres with 1 repurposed ambulance van. Saved our first 250 vulnerable street dogs and orphaned farm kittens.
+          </p>
+          <div class="timeline-tag">Grassroots Launch</div>
+        </div>
+
+        <!-- Year 2020 -->
+        <div class="timeline-step-card">
+          <div class="timeline-year-badge">2020</div>
+          <div class="timeline-icon-box">
+            <i class="ph-fill ph-truck"></i>
+          </div>
+          <h4>Mobile ICU Dispatch</h4>
+          <p>
+            Commissioned two custom-built 24/7 mobile trauma ambulances with portable digital X-rays and anesthesia for on-site highway rescues.
+          </p>
+          <div class="timeline-tag">24/7 Rapid Response</div>
+        </div>
+
+        <!-- Year 2023 -->
+        <div class="timeline-step-card">
+          <div class="timeline-year-badge">2023</div>
+          <div class="timeline-icon-box">
+            <i class="ph-fill ph-baby"></i>
+          </div>
+          <h4>Neonatal Nursery Wing</h4>
+          <p>
+            Constructed our 4,000 sq ft specialized nursery wing with oxygen-enriched incubators and thermal heating suites for neonatal orphans.
+          </p>
+          <div class="timeline-tag">Pediatric ICU</div>
+        </div>
+
+        <!-- Year 2026 -->
+        <div class="timeline-step-card active-milestone">
+          <div class="timeline-year-badge current">2026</div>
+          <div class="timeline-icon-box">
+            <i class="ph-fill ph-seal-check"></i>
+          </div>
+          <h4>Platinum Accredited Lifeline</h4>
+          <p>
+            Surpassed 14,850+ lives saved and 9,420+ adoptions with GuideStar Platinum Seal & 99.2% audited direct patient care rating.
+          </p>
+          <div class="timeline-tag current">Current Milestone</div>
+        </div>
+      </div>
+
+      <!-- Split Feature Banner: Campus Facility Highlights -->
+      <div class="about-campus-banner grid-2 slide-up" style="align-items: center; gap: 48px; background: #FFFFFF; border-radius: var(--radius-xl); padding: 44px; border: 1px solid var(--border-color); box-shadow: var(--shadow-sm);">
+        <div>
+          <div class="badge badge-emerald" style="margin-bottom: 12px;">
+            <i class="ph-fill ph-map-pin"></i> 25-Acre Sanctuary Campus
+          </div>
+          <h3 style="font-size: 1.9rem; margin-bottom: 16px;">Built for Absolute Healing & Freedom</h3>
+          <p style="color: var(--text-dark); line-height: 1.7; margin-bottom: 24px;">
+            Our facility is designed around behavioral enrichment, stress-free recuperation, and freedom. Animals don't sit in cramped wire cages — they live in sunlit suites, temperature-controlled nursery wards, and open canine play meadows.
+          </p>
+          <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 12px; margin-bottom: 28px;">
+            <li style="display: flex; align-items: center; gap: 10px; font-weight: 600;">
+              <i class="ph-fill ph-check-circle text-emerald" style="font-size: 1.25rem;"></i>
+              Two sterile surgical theatres with positive-pressure HEPA ventilation
+            </li>
+            <li style="display: flex; align-items: center; gap: 10px; font-weight: 600;">
+              <i class="ph-fill ph-check-circle text-emerald" style="font-size: 1.25rem;"></i>
+              10-acre fenced freedom meadow with agility zones & splash ponds
+            </li>
+            <li style="display: flex; align-items: center; gap: 10px; font-weight: 600;">
+              <i class="ph-fill ph-check-circle text-emerald" style="font-size: 1.25rem;"></i>
+              Warm hydrotherapy rehabilitation pool for paralyzed & senior dogs
+            </li>
+          </ul>
+          <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+            <button class="btn btn-primary action-to-404" onclick="window.location.href='404.html'" data-campaign-title="Sanctuary Facility Expansion">
+              <i class="ph-fill ph-heart"></i> Sponsor Sanctuary Healing
+            </button>
+            <a href="404.html" class="btn btn-outline" onclick="window.location.href='404.html'">Schedule a Sanctuary Tour &rarr;</a>
+          </div>
+        </div>
+
+        <div>
+          <img src="assets/images/journey-ambulance.webp" 
+               alt="PawsHaven Emergency Rescue Ambulance" 
+               style="width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); object-fit: cover; height: 380px; display: block;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Veterinary Medical Squad -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header text-center fade-in">
+        <div class="badge badge-amber">
+          <i class="ph-fill ph-stethoscope"></i> Our Medical Team
+        </div>
+        <h2>The Healing Hands Behind Every Rescue</h2>
+        <p class="section-subtitle">
+          Board-certified veterinary surgeons, neonatal specialists, and canine behavior rehabilitation masters.
+        </p>
+      </div>
+
+      <div class="grid-3 slide-up">
+        <!-- Member 1 -->
+        <div class="card" style="text-align: center; padding: 32px 24px;">
+          <img src="assets/images/team-sarah.webp" 
+               alt="Dr. Sarah Mitchell" 
+               style="width: 130px; height: 130px; border-radius: 50%; object-fit: cover; margin: 0 auto 18px; border: 3px solid var(--primary-soft);">
+          <h4>Dr. Sarah Mitchell, DVM</h4>
+          <p style="color: var(--primary); font-weight: 700; font-size: 0.85rem; margin-bottom: 12px;">Chief Veterinary Surgeon</p>
+          <p style="font-size: 0.9rem; color: var(--text-light); margin: 0;">
+            14 years experience specializing in orthopedic reconstruction for trauma survivors and road accident victims.
+          </p>
+        </div>
+
+        <!-- Member 2 -->
+        <div class="card" style="text-align: center; padding: 32px 24px;">
+          <img src="assets/images/team-marcus.webp" 
+               alt="Dr. Marcus Thorne" 
+               style="width: 130px; height: 130px; border-radius: 50%; object-fit: cover; margin: 0 auto 18px; border: 3px solid var(--emerald-soft);">
+          <h4>Dr. Marcus Thorne, DVM</h4>
+          <p style="color: var(--emerald-dark); font-weight: 700; font-size: 0.85rem; margin-bottom: 12px;">Director of Mobile Rescue</p>
+          <p style="font-size: 0.9rem; color: var(--text-light); margin: 0;">
+            Leads our 24/7 ambulance triage units and field disaster response during floods and wildfires.
+          </p>
+        </div>
+
+        <!-- Member 3 -->
+        <div class="card" style="text-align: center; padding: 32px 24px;">
+          <img src="assets/images/team-maya.webp" 
+               alt="Maya Lin" 
+               style="width: 130px; height: 130px; border-radius: 50%; object-fit: cover; margin: 0 auto 18px; border: 3px solid var(--amber-soft);">
+          <h4>Maya Lin, CPDT-KA</h4>
+          <p style="color: #B45309; font-weight: 700; font-size: 0.85rem; margin-bottom: 12px;">Head of Behavioral Therapy</p>
+          <p style="font-size: 0.9rem; color: var(--text-light); margin: 0;">
+            Rehabilitates severely traumatized and abused animals, transforming them into loving adoptable pets.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+    <!-- Unified Website Dark Footer -->
+  <footer class="footer-dark">
+    <div class="container">
+      <div class="footer-grid-5">
+        <!-- Col 1: Brand & Mission -->
+        <div class="footer-col">
+          <div class="footer-logo mb-4">
+            <a href="index.html" style="display: inline-block;">
+              <img src="assets/logo.webp" alt="Stackly Pets Logo" style="height: 40px; width: auto;">
+            </a>
+          </div>
+          <p class="footer-desc">
+            PawsHaven is an internationally recognized 501(c)(3) animal rescue and rehabilitation charity committed to rescuing distressed animals, ending euthanasia in shelters, and providing lifetime sanctuary care.
+          </p>
+          <!-- Social media icons -> All render to 404.html -->
+          <div class="social-links">
+            <a href="404.html" class="social-btn" aria-label="Facebook"><i class="ph ph-facebook-logo"></i></a>
+            <a href="404.html" class="social-btn" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+            <a href="404.html" class="social-btn" aria-label="YouTube"><i class="ph ph-youtube-logo"></i></a>
+            <a href="404.html" class="social-btn" aria-label="LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation (Home, About, Campaigns, Stories, Donate, Contact) -->
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="campaigns.html">Campaigns</a></li>
+            <li><a href="stories.html">Stories</a></li>
+            <li><a href="donate.html">Donate</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Programs / Progress -> All render to 404.html -->
+        <div class="footer-col">
+          <h4>Our Programs</h4>
+          <ul class="footer-links-list">
+            <li><a href="404.html">Ambulance Dispatch</a></li>
+            <li><a href="404.html">Trauma Vet Surgery</a></li>
+            <li><a href="404.html">Winter Warmth Drive</a></li>
+            <li><a href="404.html">Monthly Guardian Club</a></li>
+            <li><a href="404.html">Foster & Adoption</a></li>
+            <li><a href="404.html">99.2% Transparency</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: 24/7 Rescue Center -> Contact items render to 404.html -->
+        <div class="footer-col">
+          <h4>24/7 Rescue Center</h4>
+          <div class="footer-contact-item">
+            <i class="ph-fill ph-phone-call" style="color: var(--danger);"></i>
+            <div>
+              <a href="404.html" style="color: #FFFFFF; font-weight: 700; text-decoration: none;">1-800-PAW-HELP</a>
+              <div style="font-size: 0.8rem; color: #94A3B8;">Toll-free 24/7 Dispatch</div>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="ph-fill ph-envelope"></i>
+            <div>
+              <a href="404.html" style="color: #94A3B8; text-decoration: none;">rescue@pawshaven.org</a>
+              <div style="font-size: 0.8rem; color: #94A3B8;">General Inquiries</div>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="ph-fill ph-map-pin"></i>
+            <div>
+              <a href="404.html" style="color: #94A3B8; text-decoration: none;">740 Haven Valley Rd, CA 95060</a>
+              <div style="font-size: 0.8rem; color: #94A3B8;">PawsHaven Sanctuary Park</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Col 5: Newsletter (Gmail is mandatory, then render to 404.html) -->
+        <div class="footer-col">
+          <h4>Rescue Updates</h4>
+          <p class="footer-desc" style="margin-bottom: 16px;">
+            Subscribe to receive real-time rescue video alerts, before/after stories, and impact receipts.
+          </p>
+          <form class="footer-newsletter-form" onsubmit="handleNewsletterSubmit(event)" novalidate>
+            <input type="email" class="footer-input" id="newsletter-email" placeholder="yourname@gmail.com" required autocomplete="off">
+            <div class="newsletter-error" id="newsletter-error" style="display: none; color: #F87171; font-size: 0.8rem; margin-top: -6px; font-weight: 600;">
+              Please enter a valid Gmail address (@gmail.com).
+            </div>
+            <button type="submit" class="btn btn-primary" style="border-radius: var(--radius-sm); width: 100%;">
+              Join the Guardian Circle
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <div>
+          <p style="margin: 0 0 6px 0;">&copy; <span id="current-year">2026</span> PawsHaven Animal Welfare & Rescue Fund. All rights reserved. Registered 501(c)(3) Non-Profit Charity #84-2947190.</p>
+          <div style="display: flex; gap: 16px;">
+            <a href="404.html" style="color: #64748B; font-size: 0.85rem; text-decoration: none;">Privacy Policy</a>
+            <a href="404.html" style="color: #64748B; font-size: 0.85rem; text-decoration: none;">Terms of Service</a>
+          </div>
+        </div>
+        <button id="scroll-top" class="scroll-top-btn" onclick="window.scrollTo({top:0, behavior:'smooth'})" aria-label="Scroll to top of page">
+          <i class="ph ph-caret-up"></i>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Include Donation Modal Container -->
+  <div class="modal-backdrop" id="donation-modal">
+    <div class="modal-window">
+      <button class="modal-close-btn" id="donation-modal-close"><i class="ph ph-x"></i></button>
+      <div id="donation-form-view">
+        <div class="modal-header">
+          <div class="badge badge-emerald" style="margin-bottom: 6px;">100% Tax Deductible</div>
+          <h3 style="margin-bottom: 4px;">Make a Life-Saving Gift</h3>
+          <p style="font-size: 0.88rem; color: var(--text-light); margin: 0;">Supporting: <strong id="modal-cause-name" style="color: var(--primary);">General Rescue Fund</strong></p>
+        </div>
+        <div class="modal-body">
+          <form id="donation-form">
+            <div class="freq-toggle-container">
+              <button type="button" class="freq-btn active" data-freq="one-time">One-Time Gift</button>
+              <button type="button" class="freq-btn" data-freq="monthly">Monthly Hero</button>
+            </div>
+            <div class="donation-grid">
+              <button type="button" class="donation-choice-btn" data-amount="25">$25</button>
+              <button type="button" class="donation-choice-btn active" data-amount="50">$50</button>
+              <button type="button" class="donation-choice-btn" data-amount="100">$100</button>
+              <button type="button" class="donation-choice-btn" data-amount="250">$250</button>
+              <button type="button" class="donation-choice-btn" data-amount="500">$500</button>
+              <button type="button" class="donation-choice-btn" data-amount="1000">$1,000</button>
+            </div>
+            <div class="custom-amount-input-wrap">
+              <span class="symbol">$</span>
+              <input type="number" id="custom-donation-amount" class="custom-amount-input" value="50">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Full Name</label>
+              <input type="text" id="donor-name" class="form-input" placeholder="Sarah Jenkins" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Email Address</label>
+              <input type="email" id="donor-email" class="form-input" placeholder="sarah@example.com" required>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%; padding: 14px;">
+              <i class="ph-fill ph-credit-card"></i> Donate Securely
+            </button>
+          </form>
+        </div>
+      </div>
+      <div id="donation-success-view" style="display: none; padding: 36px 32px; text-align: center;">
+        <div style="width: 60px; height: 60px; border-radius: 50%; background: var(--emerald-soft); color: var(--emerald); display: flex; align-items: center; justify-content: center; font-size: 2rem; margin: 0 auto 16px;">
+          <i class="ph-fill ph-check"></i>
+        </div>
+        <h3>Thank You For Your Compassion!</h3>
+        <p style="color: var(--text-light); margin-bottom: 20px;">Your donation receipt has been generated.</p>
+        <button class="btn btn-primary" onclick="document.getElementById('donation-modal').classList.remove('active');">Done</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/donation.js"></script>
+  <!-- Instant Modal Safety Reset on Navigation / BFCache -->
+  <script>
+    function forceCloseModals() {
+      var dModal = document.getElementById('donation-modal');
+      if (dModal) dModal.classList.remove('active');
+      var eModal = document.getElementById('emergency-modal');
+      if (eModal) eModal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+    window.addEventListener('pageshow', forceCloseModals);
+    window.addEventListener('DOMContentLoaded', forceCloseModals);
+    window.addEventListener('load', forceCloseModals);
+  </script>
+  <!-- Newsletter Validation & 404 Render Script -->
+  <script>
+    function handleNewsletterSubmit(e) {
+      e.preventDefault();
+      var form = e.target;
+      var input = form.querySelector('input[type="email"]') || document.getElementById('newsletter-email');
+      var errorEl = form.querySelector('.newsletter-error') || document.getElementById('newsletter-error');
+      var val = input ? input.value.trim().toLowerCase() : '';
+      var gmailRegex = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
+
+      if (!val || !gmailRegex.test(val)) {
+        if (errorEl) errorEl.style.display = 'block';
+        if (input) input.style.borderColor = '#EF4444';
+        return false;
+      }
+
+      if (errorEl) errorEl.style.display = 'none';
+      window.location.href = '404.html';
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('.footer-input').forEach(function(inp) {
+        inp.addEventListener('input', function() {
+          this.style.borderColor = '';
+          var err = this.parentElement.querySelector('.newsletter-error') || document.getElementById('newsletter-error');
+          if (err) err.style.display = 'none';
+        });
+      });
+    });
+  </script>
+</body>
+</html>

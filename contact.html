@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact & 24/7 Rescue Dispatch | PawsHaven</title>
+  <meta name="description" content="Report an injured animal in distress, inquire about pet adoption or volunteering, and visit our rescue sanctuary.">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐾</text></svg>">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <!-- Phosphor Icons -->
+  <script defer src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    <div class="top-bar-content">
+      <span class="badge-live"><span class="dot"></span> EMERGENCY HELPLINE ACTIVE</span>
+      <span>For life-threatening animal emergencies, immediately dial toll-free: <strong>1-800-729-4357</strong>.</span>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <img src="assets/logo.webp" alt="Stackly Pets Logo" style="height: 40px; width: auto;">
+      </a>
+
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="campaigns.html" class="nav-link">Campaigns</a></li>
+        <li><a href="stories.html" class="nav-link">Stories</a></li>
+        <li><a href="donate.html" class="nav-link">Donate</a></li>
+        <li><a href="contact.html" class="nav-link active">Contact</a></li>
+      </ul>
+
+      <div class="nav-icons" style="display: flex; align-items: center; gap: 10px;">
+        <a href="login.html" class="btn btn-outline btn-nav-login" style="padding: 8px 18px; font-size: 0.9rem; font-weight: 600;">Login</a>
+        <a href="get-started.html" class="btn btn-primary btn-nav-getstarted" style="padding: 8px 18px; font-size: 0.9rem; font-weight: 600;">Get Started</a>
+        <button class="hamburger" id="hamburger" aria-label="Menu"><i class="ph ph-list"></i></button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu-overlay" id="mobile-menu">
+    <button class="mobile-menu-close" id="mobile-close" aria-label="Close Menu">
+      <i class="ph ph-x"></i>
+    </button>
+    <div class="logo mb-4">
+      <img src="assets/logo.webp" alt="Stackly Pets Logo" style="height: 40px; width: auto;">
+    </div>
+    <ul class="mobile-nav-menu">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="about.html" class="nav-link">About</a></li>
+      <li><a href="campaigns.html" class="nav-link">Campaigns</a></li>
+      <li><a href="stories.html" class="nav-link">Stories</a></li>
+      <li><a href="donate.html" class="nav-link">Donate</a></li>
+      <li><a href="contact.html" class="nav-link active">Contact</a></li>
+    </ul>
+    <div style="margin-top: auto; display: flex; flex-direction: column; gap: 12px; width: 100%; padding-top: 32px; padding-bottom: 24px;">
+      <a href="login.html" class="btn btn-outline" style="width: 100%; justify-content: center;">Login</a>
+      <a href="get-started.html" class="btn btn-primary" style="width: 100%; justify-content: center;">Get Started</a>
+    </div>
+  </div>
+
+  <!-- Hero Contact -->
+  <section style="background: var(--secondary); padding: 60px 0; border-radius: 0 0 40px 40px; margin-bottom: 50px;">
+    <div class="container text-center">
+      <div class="badge badge-danger slide-up">
+        <i class="ph-fill ph-siren"></i> 24/7 Fast Response Network
+      </div>
+      <h1 class="slide-up delay-100" style="margin-bottom: 16px;">We're Here for Animals & You</h1>
+      <p class="slide-up delay-200" style="max-width: 650px; margin: 0 auto; font-size: 1.15rem;">
+        Whether you are reporting a stray in danger, looking to adopt, or eager to volunteer your time, our team is standing by.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact Form & Info Grid -->
+  <section class="container" style="margin-bottom: 80px;">
+    <div class="grid-2" style="gap: 48px; align-items: start;">
+      
+      <!-- Left: Contact Information & Emergency Banner -->
+      <div class="slide-up">
+        <!-- Emergency Box -->
+        <div style="background: var(--danger-soft); border: 2px solid rgba(239, 68, 68, 0.4); border-radius: var(--radius-lg); padding: 32px; margin-bottom: 30px;">
+          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+            <div style="width: 44px; height: 44px; border-radius: 50%; background: #EF4444; color: white; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
+              <i class="ph-fill ph-phone-call"></i>
+            </div>
+            <div>
+              <h3 style="color: #991B1B; font-size: 1.3rem; margin: 0;">24/7 Emergency Dispatch</h3>
+              <p style="margin: 0; color: #7F1D1D; font-size: 0.85rem;">Toll-Free Immediate Trauma Hotline</p>
+            </div>
+          </div>
+          <div style="font-size: 2rem; font-weight: 800; color: #B91C1C; margin-bottom: 10px;">1-800-PAW-HELP</div>
+          <p style="color: #7F1D1D; font-size: 0.9rem; margin: 0;">(1-800-729-4357) &bull; Rapid ambulance deployment across regional counties.</p>
+        </div>
+
+        <!-- Headquarters Details Card -->
+        <div class="card" style="padding: 32px;">
+          <h3 style="font-size: 1.4rem; margin-bottom: 20px;">Sanctuary & Main Office</h3>
+          
+          <div style="display: flex; gap: 16px; margin-bottom: 20px;">
+            <div style="width: 44px; height: 44px; min-width: 44px; border-radius: var(--radius-sm); background: var(--primary-soft); color: var(--primary); display: flex; align-items: center; justify-content: center; font-size: 1.4rem;">
+              <i class="ph-fill ph-map-pin"></i>
+            </div>
+            <div>
+              <h5 style="margin-bottom: 4px;">Sanctuary Grounds</h5>
+              <p style="font-size: 0.9rem; margin: 0;">740 Haven Valley Road, Santa Cruz Mountains, CA 95060</p>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 16px; margin-bottom: 20px;">
+            <div style="width: 44px; height: 44px; min-width: 44px; border-radius: var(--radius-sm); background: var(--emerald-soft); color: var(--emerald); display: flex; align-items: center; justify-content: center; font-size: 1.4rem;">
+              <i class="ph-fill ph-envelope"></i>
+            </div>
+            <div>
+              <h5 style="margin-bottom: 4px;">Email Contacts</h5>
+              <p style="font-size: 0.9rem; margin: 0;">rescue@pawshaven.org (Rescue Alerts)<br>donations@pawshaven.org (Tax Receipts)</p>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 16px;">
+            <div style="width: 44px; height: 44px; min-width: 44px; border-radius: var(--radius-sm); background: var(--amber-soft); color: var(--amber); display: flex; align-items: center; justify-content: center; font-size: 1.4rem;">
+              <i class="ph-fill ph-clock"></i>
+            </div>
+            <div>
+              <h5 style="margin-bottom: 4px;">Public Visitation & Adoption Hours</h5>
+              <p style="font-size: 0.9rem; margin: 0;">Tuesday – Sunday: 10:00 AM – 5:00 PM<br>(24/7 Mobile Veterinary intake always active)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Interactive Inquiry Form -->
+      <div class="card slide-up delay-200" style="padding: 40px 32px;">
+        <h3 style="font-size: 1.6rem; margin-bottom: 8px;">Send Us a Message</h3>
+        <p style="font-size: 0.925rem; color: var(--text-light); margin-bottom: 24px;">
+          For adoption inquiries, volunteering, memorial dedications, or general questions.
+        </p>
+
+        <form id="contact-form" novalidate>
+          <div class="form-group">
+            <label class="form-label" for="contact-reason">Reason for Contact <span style="color: var(--danger);">*</span></label>
+            <select class="form-select" id="contact-reason" name="reason" required>
+              <option value="">Select Topic...</option>
+              <option value="adopt">Adoption Inquiry</option>
+              <option value="foster">Become a Volunteer Foster Home</option>
+              <option value="volunteer">Volunteer at the Sanctuary</option>
+              <option value="donation">Donation or Tax Receipt Question</option>
+              <option value="other">General Feedback / Press</option>
+            </select>
+            <span class="field-error-msg" id="reason-error" style="display: none; color: var(--danger); font-size: 0.8rem; margin-top: 4px;">Please select a reason for contact.</span>
+          </div>
+
+          <div class="grid-2" style="gap: 16px; margin-bottom: 18px;">
+            <div>
+              <label class="form-label" for="contact-name">Your Name <span style="color: var(--danger);">*</span> <span style="font-size: 0.75rem; color: var(--text-light); font-weight: normal;">(Alphabets only, no spaces, max 16)</span></label>
+              <input type="text" class="form-input" id="contact-name" name="name" placeholder="AlexMorgan" maxlength="16" pattern="^[A-Za-z]{1,16}$" title="Only alphabets allowed, no spaces, maximum 16 letters" required>
+              <span class="field-error-msg" id="name-error" style="display: none; color: var(--danger); font-size: 0.8rem; margin-top: 4px;">Only alphabets allowed, no spaces, max 16 letters.</span>
+            </div>
+            <div>
+              <label class="form-label" for="contact-phone">Phone Number <span style="color: var(--danger);">*</span> <span style="font-size: 0.75rem; color: var(--text-light); font-weight: normal;">(10 digits only)</span></label>
+              <input type="tel" class="form-input" id="contact-phone" name="phone" placeholder="9876543210" maxlength="10" pattern="^[0-9]{10}$" inputmode="numeric" title="Please enter exactly 10 digits (numbers only)" required>
+              <span class="field-error-msg" id="phone-error" style="display: none; color: var(--danger); font-size: 0.8rem; margin-top: 4px;">Must be exactly 10 digits (numbers only).</span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="contact-email">Email Address <span style="color: var(--danger);">*</span> <span style="font-size: 0.75rem; color: var(--text-light); font-weight: normal;">(Gmail format: @gmail.com)</span></label>
+            <input type="email" class="form-input" id="contact-email" name="email" placeholder="alex@gmail.com" pattern="^[a-zA-Z0-9._%+-]+@gmail\.com$" title="Must be a valid Gmail address ending in @gmail.com" required>
+            <span class="field-error-msg" id="email-error" style="display: none; color: var(--danger); font-size: 0.8rem; margin-top: 4px;">Must be a valid Gmail address ending in @gmail.com</span>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="contact-message">Message Details <span style="color: var(--danger);">*</span></label>
+            <textarea class="form-textarea" id="contact-message" name="message" rows="4" placeholder="Tell us how we can help or which animal you'd like to meet..." required></textarea>
+            <span class="field-error-msg" id="message-error" style="display: none; color: var(--danger); font-size: 0.8rem; margin-top: 4px;">Message cannot be empty.</span>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-lg" id="contact-submit-btn" style="width: 100%;">
+            <i class="ph-fill ph-paper-plane-tilt"></i> Send Message
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+    <!-- =========================================================================
+       NEW SECTION 1: 24/7 Rapid Rescue Dispatch Protocol & Triage
+       ========================================================================= -->
+  <section class="section section-cream" id="dispatch-protocol" style="padding: 85px 0;">
+    <div class="container">
+      <div class="section-header text-center fade-in">
+        <div class="badge badge-danger">
+          <i class="ph-fill ph-siren"></i> Rapid Rescue Response
+        </div>
+        <h2>24/7 Animal Distress Triage Protocol</h2>
+        <p class="section-subtitle">
+          If you have spotted an injured, abandoned, or abused animal, here is how our rapid emergency dispatch system prioritizes and deploys veterinary rescue ambulances.
+        </p>
+      </div>
+
+      <div class="grid-3 slide-up" style="gap: 28px; margin-bottom: 40px;">
+        <!-- Code Red -->
+        <div class="triage-tier-card code-red">
+          <span class="triage-code-badge red">
+            <i class="ph-fill ph-warning-octagon"></i> Code Red: Immediate (15 Min)
+          </span>
+          <h4 style="font-size: 1.25rem; margin-bottom: 10px; color: #DC2626;">Life-Threatening Trauma</h4>
+          <p style="font-size: 0.9rem; color: var(--text-dark); line-height: 1.6; margin-bottom: 16px; flex-grow: 1;">
+            Hit-by-car victims with arterial bleeding, collapsed animals, respiratory distress, heatstroke, or acute poisoning.
+          </p>
+          <ul style="list-style: none; padding: 0; font-size: 0.82rem; color: var(--text-light); display: flex; flex-direction: column; gap: 6px; margin-bottom: 20px;">
+            <li>&bull; Fully equipped trauma ambulance dispatched</li>
+            <li>&bull; In-transit digital vitals & oxygen telemetry</li>
+            <li>&bull; Surgical suite prepped upon hospital arrival</li>
+          </ul>
+          <a href="404.html" onclick="window.location.href='404.html'" class="btn btn-emergency action-to-404" style="width: 100%; text-align: center;">
+            <i class="ph-fill ph-phone-call"></i> Call Emergency Hotline
+          </a>
+        </div>
+
+        <!-- Code Orange -->
+        <div class="triage-tier-card code-orange">
+          <span class="triage-code-badge orange">
+            <i class="ph-fill ph-clock"></i> Code Orange: Urgent (45 Min)
+          </span>
+          <h4 style="font-size: 1.25rem; margin-bottom: 10px; color: #B45309;">Neonatal & Severe Neglect</h4>
+          <p style="font-size: 0.9rem; color: var(--text-dark); line-height: 1.6; margin-bottom: 16px; flex-grow: 1;">
+            Abandoned newborn litters without maternal heat, animals trapped in storm drains, severe mange, or non-ambulatory injuries.
+          </p>
+          <ul style="list-style: none; padding: 0; font-size: 0.82rem; color: var(--text-light); display: flex; flex-direction: column; gap: 6px; margin-bottom: 20px;">
+            <li>&bull; Mobile incubator & thermal transport deployed</li>
+            <li>&bull; Colostrum syringe feeding kit prepared</li>
+            <li>&bull; Direct transfer to specialized Neonatal Nursery</li>
+          </ul>
+          <button class="btn btn-outline action-to-404" onclick="window.location.href='404.html'" style="width: 100%;">
+            <i class="ph-fill ph-warning"></i> Report Neonatal Distress
+          </button>
+        </div>
+
+        <!-- Code Yellow -->
+        <div class="triage-tier-card code-yellow">
+          <span class="triage-code-badge yellow">
+            <i class="ph-fill ph-shield-check"></i> Code Yellow: Same-Day
+          </span>
+          <h4 style="font-size: 1.25rem; margin-bottom: 10px; color: var(--emerald-dark);">Cruelty & Community Strays</h4>
+          <p style="font-size: 0.9rem; color: var(--text-dark); line-height: 1.6; margin-bottom: 16px; flex-grow: 1;">
+            Ongoing chain tethering, hoarding situations, limping community strays, or abandoned domestic pets reported in vacant lots.
+          </p>
+          <ul style="list-style: none; padding: 0; font-size: 0.82rem; color: var(--text-light); display: flex; flex-direction: column; gap: 6px; margin-bottom: 20px;">
+            <li>&bull; Humane animal welfare investigation officer</li>
+            <li>&bull; Food replenishment and safe crate trapping</li>
+            <li>&bull; Full intake examination and zero-kill sheltering</li>
+          </ul>
+          <button class="btn btn-outline action-to-404" onclick="window.location.href='404.html'" style="width: 100%;">
+            <i class="ph-fill ph-files"></i> File Welfare Report
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       NEW SECTION 2: Sanctuary Visiting, Volunteer Days & Campus Directions
+       ========================================================================= -->
+  <section class="section" style="padding: 85px 0;">
+    <div class="container">
+      <div class="section-header text-center fade-in">
+        <div class="badge badge-emerald">
+          <i class="ph-fill ph-compass"></i> Visit & Get Involved
+        </div>
+        <h2>Plan Your Sanctuary Visit</h2>
+        <p class="section-subtitle">
+          Experience the joy of our 25-acre rescue campus firsthand. Meet our residents, attend orientation, or walk rescue dogs in our meadows.
+        </p>
+      </div>
+
+      <div class="grid-3 slide-up" style="gap: 24px; margin-bottom: 48px;">
+        <!-- Public Tours -->
+        <div class="campus-visit-card">
+          <div class="campus-icon-box">
+            <i class="ph-fill ph-footprints"></i>
+          </div>
+          <div>
+            <h4 style="font-size: 1.15rem; margin-bottom: 6px;">Guided Sanctuary Tours</h4>
+            <p style="font-size: 0.88rem; color: var(--text-light); line-height: 1.55; margin-bottom: 8px;">
+              Every Saturday & Sunday between 11:00 AM – 3:00 PM. Guided 45-minute walking tours of our nursery wards, catteries, and play meadows.
+            </p>
+            <span style="font-size: 0.8rem; font-weight: 700; color: var(--primary);">Free Admission • Donations Welcomed</span>
+          </div>
+        </div>
+
+        <!-- Volunteer Orientation -->
+        <div class="campus-visit-card">
+          <div class="campus-icon-box">
+            <i class="ph-fill ph-users-three"></i>
+          </div>
+          <div>
+            <h4 style="font-size: 1.15rem; margin-bottom: 6px;">Volunteer Orientation</h4>
+            <p style="font-size: 0.88rem; color: var(--text-light); line-height: 1.55; margin-bottom: 8px;">
+              1st and 3rd Saturday of every month at 10:00 AM. Learn animal handling protocols, dog walking enrichment, and cattery socializing.
+            </p>
+            <span style="font-size: 0.8rem; font-weight: 700; color: var(--emerald-dark);">Ages 16+ Welcome to Attend</span>
+          </div>
+        </div>
+
+        <!-- Adoption Center -->
+        <div class="campus-visit-card">
+          <div class="campus-icon-box">
+            <i class="ph-fill ph-house-heart"></i>
+          </div>
+          <div>
+            <h4 style="font-size: 1.15rem; margin-bottom: 6px;">Adoption Meet & Greets</h4>
+            <p style="font-size: 0.88rem; color: var(--text-light); line-height: 1.55; margin-bottom: 8px;">
+              Tuesday – Sunday 10:00 AM – 6:00 PM. Private meet-and-greet sessions in our fenced meadow runs to introduce your family to adoptable pets.
+            </p>
+            <span style="font-size: 0.8rem; font-weight: 700; color: #B45309;">Pre-Screening Recommended</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Campus Directions Banner -->
+      <div class="card slide-up" style="padding: 36px 32px; border-radius: var(--radius-xl); background: var(--bg-alt); border: 1px solid var(--border-color); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 24px;">
+        <div style="display: flex; align-items: center; gap: 20px;">
+          <div style="width: 54px; height: 54px; border-radius: 50%; background: var(--primary-soft); color: var(--primary); display: flex; align-items: center; justify-content: center; font-size: 1.8rem; flex-shrink: 0;">
+            <i class="ph-fill ph-map-pin"></i>
+          </div>
+          <div>
+            <h4 style="font-size: 1.25rem; margin-bottom: 4px;">PawsHaven Medical Sanctuary & Recovery Meadow</h4>
+            <p style="margin: 0; color: var(--text-light); font-size: 0.95rem;">
+              4800 Rescue Haven Way, Meadowview County, CA 95404 (3 miles east off Highway 101, Exit 42)
+            </p>
+          </div>
+        </div>
+        <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+          <a href="404.html" onclick="window.location.href='404.html'" class="btn btn-outline action-to-404">
+            <i class="ph-fill ph-navigation-arrow"></i> Open in Maps
+          </a>
+          <button class="btn btn-primary action-to-404" onclick="window.location.href='404.html'" data-campaign-title="Sanctuary Visitor & Maintenance Fund">
+            <i class="ph-fill ph-heart"></i> Support Sanctuary Upkeep
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+    <!-- Unified Website Dark Footer -->
+  <footer class="footer-dark">
+    <div class="container">
+      <div class="footer-grid-5">
+        <!-- Col 1: Brand & Mission -->
+        <div class="footer-col">
+          <div class="footer-logo mb-4">
+            <a href="index.html" style="display: inline-block;">
+              <img src="assets/logo.webp" alt="Stackly Pets Logo" style="height: 40px; width: auto;">
+            </a>
+          </div>
+          <p class="footer-desc">
+            PawsHaven is an internationally recognized 501(c)(3) animal rescue and rehabilitation charity committed to rescuing distressed animals, ending euthanasia in shelters, and providing lifetime sanctuary care.
+          </p>
+          <!-- Social media icons -> All render to 404.html -->
+          <div class="social-links">
+            <a href="404.html" class="social-btn" aria-label="Facebook"><i class="ph ph-facebook-logo"></i></a>
+            <a href="404.html" class="social-btn" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+            <a href="404.html" class="social-btn" aria-label="YouTube"><i class="ph ph-youtube-logo"></i></a>
+            <a href="404.html" class="social-btn" aria-label="LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation (Home, About, Campaigns, Stories, Donate, Contact) -->
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="campaigns.html">Campaigns</a></li>
+            <li><a href="stories.html">Stories</a></li>
+            <li><a href="donate.html">Donate</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Programs / Progress -> All render to 404.html -->
+        <div class="footer-col">
+          <h4>Our Programs</h4>
+          <ul class="footer-links-list">
+            <li><a href="404.html">Ambulance Dispatch</a></li>
+            <li><a href="404.html">Trauma Vet Surgery</a></li>
+            <li><a href="404.html">Winter Warmth Drive</a></li>
+            <li><a href="404.html">Monthly Guardian Club</a></li>
+            <li><a href="404.html">Foster & Adoption</a></li>
+            <li><a href="404.html">99.2% Transparency</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: 24/7 Rescue Center -> Contact items render to 404.html -->
+        <div class="footer-col">
+          <h4>24/7 Rescue Center</h4>
+          <div class="footer-contact-item">
+            <i class="ph-fill ph-phone-call" style="color: var(--danger);"></i>
+            <div>
+              <a href="404.html" style="color: #FFFFFF; font-weight: 700; text-decoration: none;">1-800-PAW-HELP</a>
+              <div style="font-size: 0.8rem; color: #94A3B8;">Toll-free 24/7 Dispatch</div>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="ph-fill ph-envelope"></i>
+            <div>
+              <a href="404.html" style="color: #94A3B8; text-decoration: none;">rescue@pawshaven.org</a>
+              <div style="font-size: 0.8rem; color: #94A3B8;">General Inquiries</div>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="ph-fill ph-map-pin"></i>
+            <div>
+              <a href="404.html" style="color: #94A3B8; text-decoration: none;">740 Haven Valley Rd, CA 95060</a>
+              <div style="font-size: 0.8rem; color: #94A3B8;">PawsHaven Sanctuary Park</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Col 5: Newsletter (Gmail is mandatory, then render to 404.html) -->
+        <div class="footer-col">
+          <h4>Rescue Updates</h4>
+          <p class="footer-desc" style="margin-bottom: 16px;">
+            Subscribe to receive real-time rescue video alerts, before/after stories, and impact receipts.
+          </p>
+          <form class="footer-newsletter-form" onsubmit="handleNewsletterSubmit(event)" novalidate>
+            <input type="email" class="footer-input" id="newsletter-email" placeholder="yourname@gmail.com" required autocomplete="off">
+            <div class="newsletter-error" id="newsletter-error" style="display: none; color: #F87171; font-size: 0.8rem; margin-top: -6px; font-weight: 600;">
+              Please enter a valid Gmail address (@gmail.com).
+            </div>
+            <button type="submit" class="btn btn-primary" style="border-radius: var(--radius-sm); width: 100%;">
+              Join the Guardian Circle
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <div>
+          <p style="margin: 0 0 6px 0;">&copy; <span id="current-year">2026</span> PawsHaven Animal Welfare & Rescue Fund. All rights reserved. Registered 501(c)(3) Non-Profit Charity #84-2947190.</p>
+          <div style="display: flex; gap: 16px;">
+            <a href="404.html" style="color: #64748B; font-size: 0.85rem; text-decoration: none;">Privacy Policy</a>
+            <a href="404.html" style="color: #64748B; font-size: 0.85rem; text-decoration: none;">Terms of Service</a>
+          </div>
+        </div>
+        <button id="scroll-top" class="scroll-top-btn" onclick="window.scrollTo({top:0, behavior:'smooth'})" aria-label="Scroll to top of page">
+          <i class="ph ph-caret-up"></i>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Include Donation Modal Container -->
+  <div class="modal-backdrop" id="donation-modal">
+    <div class="modal-window">
+      <button class="modal-close-btn" id="donation-modal-close"><i class="ph ph-x"></i></button>
+      <div id="donation-form-view">
+        <div class="modal-header">
+          <div class="badge badge-emerald" style="margin-bottom: 6px;">100% Tax Deductible</div>
+          <h3 style="margin-bottom: 4px;">Make a Life-Saving Gift</h3>
+          <p style="font-size: 0.88rem; color: var(--text-light); margin: 0;">Supporting: <strong id="modal-cause-name" style="color: var(--primary);">Emergency Animal Rescue</strong></p>
+        </div>
+        <div class="modal-body">
+          <form id="donation-form">
+            <div class="freq-toggle-container">
+              <button type="button" class="freq-btn active" data-freq="one-time">One-Time Gift</button>
+              <button type="button" class="freq-btn" data-freq="monthly">Monthly Hero</button>
+            </div>
+            <div class="donation-grid">
+              <button type="button" class="donation-choice-btn" data-amount="25">$25</button>
+              <button type="button" class="donation-choice-btn active" data-amount="50">$50</button>
+              <button type="button" class="donation-choice-btn" data-amount="100">$100</button>
+              <button type="button" class="donation-choice-btn" data-amount="250">$250</button>
+              <button type="button" class="donation-choice-btn" data-amount="500">$500</button>
+              <button type="button" class="donation-choice-btn" data-amount="1000">$1,000</button>
+            </div>
+            <div class="custom-amount-input-wrap">
+              <span class="symbol">$</span>
+              <input type="number" id="custom-donation-amount" class="custom-amount-input" value="50">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Full Name</label>
+              <input type="text" id="donor-name" class="form-input" placeholder="Sarah Jenkins" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Email Address</label>
+              <input type="email" id="donor-email" class="form-input" placeholder="sarah@example.com" required>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%; padding: 14px;">
+              <i class="ph-fill ph-credit-card"></i> Donate Securely
+            </button>
+          </form>
+        </div>
+      </div>
+      <div id="donation-success-view" style="display: none; padding: 36px 32px; text-align: center;">
+        <div style="width: 60px; height: 60px; border-radius: 50%; background: var(--emerald-soft); color: var(--emerald); display: flex; align-items: center; justify-content: center; font-size: 2rem; margin: 0 auto 16px;">
+          <i class="ph-fill ph-check"></i>
+        </div>
+        <h3>Thank You For Your Compassion!</h3>
+        <p style="color: var(--text-light); margin-bottom: 20px;">Your donation receipt has been generated.</p>
+        <button class="btn btn-primary" onclick="document.getElementById('donation-modal').classList.remove('active');">Done</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/donation.js"></script>
+  <!-- Contact Form Validation, Key Restrictions, and 404 Routing -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const form = document.getElementById('contact-form');
+      const nameInput = document.getElementById('contact-name');
+      const phoneInput = document.getElementById('contact-phone');
+      const emailInput = document.getElementById('contact-email');
+      const reasonInput = document.getElementById('contact-reason');
+      const msgInput = document.getElementById('contact-message');
+
+      const nameErr = document.getElementById('name-error');
+      const phoneErr = document.getElementById('phone-error');
+      const emailErr = document.getElementById('email-error');
+      const reasonErr = document.getElementById('reason-error');
+      const msgErr = document.getElementById('message-error');
+
+      // 1. Name: ONLY alphabets (A-Z, a-z), max 16 letters, NO SPACES allowed
+      if (nameInput) {
+        nameInput.addEventListener('keydown', function(e) {
+          // Block space character completely
+          if (e.key === ' ' || e.code === 'Space' || e.keyCode === 32) {
+            e.preventDefault();
+          }
+        });
+
+        nameInput.addEventListener('input', function() {
+          // Remove anything that is not an English alphabet letter
+          this.value = this.value.replace(/[^a-zA-Z]/g, '').slice(0, 16);
+          if (nameErr) nameErr.style.display = 'none';
+        });
+      }
+
+      // 2. Phone: ONLY numbers (0-9), maximum 10 numbers
+      if (phoneInput) {
+        phoneInput.addEventListener('input', function() {
+          // Strip non-digit characters and cap at 10 digits
+          this.value = this.value.replace(/[^0-9]/g, '').slice(0, 10);
+          if (phoneErr) phoneErr.style.display = 'none';
+        });
+      }
+
+      // 3. Email: must be in @gmail.com format
+      if (emailInput) {
+        emailInput.addEventListener('input', function() {
+          if (emailErr) emailErr.style.display = 'none';
+        });
+      }
+
+      if (reasonInput) {
+        reasonInput.addEventListener('change', function() {
+          if (reasonErr) reasonErr.style.display = 'none';
+        });
+      }
+
+      if (msgInput) {
+        msgInput.addEventListener('input', function() {
+          if (msgErr) msgErr.style.display = 'none';
+        });
+      }
+
+      // 4. Form Submit Handler: All mandatory checks, then render 404 page
+      if (form) {
+        form.addEventListener('submit', function(e) {
+          e.preventDefault();
+          let isValid = true;
+
+          // Check Reason
+          if (!reasonInput || !reasonInput.value) {
+            if (reasonErr) reasonErr.style.display = 'block';
+            isValid = false;
+          } else if (reasonErr) {
+            reasonErr.style.display = 'none';
+          }
+
+          // Check Name (only alphabets, no spaces, 1 to 16 letters)
+          const nameVal = nameInput ? nameInput.value.trim() : '';
+          const nameRegex = /^[A-Za-z]{1,16}$/;
+          if (!nameVal || !nameRegex.test(nameVal)) {
+            if (nameErr) nameErr.style.display = 'block';
+            isValid = false;
+          } else if (nameErr) {
+            nameErr.style.display = 'none';
+          }
+
+          // Check Phone (strictly 10 numbers)
+          const phoneVal = phoneInput ? phoneInput.value.trim() : '';
+          const phoneRegex = /^[0-9]{10}$/;
+          if (!phoneVal || !phoneRegex.test(phoneVal)) {
+            if (phoneErr) phoneErr.style.display = 'block';
+            isValid = false;
+          } else if (phoneErr) {
+            phoneErr.style.display = 'none';
+          }
+
+          // Check Email (must be @gmail.com format)
+          const emailVal = emailInput ? emailInput.value.trim().toLowerCase() : '';
+          const gmailRegex = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
+          if (!emailVal || !gmailRegex.test(emailVal)) {
+            if (emailErr) emailErr.style.display = 'block';
+            isValid = false;
+          } else if (emailErr) {
+            emailErr.style.display = 'none';
+          }
+
+          // Check Message
+          const msgVal = msgInput ? msgInput.value.trim() : '';
+          if (!msgVal) {
+            if (msgErr) msgErr.style.display = 'block';
+            isValid = false;
+          } else if (msgErr) {
+            msgErr.style.display = 'none';
+          }
+
+          // If all valid, route directly to 404 page
+          if (isValid) {
+            window.location.href = '404.html';
+          }
+        });
+      }
+    });
+
+    // Safety modal reset on navigation / BFCache
+    function forceCloseModals() {
+      var dModal = document.getElementById('donation-modal');
+      if (dModal) dModal.classList.remove('active');
+      var eModal = document.getElementById('emergency-modal');
+      if (eModal) eModal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+    window.addEventListener('pageshow', forceCloseModals);
+    window.addEventListener('DOMContentLoaded', forceCloseModals);
+    window.addEventListener('load', forceCloseModals);
+  </script>
+  <!-- Newsletter Validation & 404 Render Script -->
+  <script>
+    function handleNewsletterSubmit(e) {
+      e.preventDefault();
+      var form = e.target;
+      var input = form.querySelector('input[type="email"]') || document.getElementById('newsletter-email');
+      var errorEl = form.querySelector('.newsletter-error') || document.getElementById('newsletter-error');
+      var val = input ? input.value.trim().toLowerCase() : '';
+      var gmailRegex = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
+
+      if (!val || !gmailRegex.test(val)) {
+        if (errorEl) errorEl.style.display = 'block';
+        if (input) input.style.borderColor = '#EF4444';
+        return false;
+      }
+
+      if (errorEl) errorEl.style.display = 'none';
+      window.location.href = '404.html';
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('.footer-input').forEach(function(inp) {
+        inp.addEventListener('input', function() {
+          this.style.borderColor = '';
+          var err = this.parentElement.querySelector('.newsletter-error') || document.getElementById('newsletter-error');
+          if (err) err.style.display = 'none';
+        });
+      });
+    });
+  </script>
+</body>
+</html>

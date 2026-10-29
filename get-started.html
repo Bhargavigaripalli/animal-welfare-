@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Account — PawsHaven Animal Welfare</title>
+  <meta name="description" content="Register your PawsHaven Guardian account to sponsor rescue animals and track life-saving medical recoveries.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐾</text></svg>">
+
+  <!-- Phosphor Icons & CSS -->
+  <script defer src="https://unpkg.com/@phosphor-icons/web"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <style>
+    /* Clean Standalone Auth Page in Website Warm Theme */
+    body {
+      margin: 0;
+      padding: 0;
+      background: radial-gradient(circle at 50% 25%, #FFF8F1 0%, #F9F7F5 65%, #F1EFEA 100%);
+      color: var(--text-dark, #1F2937);
+      font-family: var(--font-body, 'Inter', sans-serif);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-sizing: border-box;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* Ambient Warm Paw Prints */
+    .auth-ambient-paw {
+      position: absolute;
+      color: rgba(255, 123, 41, 0.05);
+      font-size: 16rem;
+      pointer-events: none;
+      z-index: 1;
+      user-select: none;
+    }
+    .paw-left {
+      top: -40px;
+      left: -40px;
+      transform: rotate(-25deg);
+    }
+    .paw-right {
+      bottom: -50px;
+      right: -40px;
+      transform: rotate(30deg);
+    }
+
+    .auth-container {
+      width: 100%;
+      max-width: 520px;
+      padding: 2.5rem 1.25rem;
+      position: relative;
+      z-index: 5;
+      box-sizing: border-box;
+    }
+
+    /* Auth Card - Pure White, Warm Border & Shadow */
+    .auth-card {
+      width: 100%;
+      background: #FFFFFF !important;
+      border: 1px solid rgba(255, 123, 41, 0.2);
+      border-radius: 24px;
+      padding: 2.8rem 2.4rem;
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.07), 0 4px 15px rgba(255, 123, 41, 0.07);
+      box-sizing: border-box;
+      opacity: 1 !important;
+      transform: none !important;
+      display: block !important;
+    }
+
+    .auth-logo-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 1.4rem;
+      width: 100%;
+    }
+
+    .auth-header {
+      text-align: center;
+      margin-bottom: 1.8rem;
+    }
+    .auth-header h2 {
+      color: #111827;
+      font-size: 1.85rem;
+      font-weight: 800;
+      margin: 0 0 0.5rem 0;
+      letter-spacing: -0.02em;
+    }
+    .auth-header p {
+      color: #64748B;
+      font-size: 0.92rem;
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    /* FORM STYLING */
+    .auth-form .f-group {
+      margin-bottom: 1.25rem;
+    }
+    .auth-form label {
+      display: block;
+      color: #1E293B;
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    .auth-form input, .auth-form select {
+      width: 100%;
+      background: #FFFFFF;
+      border: 1.5px solid #CBD5E1;
+      padding: 0.85rem 1.15rem;
+      border-radius: 12px;
+      color: #0F172A;
+      font-size: 0.95rem;
+      box-sizing: border-box;
+      transition: all 0.2s ease;
+    }
+    .auth-form select option {
+      background: #FFFFFF;
+      color: #0F172A;
+    }
+    .auth-form input:focus, .auth-form select:focus {
+      border-color: var(--primary, #FF7B29);
+      box-shadow: 0 0 0 3px rgba(255, 123, 41, 0.18);
+      outline: none;
+    }
+    .auth-form input.input-error, .auth-form select.input-error {
+      border-color: #EF4444 !important;
+      box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.18) !important;
+    }
+
+    /* ERROR TEXT UNDER INPUTS */
+    .field-error-msg {
+      display: none;
+      color: #DC2626;
+      font-size: 0.82rem;
+      font-weight: 600;
+      margin-top: 5px;
+    }
+
+    .pwd-wrapper {
+      position: relative;
+    }
+    .pwd-wrapper input {
+      padding-right: 48px;
+    }
+    .pwd-toggle-btn {
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: #64748B;
+      cursor: pointer;
+      padding: 6px;
+      font-size: 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: color 0.2s ease;
+    }
+    .pwd-toggle-btn:hover {
+      color: var(--primary, #FF7B29);
+    }
+
+    .success-alert-box {
+      display: none;
+      background: #ECFDF5;
+      border: 1px solid #6EE7B7;
+      color: #065F46;
+      padding: 0.85rem 1rem;
+      border-radius: 10px;
+      font-size: 0.9rem;
+      margin-bottom: 1.2rem;
+      text-align: center;
+      font-weight: 600;
+      animation: fadeIn 0.3s ease;
+    }
+
+    .btn-auth-submit {
+      width: 100%;
+      padding: 0.95rem;
+      font-size: 1rem;
+      font-weight: 700;
+      border-radius: 12px;
+      border: none;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: var(--primary, #FF7B29);
+      color: #FFFFFF;
+      box-shadow: 0 4px 18px rgba(255, 123, 41, 0.35);
+      margin-top: 1.2rem;
+    }
+    .btn-auth-submit:hover {
+      background: var(--primary-hover, #E66A1F);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(255, 123, 41, 0.45);
+    }
+
+    .auth-footer-link {
+      text-align: center;
+      margin-top: 1.8rem;
+      font-size: 0.92rem;
+      color: #64748B;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .auth-footer-link a {
+      color: var(--primary, #FF7B29);
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .auth-footer-link a:hover {
+      color: var(--primary-hover, #E66A1F);
+      text-decoration: underline;
+    }
+    .btn-back-home {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.45rem 1rem;
+      background: #F1F5F9;
+      border: 1px solid #E2E8F0;
+      color: #334155 !important;
+      border-radius: 100px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-decoration: none !important;
+      transition: all 0.2s ease;
+    }
+    .btn-back-home:hover {
+      background: #E2E8F0;
+      color: #0F172A !important;
+      transform: translateY(-1px);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Ambient Decorative Paw Prints -->
+  <div class="auth-ambient-paw paw-left"><i class="ph-fill ph-paw-print"></i></div>
+  <div class="auth-ambient-paw paw-right"><i class="ph-fill ph-paw-print"></i></div>
+
+  <div class="auth-container">
+    <div class="auth-card">
+      <!-- Centered Logo -->
+      <div class="auth-logo-wrap">
+        <a href="index.html" title="PawsHaven Animal Sanctuary">
+          <img src="assets/logo.webp" alt="Stackly Pets Logo" style="height: 48px; width: auto;">
+        </a>
+      </div>
+
+      <div class="auth-header">
+        <h2>Join the Guardian Circle</h2>
+        <p>Create your account to sponsor rescues, track medical recovery journeys & manage tax-deductible pledges.</p>
+      </div>
+
+      <!-- Success Notification Box -->
+      <div class="success-alert-box" id="successBox">
+        🎉 Account created successfully! Redirecting to login...
+      </div>
+
+      <!-- REGISTRATION FORM (EMPTY DEFAULTS, ALL MANDATORY) -->
+      <form class="auth-form" id="registerForm" onsubmit="handleRegisterSubmit(event)" novalidate>
+        <!-- Full Name: Only alphabets, max 16 letters, NO spaces allowed -->
+        <div class="f-group">
+          <label for="regName">Full Name <span style="color: #EF4444;">*</span></label>
+          <input 
+            type="text" 
+            id="regName" 
+            placeholder="Letters only, max 16 chars" 
+            value="" 
+            maxlength="16"
+            required 
+            autocomplete="off"
+          />
+          <small style="color: #64748B; font-size: 0.78rem; display: block; margin-top: 4px;">
+            Letters only (A-Z, a-z), no spaces, maximum 16 characters.
+          </small>
+          <div class="field-error-msg" id="nameError">
+            Name must contain only alphabets (no spaces), maximum 16 letters.
+          </div>
+        </div>
+
+        <!-- Gmail Address: Strict @gmail.com format -->
+        <div class="f-group">
+          <label for="regEmail">Gmail Address <span style="color: #EF4444;">*</span></label>
+          <input 
+            type="email" 
+            id="regEmail" 
+            placeholder="yourname@gmail.com" 
+            value="" 
+            required 
+            autocomplete="off"
+          />
+          <div class="field-error-msg" id="emailError">
+            Please enter a valid Gmail address in @gmail.com format (e.g. user@gmail.com).
+          </div>
+        </div>
+
+        <!-- Membership / Role Interest: Mandatory -->
+        <div class="f-group">
+          <label for="regRole">Membership / Portal Interest <span style="color: #EF4444;">*</span></label>
+          <select id="regRole" required>
+            <option value="">Select your membership role...</option>
+            <option value="user">Monthly Guardian Angel Supporter</option>
+            <option value="adopter">Rescue Pet Adopter / Foster Family</option>
+            <option value="volunteer">Sanctuary Volunteer Corps</option>
+            <option value="admin">Veterinary Operations / Staff Console</option>
+          </select>
+          <div class="field-error-msg" id="roleError">
+            Please select a membership / portal interest.
+          </div>
+        </div>
+
+        <!-- Create Password: Strong Password Only -->
+        <div class="f-group">
+          <label for="regPassword">Create Password <span style="color: #EF4444;">*</span></label>
+          <div class="pwd-wrapper">
+            <input 
+              type="password" 
+              id="regPassword" 
+              placeholder="Enter strong password" 
+              value="" 
+              required 
+              autocomplete="new-password"
+            />
+            <button type="button" class="pwd-toggle-btn" onclick="togglePasswordVisibility('regPassword', this)" aria-label="Toggle Password Visibility">
+              <i class="ph ph-eye"></i>
+            </button>
+          </div>
+          <small style="color: #64748B; font-size: 0.78rem; display: block; margin-top: 4px;">
+            🔒 Strong Password: min 8 characters, uppercase, lowercase, number & special character.
+          </small>
+          <div class="field-error-msg" id="passError">
+            Password must be at least 8 characters and contain at least one uppercase letter, one lowercase letter, one number, and one special character (e.g. @$!%*?&#).
+          </div>
+        </div>
+
+        <!-- Confirm Password: Must match Create Password -->
+        <div class="f-group">
+          <label for="confirmPassword">Confirm Password <span style="color: #EF4444;">*</span></label>
+          <div class="pwd-wrapper">
+            <input 
+              type="password" 
+              id="confirmPassword" 
+              placeholder="Re-enter strong password" 
+              value="" 
+              required 
+              autocomplete="new-password"
+            />
+            <button type="button" class="pwd-toggle-btn" onclick="togglePasswordVisibility('confirmPassword', this)" aria-label="Toggle Password Visibility">
+              <i class="ph ph-eye"></i>
+            </button>
+          </div>
+          <div class="field-error-msg" id="confirmPassError">
+            Create Password and Confirm Password must be identical.
+          </div>
+        </div>
+
+        <!-- Terms of Service Checkbox (Mandatory) -->
+        <div style="margin-top: 10px;">
+          <label id="termsLabel" style="display: flex; align-items: flex-start; gap: 8px; font-size: 0.86rem; color: #475569; font-weight: normal; cursor: pointer; padding: 4px 6px; border-radius: 6px;">
+            <input type="checkbox" id="termsCheck" required style="width: auto; margin-top: 3px; cursor: pointer;">
+            <span>I agree to the 501(c)(3) Animal Welfare Sanctuary Terms of Service & Privacy Policy. <span style="color: #EF4444;">*</span></span>
+          </label>
+          <div class="field-error-msg" id="termsError">
+            You must agree to the Terms of Service & Privacy Policy to create an account.
+          </div>
+        </div>
+
+        <button type="submit" class="btn-auth-submit" id="createAccountBtn">
+          Create Account →
+        </button>
+      </form>
+
+      <div class="auth-footer-link">
+        <span>Already have an account? <a href="login.html">Sign In</a></span>
+        <a href="index.html" class="btn-back-home"><i class="ph ph-house"></i> Back to Home</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Script Logic -->
+  <script>
+    // 1. Name Input: Strictly English alphabets ONLY, maximum 16 letters, NO SPACES allowed
+    const nameInput = document.getElementById('regName');
+    const nameError = document.getElementById('nameError');
+
+    nameInput.addEventListener('keydown', function(e) {
+      // Prevent space key completely
+      if (e.key === ' ' || e.code === 'Space' || e.keyCode === 32) {
+        e.preventDefault();
+      }
+    });
+
+    nameInput.addEventListener('input', function() {
+      // Strip any non-alphabet characters and enforce max 16 chars
+      this.value = this.value.replace(/[^a-zA-Z]/g, '').slice(0, 16);
+      this.classList.remove('input-error');
+      if (nameError) nameError.style.display = 'none';
+    });
+
+    // 2. Real-time error clearance for other inputs
+    document.getElementById('regEmail').addEventListener('input', function() {
+      this.classList.remove('input-error');
+      document.getElementById('emailError').style.display = 'none';
+    });
+
+    document.getElementById('regRole').addEventListener('change', function() {
+      this.classList.remove('input-error');
+      document.getElementById('roleError').style.display = 'none';
+    });
+
+    document.getElementById('regPassword').addEventListener('input', function() {
+      this.classList.remove('input-error');
+      document.getElementById('passError').style.display = 'none';
+    });
+
+    document.getElementById('confirmPassword').addEventListener('input', function() {
+      this.classList.remove('input-error');
+      document.getElementById('confirmPassError').style.display = 'none';
+    });
+
+    document.getElementById('termsCheck').addEventListener('change', function() {
+      document.getElementById('termsError').style.display = 'none';
+      document.getElementById('termsLabel').style.background = 'transparent';
+      document.getElementById('termsLabel').style.color = '#475569';
+    });
+
+    // Check Strong Password:
+    // Min 8 chars, 1 uppercase, 1 lowercase, 1 number, 1 special character
+    function isStrongPassword(pwd) {
+      if (!pwd || pwd.length < 8) return false;
+      const hasUpper = /[A-Z]/.test(pwd);
+      const hasLower = /[a-z]/.test(pwd);
+      const hasNumber = /[0-9]/.test(pwd);
+      const hasSpecial = /[@$!%*?&#^()_+\-=\[\]{}|;:,.<>]/.test(pwd);
+      return hasUpper && hasLower && hasNumber && hasSpecial;
+    }
+
+    // Form Submission Handler: Validates everything as MANDATORY
+    function handleRegisterSubmit(e) {
+      e.preventDefault();
+      let isValid = true;
+
+      const nameVal = nameInput.value.trim();
+      const emailInput = document.getElementById('regEmail');
+      const emailVal = emailInput.value.trim().toLowerCase();
+      const roleSelect = document.getElementById('regRole');
+      const roleVal = roleSelect.value;
+      const passInput = document.getElementById('regPassword');
+      const passVal = passInput.value;
+      const confirmPassInput = document.getElementById('confirmPassword');
+      const confirmPassVal = confirmPassInput.value;
+      const termsCheck = document.getElementById('termsCheck');
+      const termsLabel = document.getElementById('termsLabel');
+
+      const nameErr = document.getElementById('nameError');
+      const emailErr = document.getElementById('emailError');
+      const roleErr = document.getElementById('roleError');
+      const passErr = document.getElementById('passError');
+      const confirmPassErr = document.getElementById('confirmPassError');
+      const termsErr = document.getElementById('termsError');
+      const successBox = document.getElementById('successBox');
+
+      // 1. Name Check: only alphabets, 1 to 16 letters, no spaces
+      const nameRegex = /^[A-Za-z]{1,16}$/;
+      if (!nameVal || !nameRegex.test(nameVal)) {
+        nameInput.classList.add('input-error');
+        nameErr.style.display = 'block';
+        isValid = false;
+      } else {
+        nameInput.classList.remove('input-error');
+        nameErr.style.display = 'none';
+      }
+
+      // 2. Gmail Check: strictly @gmail.com
+      const gmailRegex = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
+      if (!emailVal || !gmailRegex.test(emailVal)) {
+        emailInput.classList.add('input-error');
+        emailErr.style.display = 'block';
+        isValid = false;
+      } else {
+        emailInput.classList.remove('input-error');
+        emailErr.style.display = 'none';
+      }
+
+      // 3. Role / Interest Dropdown Check
+      if (!roleVal) {
+        roleSelect.classList.add('input-error');
+        roleErr.style.display = 'block';
+        isValid = false;
+      } else {
+        roleSelect.classList.remove('input-error');
+        roleErr.style.display = 'none';
+      }
+
+      // 4. Strong Password Check
+      if (!isStrongPassword(passVal)) {
+        passInput.classList.add('input-error');
+        passErr.style.display = 'block';
+        isValid = false;
+      } else {
+        passInput.classList.remove('input-error');
+        passErr.style.display = 'none';
+      }
+
+      // 5. Confirm Password Check: Must be identical
+      if (!confirmPassVal || confirmPassVal !== passVal) {
+        confirmPassInput.classList.add('input-error');
+        confirmPassErr.style.display = 'block';
+        isValid = false;
+      } else {
+        confirmPassInput.classList.remove('input-error');
+        confirmPassErr.style.display = 'none';
+      }
+
+      // 6. Terms Checkbox Check: Mandatory
+      if (!termsCheck.checked) {
+        termsErr.style.display = 'block';
+        termsLabel.style.background = '#FEF2F2';
+        termsLabel.style.color = '#DC2626';
+        isValid = false;
+      } else {
+        termsErr.style.display = 'none';
+        termsLabel.style.background = 'transparent';
+        termsLabel.style.color = '#475569';
+      }
+
+      if (!isValid) {
+        return false;
+      }
+
+      // Save user to localStorage
+      localStorage.setItem('pawshaven_user_name', nameVal);
+      localStorage.setItem('pawshaven_user_email', emailVal);
+      localStorage.setItem('pawshaven_user_role', roleVal === 'admin' ? 'admin' : 'user');
+
+      successBox.style.display = 'block';
+
+      // Redirect to login page after short delay
+      setTimeout(() => {
+        window.location.href = 'login.html';
+      }, 700);
+    }
+
+    function togglePasswordVisibility(inputId, btn) {
+      const input = document.getElementById(inputId);
+      const icon = btn.querySelector('i');
+      if (input.type === 'password') {
+        input.type = 'text';
+        icon.classList.remove('ph-eye');
+        icon.classList.add('ph-eye-slash');
+        btn.style.color = 'var(--primary, #FF7B29)';
+      } else {
+        input.type = 'password';
+        icon.classList.remove('ph-eye-slash');
+        icon.classList.add('ph-eye');
+        btn.style.color = '#64748B';
+      }
+    }
+  </script>
+</body>
+</html>

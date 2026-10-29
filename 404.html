@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Page Lost on the Trail | PawsHaven</title>
+  <meta name="description" content="Uh-oh! The rescue page you're searching for has wandered off. Return safely home or go back.">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐾</text></svg>">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <!-- Phosphor Icons -->
+  <script defer src="https://unpkg.com/@phosphor-icons/web"></script>
+
+  <!-- Go Back Navigation Handler -->
+  <script>
+    function handleGoBack() {
+      if (window.history.length > 1) {
+        window.history.back();
+      } else if (document.referrer && !document.referrer.includes('404')) {
+        window.location.href = document.referrer;
+      } else {
+        window.location.href = 'index.html';
+      }
+    }
+  </script>
+</head>
+<body style="min-height: 100vh; margin: 0; background-color: var(--secondary); display: flex; flex-direction: column;">
+
+  <!-- 404 Standalone Main Content Section (No Header, No Footer, No Helpful Trails) -->
+  <main class="error-page-section" style="min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 40px 20px;">
+    <!-- Ambient Floating Paw Prints -->
+    <div class="hero-ambient-paw hero-ambient-paw-1"><i class="ph-fill ph-paw-print"></i></div>
+    <div class="hero-ambient-paw hero-ambient-paw-2"><i class="ph-fill ph-paw-print"></i></div>
+    <div class="hero-ambient-paw hero-ambient-paw-3"><i class="ph-fill ph-paw-print"></i></div>
+
+    <div class="container" style="display: flex; justify-content: center; width: 100%;">
+      <div class="error-page-card slide-up" style="margin: 0; max-width: 680px; width: 100%;">
+        <div class="badge badge-amber" style="margin-bottom: 20px;">
+          <i class="ph-fill ph-paw-print"></i> 404 Error • Trail Lost in the Meadow
+        </div>
+
+        <!-- Rescue Pet Image -->
+        <img src="assets/images/hero-dog-cat.webp" alt="Lost but friendly rescue pet" class="error-pet-thumb">
+
+        <!-- 404 Big Hero Typography -->
+        <div class="error-number-hero">
+          4<span class="accent-paw"><i class="ph-fill ph-paw-print"></i></span>4
+        </div>
+
+        <h1 style="font-size: 2.2rem; margin-bottom: 14px;">Paws & Reflect — This Trail Has Gone Cold!</h1>
+
+        <p style="font-size: 1.1rem; color: var(--text-light); max-width: 540px; margin: 0 auto 24px; line-height: 1.65;">
+          Even the keenest rescue hounds lose the scent once in a while. The appeal, story, or feature you are looking for has wandered off into our sanctuary meadows.
+        </p>
+
+        <!-- Two Required Buttons: Go Back and Back to Home -->
+        <div class="error-actions-group" style="margin-bottom: 0;">
+          <button type="button" class="btn btn-outline btn-lg" id="go-back-btn" onclick="handleGoBack()">
+            <i class="ph ph-arrow-left"></i> Go Back
+          </button>
+          <a href="index.html" class="btn btn-primary btn-lg pulse-glow">
+            <i class="ph-fill ph-house"></i> Back to Home
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    document.getElementById('go-back-btn')?.addEventListener('click', handleGoBack);
+  </script>
+</body>
+</html>

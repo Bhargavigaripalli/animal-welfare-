@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ways to Give & Monthly Guardian Club | PawsHaven</title>
+  <meta name="description" content="Make an emergency or recurring tax-deductible gift to rescue, rehabilitate, and house abused and abandoned animals.">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐾</text></svg>">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <!-- Phosphor Icons -->
+  <script defer src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    <div class="top-bar-content">
+      <span class="badge-live"><span class="dot"></span> 2X MATCH ACTIVE</span>
+      <span>All new monthly Guardian Angel pledges are matched 100% this month by the Sterling Rescue Foundation.</span>
+      <a href="#guardian" class="top-bar-link">Become a Guardian <i class="ph ph-arrow-right"></i></a>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <img src="assets/logo.webp" alt="Stackly Pets Logo" style="height: 40px; width: auto;">
+      </a>
+
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="campaigns.html" class="nav-link">Campaigns</a></li>
+        <li><a href="stories.html" class="nav-link">Stories</a></li>
+        <li><a href="donate.html" class="nav-link active">Donate</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-icons" style="display: flex; align-items: center; gap: 10px;">
+        <a href="login.html" class="btn btn-outline btn-nav-login" style="padding: 8px 18px; font-size: 0.9rem; font-weight: 600;">Login</a>
+        <a href="get-started.html" class="btn btn-primary btn-nav-getstarted" style="padding: 8px 18px; font-size: 0.9rem; font-weight: 600;">Get Started</a>
+        <button class="hamburger" id="hamburger" aria-label="Menu"><i class="ph ph-list"></i></button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu-overlay" id="mobile-menu">
+    <button class="mobile-menu-close" id="mobile-close" aria-label="Close Menu">
+      <i class="ph ph-x"></i>
+    </button>
+    <div class="logo mb-4">
+      <img src="assets/logo.webp" alt="Stackly Pets Logo" style="height: 40px; width: auto;">
+    </div>
+    <ul class="mobile-nav-menu">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="about.html" class="nav-link">About</a></li>
+      <li><a href="campaigns.html" class="nav-link">Campaigns</a></li>
+      <li><a href="stories.html" class="nav-link">Stories</a></li>
+      <li><a href="donate.html" class="nav-link active">Donate</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+    <div style="margin-top: auto; display: flex; flex-direction: column; gap: 12px; width: 100%; padding-top: 32px; padding-bottom: 24px;">
+      <a href="login.html" class="btn btn-outline" style="width: 100%; justify-content: center;">Login</a>
+      <a href="get-started.html" class="btn btn-primary" style="width: 100%; justify-content: center;">Get Started</a>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section style="background: var(--secondary); padding: 70px 0; border-radius: 0 0 40px 40px; margin-bottom: 60px;">
+    <div class="container text-center">
+      <div class="badge badge-emerald slide-up">
+        <i class="ph-fill ph-heart"></i> 100% Tax Deductible 501(c)(3)
+      </div>
+      <h1 class="slide-up delay-100" style="margin-bottom: 16px;">Transform Suffering into Hope</h1>
+      <p class="slide-up delay-200" style="max-width: 680px; margin: 0 auto; font-size: 1.2rem;">
+        Your generous donation directly funds emergency trauma surgeries, life-saving rescue ambulances, and round-the-clock shelter care.
+      </p>
+    </div>
+  </section>
+
+  <!-- Monthly Guardian Angel Tiers Section -->
+  <section class="container" id="guardian" style="margin-bottom: 80px;">
+    <div class="section-header text-center fade-in">
+      <div class="badge badge-amber">
+        <i class="ph-fill ph-sparkle"></i> Monthly Giving Circle
+      </div>
+      <h2>Join the Guardian Angel Society</h2>
+      <p class="section-subtitle">
+        Monthly donors provide the stable heartbeat of our emergency rescue service. Enjoy quarterly rescue photo updates and personal videos of the animals you heal.
+      </p>
+    </div>
+
+    <div class="grid-4 slide-up">
+      <!-- Tier 1 -->
+      <div class="card" style="display: flex; flex-direction: column; text-align: center; border-top: 4px solid var(--primary);">
+        <h4 style="font-size: 1.25rem; margin-bottom: 8px;">Paw Supporter</h4>
+        <div style="font-size: 2.2rem; font-weight: 800; color: var(--primary); margin-bottom: 8px;">$15<span style="font-size: 0.9rem; color: var(--text-light); font-weight: 500;">/mo</span></div>
+        <p style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 20px;">Provides 14 nutritious meals & monthly deworming tablets.</p>
+        <ul style="text-align: left; font-size: 0.85rem; color: var(--text-dark); margin-bottom: 24px; display: flex; flex-direction: column; gap: 8px;">
+          <li><i class="ph-fill ph-check-circle text-emerald"></i> Feeds 2 rescue puppies</li>
+          <li><i class="ph-fill ph-check-circle text-emerald"></i> Quarterly rescue digest</li>
+          <li><i class="ph-fill ph-check-circle text-emerald"></i> Tax receipt summary</li>
+        </ul>
+        <button class="btn btn-outline action-to-404" onclick="window.location.href='404.html'" data-campaign-title="Monthly Paw Supporter ($15/mo)" data-donate-amount="15" style="margin-top: auto; width: 100%;">
+          Join for $15/mo
+        </button>
+      </div>
+
+      <!-- Tier 2 -->
+      <div class="card" style="display: flex; flex-direction: column; text-align: center; border-top: 4px solid var(--emerald); box-shadow: var(--shadow-md);">
+        <div class="badge badge-emerald" style="margin: 0 auto 10px; font-size: 0.75rem;">MOST POPULAR</div>
+        <h4 style="font-size: 1.25rem; margin-bottom: 8px;">Rescue Protector</h4>
+        <div style="font-size: 2.2rem; font-weight: 800; color: var(--emerald-dark); margin-bottom: 8px;">$35<span style="font-size: 0.9rem; color: var(--text-light); font-weight: 500;">/mo</span></div>
+        <p style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 20px;">Funds full core vaccinations and parasite treatment.</p>
+        <ul style="text-align: left; font-size: 0.85rem; color: var(--text-dark); margin-bottom: 24px; display: flex; flex-direction: column; gap: 8px;">
+          <li><i class="ph-fill ph-check-circle text-emerald"></i> Rabies & Parvo vaccines</li>
+          <li><i class="ph-fill ph-check-circle text-emerald"></i> Personalized video updates</li>
+          <li><i class="ph-fill ph-check-circle text-emerald"></i> Guardian Wall of Fame</li>
+        </ul>
+        <button class="btn btn-primary action-to-404" onclick="window.location.href='404.html'" data-campaign-title="Monthly Rescue Protector ($35/mo)" data-donate-amount="35" style="margin-top: auto; width: 100%;">
+          Join for $35/mo
+        </button>
+      </div>
+
+      <!-- Tier 3 -->
+      <div class="card" style="display: flex; flex-direction: column; text-align: center; border-top: 4px solid var(--amber);">
+        <h4 style="font-size: 1.25rem; margin-bottom: 8px;">Life Champion</h4>
+        <div style="font-size: 2.2rem; font-weight: 800; color: #B45309; margin-bottom: 8px;">$75<span style="font-size: 0.9rem; color: var(--text-light); font-weight: 500;">/mo</span></div>
+        <p style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 20px;">Sponsors 24/7 ambulance emergency rescue response.</p>
+        <ul style="text-align: left; font-size: 0.85rem; color: var(--text-dark); margin-bottom: 24px; display: flex; flex-direction: column; gap: 8px;">
+          <li><i class="ph-fill ph-check-circle text-emerald"></i> Emergency ambulance fuel</li>
+          <li><i class="ph-fill ph-check-circle text-emerald"></i> Trauma kit sterile dressings</li>
+          <li><i class="ph-fill ph-check-circle text-emerald"></i> Annual Sanctuary Tour</li>
+        </ul>
+        <button class="btn btn-outline action-to-404" onclick="window.location.href='404.html'" data-campaign-title="Monthly Life Champion ($75/mo)" data-donate-amount="75" style="margin-top: auto; width: 100%;">
+          Join for $75/mo
+        </button>
+      </div>
+
+      <!-- Tier 4 -->
+      <div class="card" style="display: flex; flex-direction: column; text-align: center; border-top: 4px solid var(--danger);">
+        <h4 style="font-size: 1.25rem; margin-bottom: 8px;">Sanctuary Guardian</h4>
+        <div style="font-size: 2.2rem; font-weight: 800; color: var(--danger); margin-bottom: 8px;">$150<span style="font-size: 0.9rem; color: var(--text-light); font-weight: 500;">/mo</span></div>
+        <p style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 20px;">Full monthly sponsorship of a sanctuary kennel suite.</p>
+        <ul style="text-align: left; font-size: 0.85rem; color: var(--text-dark); margin-bottom: 24px; display: flex; flex-direction: column; gap: 8px;">
+          <li><i class="ph-fill ph-check-circle text-emerald"></i> Complete room sponsorship</li>
+          <li><i class="ph-fill ph-check-circle text-emerald"></i> Name plaque on kennel door</li>
+          <li><i class="ph-fill ph-check-circle text-emerald"></i> VIP Donor Recognition</li>
+        </ul>
+        <button class="btn btn-outline action-to-404" onclick="window.location.href='404.html'" data-campaign-title="Monthly Sanctuary Guardian ($150/mo)" data-donate-amount="150" style="margin-top: auto; width: 100%;">
+          Join for $150/mo
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Other Meaningful Ways to Support -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header text-center fade-in">
+        <h2>More Meaningful Ways to Give</h2>
+        <p class="section-subtitle">Tailor your generosity to create the deepest personal impact.</p>
+      </div>
+
+      <div class="grid-3 slide-up">
+        <div class="card">
+          <div style="font-size: 2rem; color: var(--primary); margin-bottom: 12px;"><i class="ph-fill ph-gift"></i></div>
+          <h4 style="margin-bottom: 8px;">Memorial & Tribute Gifts</h4>
+          <p style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 20px;">
+            Celebrate the life of a beloved companion dog, cat, or animal lover. We will mail or email a personalized tribute card to their family.
+          </p>
+          <button class="btn btn-outline btn-sm action-to-404" onclick="window.location.href='404.html'" data-campaign-title="Memorial Tribute Gift">
+            Make Tribute Gift &rarr;
+          </button>
+        </div>
+
+        <div class="card">
+          <div style="font-size: 2rem; color: var(--emerald); margin-bottom: 12px;"><i class="ph-fill ph-buildings"></i></div>
+          <h4 style="margin-bottom: 8px;">Employer Matching</h4>
+          <p style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 20px;">
+            Thousands of companies match employee charitable gifts dollar-for-dollar. Check with your HR department or search our database.
+          </p>
+          <a href="404.html" class="btn btn-outline btn-sm" onclick="window.location.href='404.html'">
+            Check Company Match &rarr;
+          </a>
+        </div>
+
+        <div class="card">
+          <div style="font-size: 2rem; color: var(--amber); margin-bottom: 12px;"><i class="ph-fill ph-bank"></i></div>
+          <h4 style="margin-bottom: 8px;">Stocks & Wire Transfers</h4>
+          <p style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 20px;">
+            Avoid capital gains taxes and maximize your deduction by donating appreciated stock, mutual funds, or donor-advised funds (DAFs).
+          </p>
+          <a href="404.html" class="btn btn-outline btn-sm" onclick="window.location.href='404.html'">
+            Transfer Instructions &rarr;
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- =========================================================================
+       NEW SECTION 1: Transparent Life-Saving Impact Tiers
+       ========================================================================= -->
+  <section class="section" style="padding: 85px 0;">
+    <div class="container">
+      <div class="section-header text-center fade-in">
+        <div class="badge badge-emerald">
+          <i class="ph-fill ph-hand-heart"></i> Direct Impact Translation
+        </div>
+        <h2>See Exactly What Your Generosity Accomplishes</h2>
+        <p class="section-subtitle">
+          At PawsHaven, there is zero ambiguity. Every single tier is backed by transparent, itemized veterinary care ledgers.
+        </p>
+      </div>
+
+      <div class="grid-4 slide-up" style="gap: 24px;">
+        <!-- Tier $25 -->
+        <div class="donate-impact-card action-to-404" onclick="window.location.href='404.html'" style="cursor: pointer;" data-campaign-title="Emergency Trauma Antibiotics & Warm Meals" data-donate-amount="25">
+          <span class="impact-tier-badge">Basic Care</span>
+          <div class="donate-amount-tag">$25</div>
+          <div style="font-size: 2rem; color: var(--primary); margin-bottom: 12px;"><i class="ph-fill ph-bowl-food"></i></div>
+          <h4 style="font-size: 1.15rem; margin-bottom: 8px;">20 Warm Meals & Antibiotics</h4>
+          <p style="font-size: 0.88rem; color: var(--text-light); line-height: 1.55; margin-bottom: 18px; flex-grow: 1;">
+            Covers two full weeks of specialized digestive recovery nutrition and a complete prescription broad-spectrum antibiotic course.
+          </p>
+          <button class="btn btn-outline action-to-404" onclick="window.location.href='404.html'" style="width: 100%;">Select $25 Tier</button>
+        </div>
+
+        <!-- Tier $65 (Featured) -->
+        <div class="donate-impact-card featured action-to-404" onclick="window.location.href='404.html'" style="cursor: pointer;" data-campaign-title="Pediatric Vaccination & Microchip Pack" data-donate-amount="65">
+          <span class="impact-tier-badge" style="background: var(--emerald);">Most Popular</span>
+          <div class="donate-amount-tag" style="color: var(--emerald-dark);">$65</div>
+          <div style="font-size: 2rem; color: var(--emerald); margin-bottom: 12px;"><i class="ph-fill ph-syringe"></i></div>
+          <h4 style="font-size: 1.15rem; margin-bottom: 8px;">Vaccines & Microchip Pack</h4>
+          <p style="font-size: 0.88rem; color: var(--text-light); line-height: 1.55; margin-bottom: 18px; flex-grow: 1;">
+            Provides full core vaccinations (DHPP / FVRCP), rabies certificate, internal deworming, and universal lifetime microchip registration.
+          </p>
+          <button class="btn btn-primary action-to-404" onclick="window.location.href='404.html'" style="width: 100%;">Select $65 Tier</button>
+        </div>
+
+        <!-- Tier $150 -->
+        <div class="donate-impact-card action-to-404" onclick="window.location.href='404.html'" style="cursor: pointer;" data-campaign-title="Emergency Trauma Diagnostics & Splinting" data-donate-amount="150">
+          <span class="impact-tier-badge">Clinical ICU</span>
+          <div class="donate-amount-tag">$150</div>
+          <div style="font-size: 2rem; color: #F59E0B; margin-bottom: 12px;"><i class="ph-fill ph-first-aid"></i></div>
+          <h4 style="font-size: 1.15rem; margin-bottom: 8px;">X-Rays & ICU Oxygen</h4>
+          <p style="font-size: 0.88rem; color: var(--text-light); line-height: 1.55; margin-bottom: 18px; flex-grow: 1;">
+            Funds emergency digital radiographic series, comprehensive blood chemistry panels, and 48 hours of oxygen-enriched incubator support.
+          </p>
+          <button class="btn btn-outline action-to-404" onclick="window.location.href='404.html'" style="width: 100%;">Select $150 Tier</button>
+        </div>
+
+        <!-- Tier $350 -->
+        <div class="donate-impact-card action-to-404" onclick="window.location.href='404.html'" style="cursor: pointer;" data-campaign-title="Board-Certified Surgical Reconstruction" data-donate-amount="350">
+          <span class="impact-tier-badge">Major Surgery</span>
+          <div class="donate-amount-tag">$350</div>
+          <div style="font-size: 2rem; color: var(--danger); margin-bottom: 12px;"><i class="ph-fill ph-heartbeat"></i></div>
+          <h4 style="font-size: 1.15rem; margin-bottom: 8px;">Limb-Saving Orthopedic Surgery</h4>
+          <p style="font-size: 0.88rem; color: var(--text-light); line-height: 1.55; margin-bottom: 18px; flex-grow: 1;">
+            Enables board-certified orthopedic surgeons to perform bone plating and external fixation on highway accident victims facing amputation.
+          </p>
+          <button class="btn btn-outline action-to-404" onclick="window.location.href='404.html'" style="width: 100%;">Select $350 Tier</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       NEW SECTION 2: Donor Peace of Mind & FAQ Accordion
+       ========================================================================= -->
+  <section class="section section-cream" style="padding: 85px 0;">
+    <div class="container container-narrow">
+      <div class="section-header text-center fade-in">
+        <div class="badge badge-primary">
+          <i class="ph-fill ph-shield-check"></i> Total Donor Protection
+        </div>
+        <h2>Frequently Asked Questions</h2>
+        <p class="section-subtitle">
+          Everything you need to know about tax deductibility, monthly management, and financial governance.
+        </p>
+      </div>
+
+      <div class="accordion-group slide-up" style="display: flex; flex-direction: column; gap: 14px; margin-bottom: 48px;">
+        <!-- FAQ 1 -->
+        <div class="accordion-item active" style="background: #FFFFFF; border-radius: var(--radius-lg); border: 1px solid var(--border-color); overflow: hidden;">
+          <div class="accordion-header" style="padding: 22px 24px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; font-weight: 700; font-size: 1.05rem;">
+            <span>Is my gift 100% tax-deductible under federal law?</span>
+            <i class="ph ph-caret-down" style="font-size: 1.2rem; color: var(--primary);"></i>
+          </div>
+          <div class="accordion-body" style="padding: 0 24px 22px; color: var(--text-dark); line-height: 1.65; font-size: 0.95rem;">
+            Yes. PawsHaven is an authorized 501(c)(3) tax-exempt public charitable organization (EIN: 84-2947190). Immediately upon donation completion, an official IRS-compliant tax receipt is generated and emailed to you for your tax records.
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="accordion-item" style="background: #FFFFFF; border-radius: var(--radius-lg); border: 1px solid var(--border-color); overflow: hidden;">
+          <div class="accordion-header" style="padding: 22px 24px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; font-weight: 700; font-size: 1.05rem;">
+            <span>How do I cancel, pause, or adjust my recurring Guardian gift?</span>
+            <i class="ph ph-caret-down" style="font-size: 1.2rem; color: var(--primary);"></i>
+          </div>
+          <div class="accordion-body" style="padding: 0 24px 22px; color: var(--text-dark); line-height: 1.65; font-size: 0.95rem;">
+            You maintain 100% control over your monthly pledge at all times. Every receipt includes a self-serve donor management link allowing you to update payment details, alter contribution tiers, pause, or cancel with a single click.
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="accordion-item" style="background: #FFFFFF; border-radius: var(--radius-lg); border: 1px solid var(--border-color); overflow: hidden;">
+          <div class="accordion-header" style="padding: 22px 24px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; font-weight: 700; font-size: 1.05rem;">
+            <span>Can I dedicate my contribution in memory or in honor of a pet?</span>
+            <i class="ph ph-caret-down" style="font-size: 1.2rem; color: var(--primary);"></i>
+          </div>
+          <div class="accordion-body" style="padding: 0 24px 22px; color: var(--text-dark); line-height: 1.65; font-size: 0.95rem;">
+            Yes! When submitting your donation, select the memorial dedication checkbox to specify the animal or loved one being honored. We will generate a commemorative digital certificate and list their name on our sanctuary Memorial Roll.
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="accordion-item" style="background: #FFFFFF; border-radius: var(--radius-lg); border: 1px solid var(--border-color); overflow: hidden;">
+          <div class="accordion-header" style="padding: 22px 24px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; font-weight: 700; font-size: 1.05rem;">
+            <span>How much of my dollar goes directly to the animals vs administration?</span>
+            <i class="ph ph-caret-down" style="font-size: 1.2rem; color: var(--primary);"></i>
+          </div>
+          <div class="accordion-body" style="padding: 0 24px 22px; color: var(--text-dark); line-height: 1.65; font-size: 0.95rem;">
+            According to our 2025 audited financial statements, exactly 99.2 cents of every dollar donated directly funds veterinary surgery, medical supplies, and sanctuary food. Only 0.8 cents is spent on payment processing and audit administration.
+          </div>
+        </div>
+      </div>
+
+      <!-- Trust Badges Row -->
+      <div class="grid-4 slide-up" style="gap: 20px; text-align: center;">
+        <div style="background: #FFFFFF; border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 18px 12px;">
+          <i class="ph-fill ph-seal-check text-emerald" style="font-size: 2rem; margin-bottom: 6px; display: inline-block;"></i>
+          <p style="margin: 0; font-weight: 800; font-size: 0.88rem; color: var(--text-dark);">GuideStar Platinum</p>
+          <span style="font-size: 0.75rem; color: var(--text-light);">Highest Transparency 2026</span>
+        </div>
+        <div style="background: #FFFFFF; border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 18px 12px;">
+          <i class="ph-fill ph-star text-amber" style="font-size: 2rem; margin-bottom: 6px; display: inline-block;"></i>
+          <p style="margin: 0; font-weight: 800; font-size: 0.88rem; color: var(--text-dark);">4-Star Charity</p>
+          <span style="font-size: 0.75rem; color: var(--text-light);">Charity Navigator 100/100</span>
+        </div>
+        <div style="background: #FFFFFF; border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 18px 12px;">
+          <i class="ph-fill ph-lock-key text-primary" style="font-size: 2rem; margin-bottom: 6px; display: inline-block;"></i>
+          <p style="margin: 0; font-weight: 800; font-size: 0.88rem; color: var(--text-dark);">256-Bit SSL</p>
+          <span style="font-size: 0.75rem; color: var(--text-light);">Bank-Grade Encryption</span>
+        </div>
+        <div style="background: #FFFFFF; border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 18px 12px;">
+          <i class="ph-fill ph-shield-check text-emerald" style="font-size: 2rem; margin-bottom: 6px; display: inline-block;"></i>
+          <p style="margin: 0; font-weight: 800; font-size: 0.88rem; color: var(--text-dark);">Zero-Kill Certified</p>
+          <span style="font-size: 0.75rem; color: var(--text-light);">100% Medical Protection</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+    <!-- Unified Website Dark Footer -->
+  <footer class="footer-dark">
+    <div class="container">
+      <div class="footer-grid-5">
+        <!-- Col 1: Brand & Mission -->
+        <div class="footer-col">
+          <div class="footer-logo mb-4">
+            <a href="index.html" style="display: inline-block;">
+              <img src="assets/logo.webp" alt="Stackly Pets Logo" style="height: 40px; width: auto;">
+            </a>
+          </div>
+          <p class="footer-desc">
+            PawsHaven is an internationally recognized 501(c)(3) animal rescue and rehabilitation charity committed to rescuing distressed animals, ending euthanasia in shelters, and providing lifetime sanctuary care.
+          </p>
+          <!-- Social media icons -> All render to 404.html -->
+          <div class="social-links">
+            <a href="404.html" class="social-btn" aria-label="Facebook"><i class="ph ph-facebook-logo"></i></a>
+            <a href="404.html" class="social-btn" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+            <a href="404.html" class="social-btn" aria-label="YouTube"><i class="ph ph-youtube-logo"></i></a>
+            <a href="404.html" class="social-btn" aria-label="LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation (Home, About, Campaigns, Stories, Donate, Contact) -->
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="campaigns.html">Campaigns</a></li>
+            <li><a href="stories.html">Stories</a></li>
+            <li><a href="donate.html">Donate</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Programs / Progress -> All render to 404.html -->
+        <div class="footer-col">
+          <h4>Our Programs</h4>
+          <ul class="footer-links-list">
+            <li><a href="404.html">Ambulance Dispatch</a></li>
+            <li><a href="404.html">Trauma Vet Surgery</a></li>
+            <li><a href="404.html">Winter Warmth Drive</a></li>
+            <li><a href="404.html">Monthly Guardian Club</a></li>
+            <li><a href="404.html">Foster & Adoption</a></li>
+            <li><a href="404.html">99.2% Transparency</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: 24/7 Rescue Center -> Contact items render to 404.html -->
+        <div class="footer-col">
+          <h4>24/7 Rescue Center</h4>
+          <div class="footer-contact-item">
+            <i class="ph-fill ph-phone-call" style="color: var(--danger);"></i>
+            <div>
+              <a href="404.html" style="color: #FFFFFF; font-weight: 700; text-decoration: none;">1-800-PAW-HELP</a>
+              <div style="font-size: 0.8rem; color: #94A3B8;">Toll-free 24/7 Dispatch</div>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="ph-fill ph-envelope"></i>
+            <div>
+              <a href="404.html" style="color: #94A3B8; text-decoration: none;">rescue@pawshaven.org</a>
+              <div style="font-size: 0.8rem; color: #94A3B8;">General Inquiries</div>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="ph-fill ph-map-pin"></i>
+            <div>
+              <a href="404.html" style="color: #94A3B8; text-decoration: none;">740 Haven Valley Rd, CA 95060</a>
+              <div style="font-size: 0.8rem; color: #94A3B8;">PawsHaven Sanctuary Park</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Col 5: Newsletter (Gmail is mandatory, then render to 404.html) -->
+        <div class="footer-col">
+          <h4>Rescue Updates</h4>
+          <p class="footer-desc" style="margin-bottom: 16px;">
+            Subscribe to receive real-time rescue video alerts, before/after stories, and impact receipts.
+          </p>
+          <form class="footer-newsletter-form" onsubmit="handleNewsletterSubmit(event)" novalidate>
+            <input type="email" class="footer-input" id="newsletter-email" placeholder="yourname@gmail.com" required autocomplete="off">
+            <div class="newsletter-error" id="newsletter-error" style="display: none; color: #F87171; font-size: 0.8rem; margin-top: -6px; font-weight: 600;">
+              Please enter a valid Gmail address (@gmail.com).
+            </div>
+            <button type="submit" class="btn btn-primary" style="border-radius: var(--radius-sm); width: 100%;">
+              Join the Guardian Circle
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <div>
+          <p style="margin: 0 0 6px 0;">&copy; <span id="current-year">2026</span> PawsHaven Animal Welfare & Rescue Fund. All rights reserved. Registered 501(c)(3) Non-Profit Charity #84-2947190.</p>
+          <div style="display: flex; gap: 16px;">
+            <a href="404.html" style="color: #64748B; font-size: 0.85rem; text-decoration: none;">Privacy Policy</a>
+            <a href="404.html" style="color: #64748B; font-size: 0.85rem; text-decoration: none;">Terms of Service</a>
+          </div>
+        </div>
+        <button id="scroll-top" class="scroll-top-btn" onclick="window.scrollTo({top:0, behavior:'smooth'})" aria-label="Scroll to top of page">
+          <i class="ph ph-caret-up"></i>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Include Donation Modal Container -->
+  <div class="modal-backdrop" id="donation-modal">
+    <div class="modal-window">
+      <button class="modal-close-btn" id="donation-modal-close"><i class="ph ph-x"></i></button>
+      <div id="donation-form-view">
+        <div class="modal-header">
+          <div class="badge badge-emerald" style="margin-bottom: 6px;">100% Tax Deductible</div>
+          <h3 style="margin-bottom: 4px;">Make a Life-Saving Gift</h3>
+          <p style="font-size: 0.88rem; color: var(--text-light); margin: 0;">Supporting: <strong id="modal-cause-name" style="color: var(--primary);">Rescue Support</strong></p>
+        </div>
+        <div class="modal-body">
+          <form id="donation-form">
+            <div class="freq-toggle-container">
+              <button type="button" class="freq-btn active" data-freq="one-time">One-Time Gift</button>
+              <button type="button" class="freq-btn" data-freq="monthly">Monthly Hero</button>
+            </div>
+            <div class="donation-grid">
+              <button type="button" class="donation-choice-btn" data-amount="25">$25</button>
+              <button type="button" class="donation-choice-btn active" data-amount="50">$50</button>
+              <button type="button" class="donation-choice-btn" data-amount="100">$100</button>
+              <button type="button" class="donation-choice-btn" data-amount="250">$250</button>
+              <button type="button" class="donation-choice-btn" data-amount="500">$500</button>
+              <button type="button" class="donation-choice-btn" data-amount="1000">$1,000</button>
+            </div>
+            <div class="custom-amount-input-wrap">
+              <span class="symbol">$</span>
+              <input type="number" id="custom-donation-amount" class="custom-amount-input" value="50">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Full Name</label>
+              <input type="text" id="donor-name" class="form-input" placeholder="Sarah Jenkins" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Email Address</label>
+              <input type="email" id="donor-email" class="form-input" placeholder="sarah@example.com" required>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%; padding: 14px;">
+              <i class="ph-fill ph-credit-card"></i> Donate Securely
+            </button>
+          </form>
+        </div>
+      </div>
+      <div id="donation-success-view" style="display: none; padding: 36px 32px; text-align: center;">
+        <div style="width: 60px; height: 60px; border-radius: 50%; background: var(--emerald-soft); color: var(--emerald); display: flex; align-items: center; justify-content: center; font-size: 2rem; margin: 0 auto 16px;">
+          <i class="ph-fill ph-check"></i>
+        </div>
+        <h3>Thank You For Your Compassion!</h3>
+        <p style="color: var(--text-light); margin-bottom: 20px;">Your donation receipt has been generated.</p>
+        <button class="btn btn-primary" onclick="document.getElementById('donation-modal').classList.remove('active');">Done</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/donation.js"></script>
+  <!-- Instant Modal Safety Reset on Navigation / BFCache -->
+  <script>
+    function forceCloseModals() {
+      var dModal = document.getElementById('donation-modal');
+      if (dModal) dModal.classList.remove('active');
+      var eModal = document.getElementById('emergency-modal');
+      if (eModal) eModal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+    window.addEventListener('pageshow', forceCloseModals);
+    window.addEventListener('DOMContentLoaded', forceCloseModals);
+    window.addEventListener('load', forceCloseModals);
+  </script>
+  <!-- Newsletter Validation & 404 Render Script -->
+  <script>
+    function handleNewsletterSubmit(e) {
+      e.preventDefault();
+      var form = e.target;
+      var input = form.querySelector('input[type="email"]') || document.getElementById('newsletter-email');
+      var errorEl = form.querySelector('.newsletter-error') || document.getElementById('newsletter-error');
+      var val = input ? input.value.trim().toLowerCase() : '';
+      var gmailRegex = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
+
+      if (!val || !gmailRegex.test(val)) {
+        if (errorEl) errorEl.style.display = 'block';
+        if (input) input.style.borderColor = '#EF4444';
+        return false;
+      }
+
+      if (errorEl) errorEl.style.display = 'none';
+      window.location.href = '404.html';
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('.footer-input').forEach(function(inp) {
+        inp.addEventListener('input', function() {
+          this.style.borderColor = '';
+          var err = this.parentElement.querySelector('.newsletter-error') || document.getElementById('newsletter-error');
+          if (err) err.style.display = 'none';
+        });
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,283 @@
+/* ==========================================================================
+   PAWSHAVEN | Animal Welfare Fundraising - Keyframes & Animation Classes
+   ========================================================================== */
+
+/* Keyframe Animations */
+@keyframes float {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-12px) rotate(1deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+@keyframes floatReverse {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(10px) rotate(-1deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+@keyframes pulseGentle {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+@keyframes emergencyPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 14px rgba(239, 68, 68, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+  }
+}
+
+@keyframes greenPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 14px rgba(16, 185, 129, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+  }
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes pawWalk {
+  0% { opacity: 0; transform: scale(0.6) translateY(5px); }
+  50% { opacity: 0.8; transform: scale(1) translateY(0); }
+  100% { opacity: 0; transform: scale(1.1) translateY(-5px); }
+}
+
+@keyframes heartBeat {
+  0% { transform: scale(1); }
+  14% { transform: scale(1.2); }
+  28% { transform: scale(1); }
+  42% { transform: scale(1.2); }
+  70% { transform: scale(1); }
+}
+
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Utility Animation Classes */
+.floating {
+  animation: float 4s ease-in-out infinite;
+}
+
+.floating-reverse {
+  animation: floatReverse 5s ease-in-out infinite;
+}
+
+.pulse-emergency {
+  animation: emergencyPulse 2s infinite;
+}
+
+.pulse-green {
+  animation: greenPulse 2.5s infinite;
+}
+
+.heart-beat {
+  animation: heartBeat 2s ease-in-out infinite;
+  display: inline-block;
+}
+
+.spin-slow {
+  animation: spinSlow 20s linear infinite;
+}
+
+/* Infinite Marquee */
+.marquee-container {
+  overflow: hidden;
+  white-space: nowrap;
+  background: var(--primary-dark);
+  color: #FFFFFF;
+  padding: 16px 0;
+  position: relative;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.marquee-content {
+  display: inline-flex;
+  gap: 48px;
+  animation: marquee 32s linear infinite;
+  will-change: transform;
+}
+
+.marquee-container:hover .marquee-content {
+  animation-play-state: paused;
+}
+
+.marquee-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.3px;
+}
+
+.marquee-item i {
+  color: var(--accent-light);
+  font-size: 1.25rem;
+}
+
+/* Initial States for Smooth GSAP Animations (Visible by default to guarantee instant mobile rendering) */
+.reveal-init,
+.fade-in,
+.slide-up,
+.slide-right,
+.slide-left,
+.scale-in {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+/* Fallback visibility if JS disabled or fails to load */
+.no-js .fade-in,
+.no-js .slide-up,
+.no-js .slide-right,
+.no-js .slide-left,
+.no-js .scale-in {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+/* Delays */
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+.delay-400 { transition-delay: 400ms; }
+.delay-500 { transition-delay: 500ms; }
+
+/* Interactive Hover States */
+.hover-lift {
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.hover-lift:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-hover);
+}
+
+.hover-scale {
+  transition: transform var(--transition-normal);
+}
+
+.hover-scale:hover {
+  transform: scale(1.03);
+}
+
+/* Progress bar fill shimmer effect */
+.progress-fill {
+  position: relative;
+  overflow: hidden;
+}
+
+.progress-fill::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.35) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2.5s infinite;
+}
+
+/* Live Badge Glow */
+.badge-live {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(239, 68, 68, 0.12);
+  color: #DC2626;
+  border: 1px solid rgba(239, 68, 68, 0.25);
+  font-weight: 700;
+  font-size: 0.8rem;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+}
+
+.badge-live .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #DC2626;
+  animation: emergencyPulse 1.8s infinite;
+}
+
+/* ==========================================================================
+   Hero Enhanced Micro-Animations
+   ========================================================================== */
+@keyframes auroraGlow {
+  0% { transform: translate(0, 0) scale(1) rotate(0deg); opacity: 0.45; }
+  50% { transform: translate(25px, -20px) scale(1.15) rotate(180deg); opacity: 0.75; }
+  100% { transform: translate(0, 0) scale(1) rotate(360deg); opacity: 0.45; }
+}
+
+@keyframes floatSlow {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(-1.5deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+@keyframes textGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes beaconPulse {
+  0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.6); }
+  70% { box-shadow: 0 0 0 10px rgba(16, 185, 129, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+}
+
+@keyframes pawDrift {
+  0% { transform: translateY(0) rotate(0deg); opacity: 0.12; }
+  50% { transform: translateY(-25px) rotate(8deg); opacity: 0.28; }
+  100% { transform: translateY(0) rotate(0deg); opacity: 0.12; }
+}
+
+@keyframes iconWiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-8deg); }
+  75% { transform: rotate(8deg); }
+}
+
+.floating-slow {
+  animation: floatSlow 5s ease-in-out infinite;
+}
+
+.paw-drift-1 {
+  animation: pawDrift 7s ease-in-out infinite;
+}
+
+.paw-drift-2 {
+  animation: pawDrift 9s ease-in-out infinite reverse;
+}
+
+.icon-wiggle {
+  animation: iconWiggle 3s ease-in-out infinite;
+}

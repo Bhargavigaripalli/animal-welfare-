@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal Login — PawsHaven Animal Welfare</title>
+  <meta name="description" content="Sign in to your PawsHaven Guardian Portal or Sanctuary Admin Console for live rescue tracking and sponsorship management.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐾</text></svg>">
+
+  <!-- Phosphor Icons & CSS -->
+  <script defer src="https://unpkg.com/@phosphor-icons/web"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <style>
+    /* Clean Standalone Auth Page in Website Warm Theme */
+    body {
+      margin: 0;
+      padding: 0;
+      background: radial-gradient(circle at 50% 25%, #FFF8F1 0%, #F9F7F5 65%, #F1EFEA 100%);
+      color: var(--text-dark, #1F2937);
+      font-family: var(--font-body, 'Inter', sans-serif);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-sizing: border-box;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* Ambient Warm Paw Prints */
+    .auth-ambient-paw {
+      position: absolute;
+      color: rgba(255, 123, 41, 0.05);
+      font-size: 16rem;
+      pointer-events: none;
+      z-index: 1;
+      user-select: none;
+    }
+    .paw-left {
+      top: -40px;
+      left: -40px;
+      transform: rotate(-25deg);
+    }
+    .paw-right {
+      bottom: -50px;
+      right: -40px;
+      transform: rotate(30deg);
+    }
+
+    .auth-container {
+      width: 100%;
+      max-width: 490px;
+      padding: 2rem 1.25rem;
+      position: relative;
+      z-index: 5;
+      box-sizing: border-box;
+    }
+
+    /* Auth Card - Pure White, Warm Border & Shadow */
+    .auth-card {
+      width: 100%;
+      background: #FFFFFF !important;
+      border: 1px solid rgba(255, 123, 41, 0.2);
+      border-radius: 24px;
+      padding: 2.8rem 2.4rem;
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.07), 0 4px 15px rgba(255, 123, 41, 0.07);
+      box-sizing: border-box;
+      opacity: 1 !important;
+      transform: none !important;
+      display: block !important;
+    }
+
+    .auth-logo-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 1.4rem;
+      width: 100%;
+    }
+
+    .auth-header {
+      text-align: center;
+      margin-bottom: 1.8rem;
+    }
+    .auth-header h2 {
+      color: #111827;
+      font-size: 1.85rem;
+      font-weight: 800;
+      margin: 0 0 0.5rem 0;
+      letter-spacing: -0.02em;
+    }
+    .auth-header p {
+      color: #64748B;
+      font-size: 0.92rem;
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    /* ROLE SWITCHER TABS */
+    .role-tabs {
+      display: flex;
+      background: #F1EFEA;
+      padding: 5px;
+      border-radius: 100px;
+      border: 1px solid #E2E8F0;
+      margin-bottom: 1.8rem;
+      gap: 4px;
+    }
+    .role-btn {
+      flex: 1;
+      padding: 10px 14px;
+      border: none;
+      background: none;
+      color: #64748B;
+      font-weight: 700;
+      font-size: 0.88rem;
+      border-radius: 100px;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+    .role-btn:hover {
+      color: #1F2937;
+    }
+    .role-btn.active {
+      background: var(--primary, #FF7B29);
+      color: #FFFFFF;
+      box-shadow: 0 4px 15px rgba(255, 123, 41, 0.35);
+    }
+    .role-btn.admin-mode.active {
+      background: #111827;
+      color: #FFFFFF;
+      box-shadow: 0 4px 15px rgba(17, 24, 39, 0.3);
+    }
+
+    /* FORM STYLING */
+    .auth-form .f-group {
+      margin-bottom: 1.25rem;
+    }
+    .auth-form label {
+      display: block;
+      color: #1E293B;
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    .auth-form input {
+      width: 100%;
+      background: #FFFFFF;
+      border: 1.5px solid #CBD5E1;
+      padding: 0.85rem 1.15rem;
+      border-radius: 12px;
+      color: #0F172A;
+      font-size: 0.95rem;
+      box-sizing: border-box;
+      transition: all 0.2s ease;
+    }
+    .auth-form input:focus {
+      border-color: var(--primary, #FF7B29);
+      box-shadow: 0 0 0 3px rgba(255, 123, 41, 0.18);
+      outline: none;
+    }
+    .auth-form input.input-error {
+      border-color: #EF4444 !important;
+      box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.18) !important;
+    }
+
+    /* ERROR TEXT UNDER INPUTS */
+    .field-error-msg {
+      display: none;
+      color: #DC2626;
+      font-size: 0.82rem;
+      font-weight: 600;
+      margin-top: 5px;
+    }
+
+    .pwd-wrapper {
+      position: relative;
+    }
+    .pwd-wrapper input {
+      padding-right: 48px;
+    }
+    .pwd-toggle-btn {
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: #64748B;
+      cursor: pointer;
+      padding: 6px;
+      font-size: 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: color 0.2s ease;
+    }
+    .pwd-toggle-btn:hover {
+      color: var(--primary, #FF7B29);
+    }
+
+    /* REMEMBER ME WRAPPER & WARNING */
+    .remember-warning-box {
+      display: none;
+      background: #FEF2F2;
+      border: 1px solid #FCA5A5;
+      color: #B91C1C;
+      padding: 0.75rem 1rem;
+      border-radius: 10px;
+      font-size: 0.85rem;
+      margin-bottom: 1.2rem;
+      text-align: center;
+      font-weight: 600;
+    }
+
+    .auth-options {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.88rem;
+      margin-bottom: 1.5rem;
+    }
+    .auth-options a {
+      color: var(--primary, #FF7B29);
+      font-weight: 600;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .auth-options a:hover {
+      color: var(--primary-hover, #E66A1F);
+      text-decoration: underline;
+    }
+
+    .btn-auth-submit {
+      width: 100%;
+      padding: 0.95rem;
+      font-size: 1rem;
+      font-weight: 700;
+      border-radius: 12px;
+      border: none;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: var(--primary, #FF7B29);
+      color: #FFFFFF;
+      box-shadow: 0 4px 18px rgba(255, 123, 41, 0.35);
+    }
+    .btn-auth-submit:hover {
+      background: var(--primary-hover, #E66A1F);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(255, 123, 41, 0.45);
+    }
+
+    .auth-footer-link {
+      text-align: center;
+      margin-top: 1.8rem;
+      font-size: 0.92rem;
+      color: #64748B;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .auth-footer-link a {
+      color: var(--primary, #FF7B29);
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .auth-footer-link a:hover {
+      color: var(--primary-hover, #E66A1F);
+      text-decoration: underline;
+    }
+    .btn-back-home {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.45rem 1rem;
+      background: #F1F5F9;
+      border: 1px solid #E2E8F0;
+      color: #334155 !important;
+      border-radius: 100px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-decoration: none !important;
+      transition: all 0.2s ease;
+    }
+    .btn-back-home:hover {
+      background: #E2E8F0;
+      color: #0F172A !important;
+      transform: translateY(-1px);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Ambient Decorative Paw Prints -->
+  <div class="auth-ambient-paw paw-left"><i class="ph-fill ph-paw-print"></i></div>
+  <div class="auth-ambient-paw paw-right"><i class="ph-fill ph-paw-print"></i></div>
+
+  <div class="auth-container">
+    <div class="auth-card">
+      <!-- Centered Logo -->
+      <div class="auth-logo-wrap">
+        <a href="index.html" title="PawsHaven Animal Sanctuary">
+          <img src="assets/logo.webp" alt="Stackly Pets Logo" style="height: 48px; width: auto;">
+        </a>
+      </div>
+
+      <div class="auth-header">
+        <h2 id="loginHeading">Guardian & Donor Portal</h2>
+        <p id="loginSubtext">Sign in to track your sponsored rescues, active recurring pledges & tax-deductible receipts.</p>
+      </div>
+
+      <!-- ROLE SWITCHER TABS -->
+      <div class="role-tabs">
+        <button type="button" class="role-btn active" id="userRoleBtn" onclick="selectRole('user')">
+          <i class="ph-fill ph-user-circle"></i> Guardian / Donor
+        </button>
+        <button type="button" class="role-btn" id="adminRoleBtn" onclick="selectRole('admin')">
+          <i class="ph-fill ph-shield-check"></i> Sanctuary Admin
+        </button>
+      </div>
+
+      <!-- Remember Me Warning Notification -->
+      <div class="remember-warning-box" id="rememberWarning">
+        ⚠️ Warning: The "Remember Me" checkbox is mandatory! Please check it to proceed.
+      </div>
+
+      <!-- LOGIN FORM (EMPTY DEFAULTS) -->
+      <form class="auth-form" id="loginForm" onsubmit="handleLoginSubmit(event)" novalidate>
+        <input type="hidden" id="selectedRole" value="user">
+
+        <!-- Gmail Input (Mandatory, strict @gmail.com format) -->
+        <div class="f-group">
+          <label for="loginEmail">Gmail Address <span style="color: #EF4444;">*</span></label>
+          <input 
+            type="email" 
+            id="loginEmail" 
+            placeholder="yourname@gmail.com" 
+            value=""
+            required 
+            autocomplete="off"
+          />
+          <div class="field-error-msg" id="emailError">
+            Please enter a valid Gmail address in @gmail.com format (e.g. user@gmail.com).
+          </div>
+        </div>
+
+        <!-- Password Input (Mandatory, Strong password only) -->
+        <div class="f-group">
+          <label for="loginPassword">Password <span style="color: #EF4444;">*</span></label>
+          <div class="pwd-wrapper">
+            <input 
+              type="password" 
+              id="loginPassword" 
+              placeholder="Enter your strong password" 
+              value=""
+              required 
+              autocomplete="new-password"
+            />
+            <button type="button" class="pwd-toggle-btn" onclick="togglePasswordVisibility('loginPassword', this)" aria-label="Toggle Password Visibility">
+              <i class="ph ph-eye"></i>
+            </button>
+          </div>
+          <small style="color: #64748B; font-size: 0.78rem; display: block; margin-top: 5px;">
+            🔒 Strong Password: min 8 characters, uppercase, lowercase, number & special character.
+          </small>
+          <div class="field-error-msg" id="passwordError">
+            Password must be at least 8 characters and contain at least one uppercase letter, one lowercase letter, one number, and one special character (e.g. @$!%*?&#).
+          </div>
+        </div>
+
+        <!-- Options: Remember Me (Mandatory) & Forgot Password (renders to 404.html) -->
+        <div class="auth-options">
+          <label id="rememberLabel" style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; color: #475569; padding: 4px 8px; border-radius: 6px; transition: all 0.2s ease;">
+            <input type="checkbox" id="rememberMeCheck" style="width: auto; cursor: pointer;" onchange="hideRememberWarning()" /> 
+            <span>Remember Me <span style="color: #EF4444;">*</span></span>
+          </label>
+          <a href="404.html">Forgot Password?</a>
+        </div>
+
+        <button type="submit" class="btn-auth-submit" id="submitBtn">
+          Sign In to Guardian Dashboard →
+        </button>
+      </form>
+
+      <div class="auth-footer-link">
+        <span>Don't have an account? <a href="get-started.html">Get Started</a></span>
+        <a href="index.html" class="btn-back-home"><i class="ph ph-house"></i> Back to Home</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Script Logic -->
+  <script>
+    let currentRole = 'user';
+
+    // Role selection toggle - Keep inputs empty by default!
+    function selectRole(role) {
+      currentRole = role;
+      document.getElementById('selectedRole').value = role;
+      hideRememberWarning();
+      clearErrors();
+
+      const userBtn = document.getElementById('userRoleBtn');
+      const adminBtn = document.getElementById('adminRoleBtn');
+      const heading = document.getElementById('loginHeading');
+      const subtext = document.getElementById('loginSubtext');
+      const submitBtn = document.getElementById('submitBtn');
+      const emailInput = document.getElementById('loginEmail');
+      const passwordInput = document.getElementById('loginPassword');
+
+      // Clear any typed values when toggling roles
+      emailInput.value = '';
+      passwordInput.value = '';
+
+      if (role === 'admin') {
+        userBtn.classList.remove('active');
+        adminBtn.classList.add('active', 'admin-mode');
+        heading.textContent = 'Sanctuary Admin Console';
+        subtext.textContent = 'Sign in to access 24/7 rescue dispatch telemetry, veterinary triage & operations control.';
+        submitBtn.textContent = 'Sign In to Admin Console →';
+        submitBtn.style.background = '#111827';
+        submitBtn.style.boxShadow = '0 4px 18px rgba(17, 24, 39, 0.3)';
+        emailInput.placeholder = 'admin@gmail.com';
+      } else {
+        adminBtn.classList.remove('active', 'admin-mode');
+        userBtn.classList.add('active');
+        heading.textContent = 'Guardian & Donor Portal';
+        subtext.textContent = 'Sign in to track your sponsored rescues, active recurring pledges & tax-deductible receipts.';
+        submitBtn.textContent = 'Sign In to Guardian Dashboard →';
+        submitBtn.style.background = 'var(--primary, #FF7B29)';
+        submitBtn.style.boxShadow = '0 4px 18px rgba(255, 123, 41, 0.35)';
+        emailInput.placeholder = 'yourname@gmail.com';
+      }
+    }
+
+    function clearErrors() {
+      const emailErr = document.getElementById('emailError');
+      const passErr = document.getElementById('passwordError');
+      const emailInp = document.getElementById('loginEmail');
+      const passInp = document.getElementById('loginPassword');
+      if (emailErr) emailErr.style.display = 'none';
+      if (passErr) passErr.style.display = 'none';
+      if (emailInp) emailInp.classList.remove('input-error');
+      if (passInp) passInp.classList.remove('input-error');
+    }
+
+    function hideRememberWarning() {
+      const warningBox = document.getElementById('rememberWarning');
+      const rememberLabel = document.getElementById('rememberLabel');
+      if (warningBox) warningBox.style.display = 'none';
+      if (rememberLabel) {
+        rememberLabel.style.background = 'transparent';
+        rememberLabel.style.color = '#475569';
+      }
+    }
+
+    // Input listeners to clear validation errors in real time
+    document.getElementById('loginEmail').addEventListener('input', function() {
+      const emailErr = document.getElementById('emailError');
+      this.classList.remove('input-error');
+      if (emailErr) emailErr.style.display = 'none';
+    });
+
+    document.getElementById('loginPassword').addEventListener('input', function() {
+      const passErr = document.getElementById('passwordError');
+      this.classList.remove('input-error');
+      if (passErr) passErr.style.display = 'none';
+    });
+
+    // Check Strong Password:
+    // At least 8 chars, at least 1 uppercase, 1 lowercase, 1 digit, 1 special character
+    function isStrongPassword(pwd) {
+      if (!pwd || pwd.length < 8) return false;
+      const hasUpper = /[A-Z]/.test(pwd);
+      const hasLower = /[a-z]/.test(pwd);
+      const hasNumber = /[0-9]/.test(pwd);
+      const hasSpecial = /[@$!%*?&#^()_+\-=\[\]{}|;:,.<>]/.test(pwd);
+      return hasUpper && hasLower && hasNumber && hasSpecial;
+    }
+
+    // Form Submission with Strict Validations
+    function handleLoginSubmit(e) {
+      e.preventDefault();
+      let isValid = true;
+
+      const role = document.getElementById('selectedRole').value;
+      const emailInput = document.getElementById('loginEmail');
+      const passwordInput = document.getElementById('loginPassword');
+      const rememberMeCheck = document.getElementById('rememberMeCheck');
+
+      const emailErr = document.getElementById('emailError');
+      const passErr = document.getElementById('passwordError');
+      const warningBox = document.getElementById('rememberWarning');
+      const rememberLabel = document.getElementById('rememberLabel');
+
+      const emailVal = emailInput.value.trim().toLowerCase();
+      const passVal = passwordInput.value;
+
+      // 1. Gmail format validation: strictly @gmail.com
+      const gmailRegex = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
+      if (!emailVal || !gmailRegex.test(emailVal)) {
+        emailInput.classList.add('input-error');
+        if (emailErr) emailErr.style.display = 'block';
+        isValid = false;
+      } else {
+        emailInput.classList.remove('input-error');
+        if (emailErr) emailErr.style.display = 'none';
+      }
+
+      // 2. Strong Password validation
+      if (!isStrongPassword(passVal)) {
+        passwordInput.classList.add('input-error');
+        if (passErr) passErr.style.display = 'block';
+        isValid = false;
+      } else {
+        passwordInput.classList.remove('input-error');
+        if (passErr) passErr.style.display = 'none';
+      }
+
+      // 3. Remember Me is MANDATORY
+      if (!rememberMeCheck.checked) {
+        if (warningBox) warningBox.style.display = 'block';
+        if (rememberLabel) {
+          rememberLabel.style.background = '#FEF2F2';
+          rememberLabel.style.color = '#DC2626';
+        }
+        isValid = false;
+      } else {
+        hideRememberWarning();
+      }
+
+      if (!isValid) {
+        return false;
+      }
+
+      // Save user state to localStorage
+      localStorage.setItem('pawshaven_remember_me', 'true');
+      localStorage.setItem('pawshaven_user_role', role);
+      localStorage.setItem('pawshaven_user_email', emailVal);
+      const extractedName = emailVal.split('@')[0].replace(/[._]/g, ' ');
+      const capitalized = extractedName.charAt(0).toUpperCase() + extractedName.slice(1);
+      localStorage.setItem('pawshaven_user_name', role === 'admin' ? 'Dr. Sarah Mitchell (Admin)' : (capitalized || 'Guardian Supporter'));
+
+      // Redirect to respective dashboard
+      if (role === 'admin') {
+        window.location.href = 'admin-dashboard.html';
+      } else {
+        window.location.href = 'user-dashboard.html';
+      }
+    }
+
+    function togglePasswordVisibility(inputId, btn) {
+      const input = document.getElementById(inputId);
+      const icon = btn.querySelector('i');
+      if (input.type === 'password') {
+        input.type = 'text';
+        icon.classList.remove('ph-eye');
+        icon.classList.add('ph-eye-slash');
+        btn.style.color = 'var(--primary, #FF7B29)';
+      } else {
+        input.type = 'password';
+        icon.classList.remove('ph-eye-slash');
+        icon.classList.add('ph-eye');
+        btn.style.color = '#64748B';
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,1655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PawsHaven | Global Animal Welfare & Emergency Rescue Fund</title>
+  <meta name="description" content="Join PawsHaven in rescuing, healing, and rehoming abused, abandoned, and critically injured animals. 100% tax-deductible donation platform.">
+
+  <!-- Favicon Paw Icon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐾</text></svg>">
+
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <!-- Phosphor Icons -->
+  <script defer src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+
+  <!-- Top Announcement Notification Bar -->
+  <div class="top-bar">
+    <div class="top-bar-content">
+      <span class="badge-live"><span class="dot"></span> URGENT RESCUE ALERT</span>
+      <span>Severe cold front shelter emergency: 142 rescued animals need immediate heated bedding & trauma care.</span>
+      <a href="#campaigns" class="top-bar-link">Support Emergency Appeal <i class="ph ph-arrow-right"></i></a>
+    </div>
+  </div>
+
+  <!-- Main Navbar -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <img src="assets/logo.webp" alt="Stackly Pets Logo" style="height: 40px; width: auto;">
+      </a>
+
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link active">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="campaigns.html" class="nav-link">Campaigns</a></li>
+        <li><a href="stories.html" class="nav-link">Stories</a></li>
+        <li><a href="donate.html" class="nav-link">Donate</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-icons" style="display: flex; align-items: center; gap: 10px;">
+        <a href="login.html" class="btn btn-outline btn-nav-login" style="padding: 8px 18px; font-size: 0.9rem; font-weight: 600;">Login</a>
+        <a href="get-started.html" class="btn btn-primary btn-nav-getstarted" style="padding: 8px 18px; font-size: 0.9rem; font-weight: 600;">Get Started</a>
+        <button class="hamburger" id="hamburger" aria-label="Menu"><i class="ph ph-list"></i></button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-menu-overlay" id="mobile-menu">
+    <button class="mobile-menu-close" id="mobile-close" aria-label="Close Navigation Menu">
+      <i class="ph ph-x"></i>
+    </button>
+    <div class="logo mb-4">
+      <img src="assets/logo.webp" alt="Stackly Pets Logo" style="height: 40px; width: auto;">
+    </div>
+    <ul class="mobile-nav-menu">
+      <li><a href="index.html" class="nav-link active">Home</a></li>
+      <li><a href="about.html" class="nav-link">About</a></li>
+      <li><a href="campaigns.html" class="nav-link">Campaigns</a></li>
+      <li><a href="stories.html" class="nav-link">Stories</a></li>
+      <li><a href="donate.html" class="nav-link">Donate</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+    <div style="margin-top: auto; display: flex; flex-direction: column; gap: 12px; width: 100%; padding-top: 32px; padding-bottom: 24px;">
+      <a href="login.html" class="btn btn-outline" style="width: 100%; justify-content: center;">Login</a>
+      <a href="get-started.html" class="btn btn-primary" style="width: 100%; justify-content: center;">Get Started</a>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <!-- Ambient Floating Paw Prints -->
+    <div class="hero-ambient-paw hero-ambient-paw-1"><i class="ph-fill ph-paw-print"></i></div>
+    <div class="hero-ambient-paw hero-ambient-paw-2"><i class="ph-fill ph-paw-print"></i></div>
+    <div class="hero-ambient-paw hero-ambient-paw-3"><i class="ph-fill ph-paw-print"></i></div>
+
+    <div class="container">
+      <div class="hero-grid grid-2">
+        <!-- Left Hero Content -->
+        <div class="hero-content slide-up">
+          <div class="hero-live-pill-group">
+            <div class="badge">
+              <i class="ph-fill ph-shield-check"></i>
+              501(c)(3) Verified Animal Charity
+            </div>
+            <div class="hero-pulse-status">
+              <span class="dot-live"></span>
+              <span>14 Active Rescues Today</span>
+            </div>
+          </div>
+
+          <h1 class="hero-title">
+            Every Paw Deserves a Voice, <span class="hero-gradient-text">Every Life a Safe Home.</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            We rescue, heal, and rehabilitate abused, abandoned, and critically injured animals 24/7. Your kindness directly funds emergency surgeries, specialized nutrition, and zero-kill forever adoptions.
+          </p>
+
+          <!-- Quick Donation Impact Selector -->
+          <div class="hero-quick-gifts">
+            <span class="quick-gift-label">
+              <i class="ph-fill ph-lightning" style="color: var(--primary);"></i> Instant Impact — Choose a Quick Gift:
+            </span>
+            <div class="quick-gift-pills">
+              <button type="button" class="quick-pill" data-amount="15" onclick="window.location.href=\'404.html\'">$15 <span style="font-weight: 400; font-size: 0.78rem;">(Warm Meals)</span></button>
+              <button type="button" class="quick-pill active" data-amount="35" onclick="window.location.href=\'404.html\'">$35 <span style="font-weight: 400; font-size: 0.78rem;">(Vaccines)</span></button>
+              <button type="button" class="quick-pill" data-amount="50" onclick="window.location.href=\'404.html\'">$50 <span style="font-weight: 400; font-size: 0.78rem;">(Urgent Meds)</span></button>
+              <button type="button" class="quick-pill" data-amount="100" onclick="window.location.href=\'404.html\'">$100 <span style="font-weight: 400; font-size: 0.78rem;">(Surgical Care)</span></button>
+            </div>
+          </div>
+
+          <div class="hero-actions">
+            <button onclick="window.location.href='404.html'" class="btn btn-primary btn-lg pulse-glow action-to-404" id="hero-donate-btn" data-campaign-title="Emergency Animal Rescue Fund" data-donate-amount="35" onclick="window.location.href=\'404.html\'">
+              <i class="ph-fill ph-heart icon-wiggle"></i> Donate $35 Urgent Care
+            </button>
+            <a href="404.html" class="btn btn-outline btn-lg">
+              <i class="ph-fill ph-play-circle" style="color: var(--primary);"></i> Watch Miracle Stories
+            </a>
+          </div>
+
+          <!-- Social Proof Avatar Stack -->
+          <div class="hero-social-proof">
+            <div class="avatar-stack">
+              <img src="assets/images/avatar-elena.webp" alt="Donor Elena R." title="Elena R. - Monthly Guardian">
+              <img src="assets/images/avatar-marcus.webp" alt="Donor Marcus T." title="Marcus T. - Rescue Hero">
+              <img src="assets/images/avatar-sophia.webp" alt="Donor Sophia K." title="Sophia K. - Life Saver">
+              <div class="avatar-more">+45k</div>
+            </div>
+            <div>
+              <div class="stars-row-sm">
+                <i class="ph-fill ph-star"></i>
+                <i class="ph-fill ph-star"></i>
+                <i class="ph-fill ph-star"></i>
+                <i class="ph-fill ph-star"></i>
+                <i class="ph-fill ph-star"></i>
+                <strong>4.9/5 TrustScore</strong>
+              </div>
+              <span style="font-size: 0.8rem; color: var(--text-light);">Backed by 45,000+ compassionate animal lovers</span>
+            </div>
+          </div>
+
+          <!-- Social Proof & Impact Stats -->
+          <div class="hero-stats-row">
+            <div class="hero-stat-item">
+              <span class="hero-stat-number counter-val" data-target="14850" data-suffix="+">14,850+</span>
+              <span class="hero-stat-label">Animals Rescued</span>
+            </div>
+            <div class="hero-stat-item">
+              <span class="hero-stat-number counter-val" data-target="99" data-suffix=".2%">99.2%</span>
+              <span class="hero-stat-label">Direct Care Rating</span>
+            </div>
+            <div class="hero-stat-item">
+              <span class="hero-stat-number counter-val" data-target="350" data-suffix="K+">350K+</span>
+              <span class="hero-stat-label">Warm Meals Served</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Hero Media Composite with Floating Badges & Live Urgent Case -->
+        <div class="hero-media fade-in delay-200">
+          <div class="hero-media-wrapper">
+            <img src="assets/images/hero-dog-cat.webp" 
+                 alt="Rescued joyful golden retriever and companion cat" 
+                 class="hero-img-main">
+
+            <!-- Floating Badge 1: Lives Saved -->
+            <div class="floating-badge floating-badge-1 floating-slow">
+              <div class="floating-badge-icon heart">
+                <i class="ph-fill ph-heart"></i>
+              </div>
+              <div>
+                <p class="floating-badge-title" style="margin: 0;">14,850+ Lives Saved</p>
+                <span class="floating-badge-sub">Over 9,400 adoptions</span>
+              </div>
+            </div>
+
+            <!-- Floating Badge 2: Emergency Vet Dispatch -->
+            <div class="floating-badge floating-badge-2 floating-reverse">
+              <div class="floating-badge-icon emergency">
+                <i class="ph-fill ph-first-aid"></i>
+              </div>
+              <div>
+                <div style="display: flex; align-items: center; gap: 6px;">
+                  <span class="dot" style="width: 8px; height: 8px; border-radius: 50%; background: #EF4444; display: inline-block;"></span>
+                  <p class="floating-badge-title" style="margin: 0;">24/7 Mobile Vet Squad</p>
+                </div>
+                <span class="floating-badge-sub">Active response underway</span>
+              </div>
+            </div>
+
+            <!-- Floating Badge 3: Certified Charity Rating -->
+            <div class="floating-badge floating-badge-3 floating">
+              <div class="floating-badge-icon gold">
+                <i class="ph-fill ph-seal-check"></i>
+              </div>
+              <div>
+                <p class="floating-badge-title" style="margin: 0;">Platinum Rated</p>
+                <span class="floating-badge-sub">100% Tax Deductible</span>
+              </div>
+            </div>
+
+            <!-- Live Urgent Case Mini-Card Overlay -->
+            <div onclick="window.location.href='404.html'" class="hero-case-card action-to-404" data-campaign-title="Emergency Surgery for Buster" data-donate-amount="50" title="Click to support Buster's surgery">
+              <div class="case-thumb">
+                <img src="assets/images/campaign-buster.webp" alt="Buster the Golden Retriever">
+              </div>
+              <div class="case-info">
+                <span class="case-tag"><i class="ph-fill ph-flame"></i> Urgent Case</span>
+                <span class="case-title">Buster's Spinal Surgery</span>
+                <div class="case-mini-bar">
+                  <div class="case-mini-fill" style="width: 81%;"></div>
+                </div>
+              </div>
+              <div class="case-action-btn">
+                <i class="ph-bold ph-heart"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Animated Infinite Marquee Ticker -->
+  <div class="marquee-container fade-in">
+    <div class="marquee-content">
+      <div class="marquee-item"><i class="ph-fill ph-paw-print"></i> 14,850+ Animals Rescued</div>
+      <div class="marquee-item"><i class="ph-fill ph-shield-check"></i> 100% Tax-Deductible 501(c)(3)</div>
+      <div class="marquee-item"><i class="ph-fill ph-heartbeat"></i> 24/7 Rapid Ambulance Response</div>
+      <div class="marquee-item"><i class="ph-fill ph-bowl-food"></i> 350,000+ Nutritious Meals Provided</div>
+      <div class="marquee-item"><i class="ph-fill ph-house-line"></i> Zero-Kill Sanctuary Network</div>
+      <div class="marquee-item"><i class="ph-fill ph-star"></i> GuideStar Platinum Transparency</div>
+      <div class="marquee-item"><i class="ph-fill ph-paw-print"></i> 14,850+ Animals Rescued</div>
+      <div class="marquee-item"><i class="ph-fill ph-shield-check"></i> 100% Tax-Deductible 501(c)(3)</div>
+      <div class="marquee-item"><i class="ph-fill ph-heartbeat"></i> 24/7 Rapid Ambulance Response</div>
+      <div class="marquee-item"><i class="ph-fill ph-bowl-food"></i> 350,000+ Nutritious Meals Provided</div>
+      <div class="marquee-item"><i class="ph-fill ph-house-line"></i> Zero-Kill Sanctuary Network</div>
+      <div class="marquee-item"><i class="ph-fill ph-star"></i> GuideStar Platinum Transparency</div>
+    </div>
+  </div>
+
+  <!-- Four Pillars of Impact Section -->
+  <section class="section">
+    <div class="container">
+      <div class="grid-4 slide-up">
+        <div class="pillar-card">
+          <div class="pillar-icon-box danger">
+            <i class="ph-fill ph-siren"></i>
+          </div>
+          <div>
+            <h4 style="margin-bottom: 6px;">Emergency Rescue</h4>
+            <p style="font-size: 0.9rem; margin: 0;">Rapid response ambulance fleet saving road-hit, trapped, and abused animals.</p>
+          </div>
+        </div>
+
+        <div class="pillar-card">
+          <div class="pillar-icon-box emerald">
+            <i class="ph-fill ph-first-aid-kit"></i>
+          </div>
+          <div>
+            <h4 style="margin-bottom: 6px;">Critical Medical Care</h4>
+            <p style="font-size: 0.9rem; margin: 0;">Specialized trauma surgeries, rehabilitation therapy, and vaccinations.</p>
+          </div>
+        </div>
+
+        <div class="pillar-card">
+          <div class="pillar-icon-box orange">
+            <i class="ph-fill ph-bowl-food"></i>
+          </div>
+          <div>
+            <h4 style="margin-bottom: 6px;">Sanctuary & Nutrition</h4>
+            <p style="font-size: 0.9rem; margin: 0;">Comfortable heated kennels, medical diets, and continuous loving care.</p>
+          </div>
+        </div>
+
+        <div class="pillar-card">
+          <div class="pillar-icon-box amber">
+            <i class="ph-fill ph-house-line"></i>
+          </div>
+          <div>
+            <h4 style="margin-bottom: 6px;">Loving Forever Homes</h4>
+            <p style="font-size: 0.9rem; margin: 0;">Rigorous vetting, home matching, and post-adoption support for every pet.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Urgent Campaigns / Featured Fundraisers Section -->
+  <section class="section section-alt" id="campaigns">
+    <div class="container">
+      <div class="section-header fade-in">
+        <div>
+          <div class="badge badge-danger">
+            <i class="ph-fill ph-flame"></i> Active Emergency Appeals
+          </div>
+          <h2>Urgent Rescue Fundraisers</h2>
+          <p class="section-subtitle" style="margin: 0;">
+            These vulnerable animals require immediate medical care and nutrition. 100% of your gift goes straight to their treatment.
+          </p>
+        </div>
+        <a href="404.html" class="btn btn-outline" style="border-color: var(--primary); color: var(--primary); font-weight: 700;">
+          View All Appeals <i class="ph ph-arrow-right"></i>
+        </a>
+      </div>
+
+      <div class="grid-3">
+        <!-- Campaign 1: Buster the Golden Retriever -->
+        <div class="campaign-card slide-up delay-100">
+          <div class="campaign-image-box">
+            <img src="assets/images/campaign-buster.webp" alt="Buster the Golden Retriever">
+            <span class="campaign-tag-badge" style="background: rgba(220, 38, 38, 0.9);">
+              <i class="ph-fill ph-first-aid"></i> Critical Surgery
+            </span>
+            <span class="campaign-days-badge">
+              <i class="ph ph-clock"></i> 3 Days Left
+            </span>
+          </div>
+
+          <div class="campaign-body">
+            <h3 class="campaign-title">Urgent Hip Trauma Surgery for Buster</h3>
+            <p class="campaign-desc">
+              Rescued from a severe road collision, 3-year-old Buster needs bilateral pelvic reconstruction surgery and intensive post-op physiotherapy.
+            </p>
+
+            <div class="progress-container">
+              <div class="progress-info">
+                <span class="progress-raised">$4,850 <span style="font-weight: 500; font-size: 0.85rem; color: var(--text-light);">raised</span></span>
+                <span class="progress-goal">Goal: $6,000 (81%)</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill emergency" data-progress="81%"></div>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 8px; margin-bottom: 16px;">
+              <button onclick="window.location.href='404.html'" class="btn btn-outline btn-sm action-to-404" data-campaign-title="Buster's Surgery" data-donate-amount="25" style="flex: 1;">$25</button>
+              <button onclick="window.location.href='404.html'" class="btn btn-outline btn-sm action-to-404" data-campaign-title="Buster's Surgery" data-donate-amount="50" style="flex: 1;">$50</button>
+              <button onclick="window.location.href='404.html'" class="btn btn-outline btn-sm action-to-404" data-campaign-title="Buster's Surgery" data-donate-amount="100" style="flex: 1;">$100</button>
+            </div>
+
+            <button onclick="window.location.href='404.html'" class="btn btn-emergency action-to-404" data-campaign-title="Urgent Surgery for Buster" style="width: 100%;">
+              <i class="ph-fill ph-heart"></i> Save Buster
+            </button>
+
+            <div class="campaign-meta">
+              <span class="campaign-donors"><i class="ph ph-users"></i> 142 Donors</span>
+              <span style="font-size: 0.82rem; color: var(--emerald-dark); font-weight: 700;">Verified Vet Case</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Campaign 2: Orphaned Kitten Nursery Ward -->
+        <div class="campaign-card slide-up delay-200">
+          <div class="campaign-image-box">
+            <img src="assets/images/campaign-kittens.webp" alt="Rescued orphaned kittens">
+            <span class="campaign-tag-badge" style="background: rgba(16, 185, 129, 0.9);">
+              <i class="ph-fill ph-baby"></i> Nursery & Parvo
+            </span>
+            <span class="campaign-days-badge">
+              <i class="ph ph-clock"></i> 6 Days Left
+            </span>
+          </div>
+
+          <div class="campaign-body">
+            <h3 class="campaign-title">Stray Kitten Nursery & Intensive Care</h3>
+            <p class="campaign-desc">
+              Providing round-the-clock neonatal incubators, specialized kitten formula, and life-saving parvo anti-serum for 28 orphaned kittens.
+            </p>
+
+            <div class="progress-container">
+              <div class="progress-info">
+                <span class="progress-raised">$8,200 <span style="font-weight: 500; font-size: 0.85rem; color: var(--text-light);">raised</span></span>
+                <span class="progress-goal">Goal: $10,000 (82%)</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill" data-progress="82%"></div>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 8px; margin-bottom: 16px;">
+              <button onclick="window.location.href='404.html'" class="btn btn-outline btn-sm action-to-404" data-campaign-title="Kitten Nursery" data-donate-amount="20" style="flex: 1;">$20</button>
+              <button onclick="window.location.href='404.html'" class="btn btn-outline btn-sm action-to-404" data-campaign-title="Kitten Nursery" data-donate-amount="50" style="flex: 1;">$50</button>
+              <button onclick="window.location.href='404.html'" class="btn btn-outline btn-sm action-to-404" data-campaign-title="Kitten Nursery" data-donate-amount="150" style="flex: 1;">$150</button>
+            </div>
+
+            <button onclick="window.location.href='404.html'" class="btn btn-primary action-to-404" data-campaign-title="Stray Kitten Nursery Ward" style="width: 100%;">
+              <i class="ph-fill ph-heart"></i> Feed & Nurse Kittens
+            </button>
+
+            <div class="campaign-meta">
+              <span class="campaign-donors"><i class="ph ph-users"></i> 260 Donors</span>
+              <span style="font-size: 0.82rem; color: var(--emerald-dark); font-weight: 700;">28 Kittens in Care</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Campaign 3: Winter Warmth & Shelter Insulation -->
+        <div class="campaign-card slide-up delay-300">
+          <div class="campaign-image-box">
+            <img src="assets/images/campaign-shelter.webp" alt="Shelter dogs resting warmly">
+            <span class="campaign-tag-badge" style="background: rgba(59, 130, 246, 0.9);">
+              <i class="ph-fill ph-snowflake"></i> Winter Shelter
+            </span>
+            <span class="campaign-days-badge">
+              <i class="ph ph-clock"></i> 12 Days Left
+            </span>
+          </div>
+
+          <div class="campaign-body">
+            <h3 class="campaign-title">Winter Thermal Bedding & Heat Lamps</h3>
+            <p class="campaign-desc">
+              Installing weather-proof insulation curtains, infrared radiant heaters, and orthopedic fleece bedding for 320 sanctuary rescue dogs.
+            </p>
+
+            <div class="progress-container">
+              <div class="progress-info">
+                <span class="progress-raised">$12,400 <span style="font-weight: 500; font-size: 0.85rem; color: var(--text-light);">raised</span></span>
+                <span class="progress-goal">Goal: $15,000 (83%)</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill" data-progress="83%"></div>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 8px; margin-bottom: 16px;">
+              <button onclick="window.location.href='404.html'" class="btn btn-outline btn-sm action-to-404" data-campaign-title="Winter Shelter" data-donate-amount="35" style="flex: 1;">$35</button>
+              <button onclick="window.location.href='404.html'" class="btn btn-outline btn-sm action-to-404" data-campaign-title="Winter Shelter" data-donate-amount="75" style="flex: 1;">$75</button>
+              <button onclick="window.location.href='404.html'" class="btn btn-outline btn-sm action-to-404" data-campaign-title="Winter Shelter" data-donate-amount="200" style="flex: 1;">$200</button>
+            </div>
+
+            <button onclick="window.location.href='404.html'" class="btn btn-primary action-to-404" data-campaign-title="Winter Warmth Sanctuary Appeal" style="width: 100%;">
+              <i class="ph-fill ph-heart"></i> Provide Warmth
+            </button>
+
+            <div class="campaign-meta">
+              <span class="campaign-donors"><i class="ph ph-users"></i> 410 Donors</span>
+              <span style="font-size: 0.82rem; color: var(--emerald-dark); font-weight: 700;">320 Animals Protected</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       NEW SECTION 1: Care Across Every Stage of Recovery (Interactive Tabs)
+       ========================================================================= -->
+  <section class="section" style="padding-top: 20px;">
+    <div class="container fade-in">
+      <div class="section-header text-center" style="margin-bottom: 24px;">
+        <div class="badge badge-emerald">
+          <i class="ph-fill ph-heartbeat"></i> Comprehensive Recovery
+        </div>
+        <h2>Specialized Care by Rescue Stage</h2>
+        <p class="section-subtitle">
+          Every animal that enters our doors requires targeted medical intervention and age-specific nutrition. Explore how our veterinary teams support each stage of life.
+        </p>
+      </div>
+
+      <div class="tabs-header slide-up">
+        <button class="tab-btn active" data-target="stage-nursery">
+          <i class="ph-fill ph-baby"></i> Neonatal & Nursery (0–8 Weeks)
+        </button>
+        <button class="tab-btn" data-target="stage-trauma">
+          <i class="ph-fill ph-first-aid"></i> Emergency Trauma & Surgery
+        </button>
+        <button class="tab-btn" data-target="stage-senior">
+          <i class="ph-fill ph-house-heart"></i> Senior & Special Needs (7+ Yrs)
+        </button>
+      </div>
+
+      <!-- Tab 1: Neonatal -->
+      <div class="tab-pane active" id="stage-nursery">
+        <div class="grid-2" style="align-items: center; gap: 40px; background: var(--bg-alt); padding: 44px; border-radius: var(--radius-lg); border: 1px solid var(--border-color);">
+          <div>
+            <div class="badge badge-amber" style="margin-bottom: 12px;">Infant Intensive Care</div>
+            <h3 style="font-size: 2rem; margin-bottom: 16px;">Saving The Most Fragile Paws</h3>
+            <p style="margin-bottom: 22px; color: var(--text-dark); line-height: 1.65;">
+              Orphaned neonates have immature immune systems and cannot regulate body heat. Our specialized neonatal wing operates 24 hours a day with constant feeding schedules and parvo prevention.
+            </p>
+            <ul style="margin-bottom: 30px; list-style: none; padding: 0; display: flex; flex-direction: column; gap: 10px;">
+              <li style="display: flex; align-items: center; gap: 10px; font-weight: 600;"><i class="ph-fill ph-check-circle text-primary" style="font-size: 1.25rem;"></i> Oxygen-enriched incubator chambers & heating discs</li>
+              <li style="display: flex; align-items: center; gap: 10px; font-weight: 600;"><i class="ph-fill ph-check-circle text-primary" style="font-size: 1.25rem;"></i> Syringe feeding every 2 hours with maternal colostrum formula</li>
+              <li style="display: flex; align-items: center; gap: 10px; font-weight: 600;"><i class="ph-fill ph-check-circle text-primary" style="font-size: 1.25rem;"></i> Early pediatric deworming and gentle thermal bathing</li>
+            </ul>
+            <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+              <button onclick="window.location.href='404.html'" class="btn btn-primary action-to-404" data-campaign-title="Neonatal Nursery Sponsorship ($20)" data-donate-amount="20">
+                <i class="ph-fill ph-heart"></i> Sponsor a Nursery Bed ($20)
+              </button>
+              <a href="404.html" class="btn btn-outline">Read Kitten Luna's Story &rarr;</a>
+            </div>
+          </div>
+          <div>
+            <img src="assets/images/community-kittens.webp" alt="Neonatal kitten nursery" style="width: 100%; height: 380px; border-radius: var(--radius-md); box-shadow: var(--shadow-md); object-fit: cover; object-position: center 20%; display: block;">
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 2: Trauma & Surgery -->
+      <div class="tab-pane" id="stage-trauma">
+        <div class="grid-2" style="align-items: center; gap: 40px; background: var(--bg-alt); padding: 44px; border-radius: var(--radius-lg); border: 1px solid var(--border-color);">
+          <div>
+            <div class="badge badge-danger" style="margin-bottom: 12px;">Acute Surgical Triage</div>
+            <h3 style="font-size: 2rem; margin-bottom: 16px;">Immediate Relief for Road Trauma</h3>
+            <p style="margin-bottom: 22px; color: var(--text-dark); line-height: 1.65;">
+              Victims of vehicle accidents, animal cruelty, and deep lacerations arrive in acute pain. Our surgical squad provides emergency fluid resuscitation, digital X-rays, and bone stabilization.
+            </p>
+            <ul style="margin-bottom: 30px; list-style: none; padding: 0; display: flex; flex-direction: column; gap: 10px;">
+              <li style="display: flex; align-items: center; gap: 10px; font-weight: 600;"><i class="ph-fill ph-check-circle text-primary" style="font-size: 1.25rem;"></i> Immediate IV analgesia & trauma shock mitigation</li>
+              <li style="display: flex; align-items: center; gap: 10px; font-weight: 600;"><i class="ph-fill ph-check-circle text-primary" style="font-size: 1.25rem;"></i> Orthopedic pin fixation & pelvic reconstructive surgery</li>
+              <li style="display: flex; align-items: center; gap: 10px; font-weight: 600;"><i class="ph-fill ph-check-circle text-primary" style="font-size: 1.25rem;"></i> Cold-laser wound therapy & postoperative hydro-rehab</li>
+            </ul>
+            <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+              <button onclick="window.location.href='404.html'" class="btn btn-emergency action-to-404" data-campaign-title="Emergency Trauma Surgery Fund ($50)" data-donate-amount="50">
+                <i class="ph-fill ph-heart"></i> Fund Trauma Care ($50)
+              </button>
+              <a href="404.html" class="btn btn-outline">Read Barnaby's Surgery &rarr;</a>
+            </div>
+          </div>
+          <div>
+            <img src="assets/images/campaign-buster.webp" alt="Trauma surgery recovery dog" style="width: 100%; height: 380px; border-radius: var(--radius-md); box-shadow: var(--shadow-md); object-fit: cover; object-position: center; display: block;">
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 3: Senior Sanctuary -->
+      <div class="tab-pane" id="stage-senior">
+        <div class="grid-2" style="align-items: center; gap: 40px; background: var(--bg-alt); padding: 44px; border-radius: var(--radius-lg); border: 1px solid var(--border-color);">
+          <div>
+            <div class="badge badge-emerald" style="margin-bottom: 12px;">Lifetime Sanctuary Dignity</div>
+            <h3 style="font-size: 2rem; margin-bottom: 16px;">Golden Years Filled with Love</h3>
+            <p style="margin-bottom: 22px; color: var(--text-dark); line-height: 1.65;">
+              Older pets surrendered due to age or chronic mobility issues are cherished members of our sanctuary family. We give them soothing therapeutic environments where they never worry again.
+            </p>
+            <ul style="margin-bottom: 30px; list-style: none; padding: 0; display: flex; flex-direction: column; gap: 10px;">
+              <li style="display: flex; align-items: center; gap: 10px; font-weight: 600;"><i class="ph-fill ph-check-circle text-primary" style="font-size: 1.25rem;"></i> Custom rear-wheel mobility carts & low-impact exercise</li>
+              <li style="display: flex; align-items: center; gap: 10px; font-weight: 600;"><i class="ph-fill ph-check-circle text-primary" style="font-size: 1.25rem;"></i> Daily glucosamine joint chews & gentle palliative comfort</li>
+              <li style="display: flex; align-items: center; gap: 10px; font-weight: 600;"><i class="ph-fill ph-check-circle text-primary" style="font-size: 1.25rem;"></i> Orthopedic memory foam beds with temperature regulation</li>
+            </ul>
+            <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+              <button onclick="window.location.href='404.html'" class="btn btn-primary action-to-404" data-campaign-title="Senior Sanctuary Pet Sponsorship ($35)" data-donate-amount="35">
+                <i class="ph-fill ph-heart"></i> Sponsor a Senior Pet ($35)
+              </button>
+              <a href="404.html" class="btn btn-outline">Meet Sanctuary Seniors &rarr;</a>
+            </div>
+          </div>
+          <div>
+            <img src="assets/images/pet-oliver.webp" alt="Senior wheelchair dog Oliver" style="width: 100%; height: 380px; border-radius: var(--radius-md); box-shadow: var(--shadow-md); object-fit: cover; object-position: center; display: block;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive "See Your Life-Saving Impact" Calculator -->
+  <section class="section">
+    <div class="container container-narrow">
+      <div class="section-header text-center fade-in">
+        <div class="badge badge-emerald">
+          <i class="ph-fill ph-calculator"></i> Transparent Impact
+        </div>
+        <h2>See What Your Generosity Accomplishes</h2>
+        <p class="section-subtitle">
+          Every single dollar translates directly into tangible medical aid, nutrition, and comfort for rescued pets.
+        </p>
+      </div>
+
+      <div class="impact-calculator-card scale-in">
+        <div class="impact-amount-display">
+          <span class="impact-currency">$</span>
+          <span class="impact-val" id="impact-val">75</span>
+        </div>
+
+        <!-- Slider Control -->
+        <div class="calculator-slider-wrap">
+          <input type="range" class="range-slider" id="impact-slider" min="15" max="500" step="10" value="75">
+        </div>
+
+        <!-- Quick Select Preset Pills -->
+        <div class="preset-pill-group">
+          <button class="preset-pill impact-preset-pill" data-val="15">$15 (Food)</button>
+          <button class="preset-pill impact-preset-pill" data-val="35">$35 (Vaccines)</button>
+          <button class="preset-pill impact-preset-pill active" data-val="75">$75 (Trauma Care)</button>
+          <button class="preset-pill impact-preset-pill" data-val="150">$150 (Spay/Neuter)</button>
+          <button class="preset-pill impact-preset-pill" data-val="300">$300 (Surgery)</button>
+          <button class="preset-pill impact-preset-pill" data-val="500">$500 (Sanctuary)</button>
+        </div>
+
+        <!-- Dynamic Outcome Box -->
+        <div class="impact-outcome-box">
+          <h4 class="impact-outcome-title" id="impact-outcome-title">
+            🩹 Emergency Trauma & Pain Relief
+          </h4>
+          <p class="impact-outcome-desc" id="impact-outcome-desc">
+            Covers emergency ambulance rescue response, sterile wound dressing, IV antibiotics, and 24-hr veterinary observation.
+          </p>
+        </div>
+
+        <div style="text-align: center;">
+          <button class="btn btn-primary btn-lg" id="impact-donate-btn" onclick="window.location.href=\'404.html\'">
+            <i class="ph-fill ph-heart"></i> Donate This Impact Now
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       NEW SECTION 2: Tangible Rescue & Medical Supply Wishlist (Card Grid)
+       ========================================================================= -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header fade-in">
+        <div>
+          <div class="badge badge-amber">
+            <i class="ph-fill ph-gift"></i> Tangible Supply Registry
+          </div>
+          <h2>Urgent Rescue Medical & Warmth Wishlist</h2>
+          <p class="section-subtitle" style="margin: 0;">
+            Want to know exactly where your support goes? Choose a high-priority item below to ship directly to our veterinary triage clinic.
+          </p>
+        </div>
+        <a href="404.html" class="btn btn-outline" style="border-color: var(--primary); color: var(--primary); font-weight: 700;">
+          View Full Registry <i class="ph ph-arrow-right"></i>
+        </a>
+      </div>
+
+      <div class="grid-4">
+        <!-- Item 1: Trauma Kit -->
+        <div class="card product-card fade-in delay-100">
+          <div class="product-image">
+            <img src="assets/images/supply-suture-kit.webp" alt="Emergency Suture & Field Kit">
+            <button onclick="window.location.href='404.html'" class="btn-icon action-to-404" data-campaign-title="Emergency Suture Kit Gift ($25)" data-donate-amount="25" style="position: absolute; top: 12px; right: 12px; width: 34px; height: 34px;" title="Gift this item"><i class="ph-fill ph-heart text-danger"></i></button>
+          </div>
+          <div class="product-info">
+            <h4>Emergency Suture & Field Kit</h4>
+            <div class="rating-stars">
+              <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+              <span style="color: var(--text-light); margin-left: 4px; font-size: 0.8rem;">(184 Sent)</span>
+            </div>
+            <p style="font-size: 0.85rem; color: var(--text-light); margin-bottom: 12px;">Sterile surgical suturing packs, antiseptic washes & trauma gauze for mobile ambulance.</p>
+            <div class="product-bottom-row">
+              <span class="product-price">$25.00</span>
+              <button onclick="window.location.href='404.html'" class="btn btn-primary btn-sm action-to-404" data-campaign-title="Emergency Suture & Field Kit ($25)" data-donate-amount="25">
+                <i class="ph ph-gift"></i> Send Kit
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 2: Neonatal Incubator Pack -->
+        <div class="card product-card fade-in delay-200">
+          <div class="product-image">
+            <img src="assets/images/supply-incubator.webp" alt="Neonatal Kitten Incubator Pack">
+            <button onclick="window.location.href='404.html'" class="btn-icon action-to-404" data-campaign-title="Kitten Incubator Pack ($45)" data-donate-amount="45" style="position: absolute; top: 12px; right: 12px; width: 34px; height: 34px;" title="Gift this item"><i class="ph-fill ph-heart text-danger"></i></button>
+          </div>
+          <div class="product-info">
+            <h4>Neonatal Incubator Pack</h4>
+            <div class="rating-stars">
+              <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+              <span style="color: var(--text-light); margin-left: 4px; font-size: 0.8rem;">(260 Sent)</span>
+            </div>
+            <p style="font-size: 0.85rem; color: var(--text-light); margin-bottom: 12px;">Oxygen-safe warming enclosure plus 30-day supply of kitten milk replacer.</p>
+            <div class="product-bottom-row">
+              <span class="product-price">$45.00</span>
+              <button onclick="window.location.href='404.html'" class="btn btn-primary btn-sm action-to-404" data-campaign-title="Neonatal Kitten Incubator Pack ($45)" data-donate-amount="45">
+                <i class="ph ph-gift"></i> Send Pack
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 3: Heated Orthopedic Bed -->
+        <div class="card product-card fade-in delay-300">
+          <div class="product-image">
+            <img src="assets/images/supply-heated-bed.webp" alt="Heated Orthopedic Kennel Pad">
+            <button onclick="window.location.href='404.html'" class="btn-icon action-to-404" data-campaign-title="Heated Kennel Bed ($60)" data-donate-amount="60" style="position: absolute; top: 12px; right: 12px; width: 34px; height: 34px;" title="Gift this item"><i class="ph-fill ph-heart text-danger"></i></button>
+          </div>
+          <div class="product-info">
+            <h4>Heated Orthopedic Bed</h4>
+            <div class="rating-stars">
+              <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star-half"></i>
+              <span style="color: var(--text-light); margin-left: 4px; font-size: 0.8rem;">(315 Sent)</span>
+            </div>
+            <p style="font-size: 0.85rem; color: var(--text-light); margin-bottom: 12px;">Low-voltage waterproof radiant heat pad with memory foam for arthritic rescue dogs.</p>
+            <div class="product-bottom-row">
+              <span class="product-price">$60.00</span>
+              <button onclick="window.location.href='404.html'" class="btn btn-primary btn-sm action-to-404" data-campaign-title="Heated Orthopedic Kennel Bed ($60)" data-donate-amount="60">
+                <i class="ph ph-gift"></i> Send Bed
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 4: Vaccine Armor Pack -->
+        <div class="card product-card fade-in delay-400">
+          <div class="product-image">
+            <img src="assets/images/supply-vaccine-pack.webp" alt="Complete Core Vaccine Pack">
+            <button onclick="window.location.href='404.html'" class="btn-icon action-to-404" data-campaign-title="Core Vaccine Armor Pack ($35)" data-donate-amount="35" style="position: absolute; top: 12px; right: 12px; width: 34px; height: 34px;" title="Gift this item"><i class="ph-fill ph-heart text-danger"></i></button>
+          </div>
+          <div class="product-info">
+            <h4>Core Vaccine Armor Pack</h4>
+            <div class="rating-stars">
+              <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+              <span style="color: var(--text-light); margin-left: 4px; font-size: 0.8rem;">(520 Sent)</span>
+            </div>
+            <p style="font-size: 0.85rem; color: var(--text-light); margin-bottom: 12px;">Full DHPP & Rabies inoculations, broad-spectrum dewormers, and universal microchip.</p>
+            <div class="product-bottom-row">
+              <span class="product-price">$35.00</span>
+              <button onclick="window.location.href='404.html'" class="btn btn-primary btn-sm action-to-404" data-campaign-title="Complete Core Vaccine Pack ($35)" data-donate-amount="35">
+                <i class="ph ph-gift"></i> Send Pack
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Miracle Transformations: Before & After Stories (Tabbed Interface) -->
+  <section class="section section-cream" id="stories">
+    <div class="container">
+      <div class="section-header text-center fade-in">
+        <div class="badge">
+          <i class="ph-fill ph-sparkle"></i> Miracle Recoveries
+        </div>
+        <h2>From Broken to Beloved: The Power of Your Love</h2>
+        <p class="section-subtitle">
+          Real animals whose lives were turned around because compassionate donors refused to give up on them.
+        </p>
+      </div>
+
+      <div class="tabs-wrapper slide-up">
+        <!-- Tab Navigation Buttons -->
+        <div class="tabs-nav">
+          <button class="tab-btn active" data-target="tab-barnaby">
+            <i class="ph-fill ph-paw-print"></i> Barnaby (Shepherd)
+          </button>
+          <button class="tab-btn" data-target="tab-luna">
+            <i class="ph-fill ph-cat"></i> Luna (Calico Kitten)
+          </button>
+          <button class="tab-btn" data-target="tab-leo">
+            <i class="ph-fill ph-dog"></i> Leo (Beagle)
+          </button>
+        </div>
+
+        <!-- Tab 1: Barnaby -->
+        <div class="tab-content-pane active" id="tab-barnaby">
+          <div class="transformation-card">
+            <div class="before-after-grid">
+              <div class="before-box">
+                <img src="assets/images/barnaby-before.webp" alt="Barnaby before rescue">
+                <span class="state-badge before">Before Rescue: Malnourished</span>
+              </div>
+              <div class="after-box">
+                <img src="assets/images/barnaby-after.webp" alt="Barnaby after full recovery">
+                <span class="state-badge after">Today: Joyful Therapy Companion</span>
+              </div>
+            </div>
+            <div class="transformation-details">
+              <div class="pet-rescue-meta">
+                <span class="meta-chip"><i class="ph-fill ph-calendar"></i> Rescued: Nov 2025</span>
+                <span class="meta-chip"><i class="ph-fill ph-clock"></i> Recovery: 4 Months</span>
+                <span class="meta-chip"><i class="ph-fill ph-house-heart"></i> Status: Happily Adopted</span>
+              </div>
+              <h3 style="font-size: 1.8rem; margin-bottom: 12px;">Barnaby's Journey to Joy</h3>
+              <p>
+                Found shivering on an icy interstate shoulder weighing under 24 pounds, Barnaby was suffering from severe mange, hip trauma, and dehydration. Thanks to 128 donors who funded his orthopedic care and medicated baths, Barnaby gained 32 healthy pounds and passed his official certified therapy dog training.
+              </p>
+              <div style="display: flex; gap: 16px; align-items: center; margin-top: 24px;">
+                <button onclick="window.location.href='404.html'" class="btn btn-primary action-to-404" data-campaign-title="Support Rescues Like Barnaby">
+                  <i class="ph-fill ph-heart"></i> Help Another Stray Like Barnaby
+                </button>
+                <a href="404.html" class="btn btn-outline">Read Full Chronicle &rarr;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 2: Luna -->
+        <div class="tab-content-pane" id="tab-luna">
+          <div class="transformation-card">
+            <div class="before-after-grid">
+              <div class="before-box">
+                <img src="assets/images/luna-before.webp" alt="Luna rescued in palm of hand">
+                <span class="state-badge before">Found in Drainage Pipe</span>
+              </div>
+              <div class="after-box">
+                <img src="assets/images/luna-after.webp" alt="Luna healthy and playful">
+                <span class="state-badge after">Today: Healthy & Pampered</span>
+              </div>
+            </div>
+            <div class="transformation-details">
+              <div class="pet-rescue-meta">
+                <span class="meta-chip"><i class="ph-fill ph-calendar"></i> Rescued: Jan 2026</span>
+                <span class="meta-chip"><i class="ph-fill ph-clock"></i> Recovery: 60 Days</span>
+                <span class="meta-chip"><i class="ph-fill ph-house-heart"></i> Status: Forever Foster Adopted</span>
+              </div>
+              <h3 style="font-size: 1.8rem; margin-bottom: 12px;">Luna: From 200 Grams to Queen of the House</h3>
+              <p>
+                Luna was found by municipal workers trapped inside a frozen stormwater pipe at only 3 weeks old with an acute respiratory infection. Intensive nebulizer therapy, warm milk feedings every two hours, and gentle foster nursing restored her eyesight and vitality.
+              </p>
+              <div style="display: flex; gap: 16px; align-items: center; margin-top: 24px;">
+                <button onclick="window.location.href='404.html'" class="btn btn-primary action-to-404" data-campaign-title="Orphaned Kitten Emergency Fund">
+                  <i class="ph-fill ph-heart"></i> Support Kitten ICU
+                </button>
+                <a href="404.html" class="btn btn-outline">Read Full Chronicle &rarr;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 3: Leo -->
+        <div class="tab-content-pane" id="tab-leo">
+          <div class="transformation-card">
+            <div class="before-after-grid">
+              <div class="before-box">
+                <img src="assets/images/leo-before.webp" alt="Leo fearful shelter beagle">
+                <span class="state-badge before">Traumatized & Withdrawn</span>
+              </div>
+              <div class="after-box">
+                <img src="assets/images/leo-after.webp" alt="Leo joyful running beagle">
+                <span class="state-badge after">Today: Energetic Family Dog</span>
+              </div>
+            </div>
+            <div class="transformation-details">
+              <div class="pet-rescue-meta">
+                <span class="meta-chip"><i class="ph-fill ph-calendar"></i> Rescued: Feb 2026</span>
+                <span class="meta-chip"><i class="ph-fill ph-clock"></i> Recovery: 3 Months</span>
+                <span class="meta-chip"><i class="ph-fill ph-house-heart"></i> Status: Loving Forever Family</span>
+              </div>
+              <h3 style="font-size: 1.8rem; margin-bottom: 12px;">Leo's First Taste of Grass & Love</h3>
+              <p>
+                Surrendered from an industrial testing environment, 4-year-old beagle Leo had never touched real green grass or played with a chew toy. With quiet patience from our behavioral rehabilitation team and daily enrichment, Leo learned to trust humans again.
+              </p>
+              <div style="display: flex; gap: 16px; align-items: center; margin-top: 24px;">
+                <button onclick="window.location.href='404.html'" class="btn btn-primary action-to-404" data-campaign-title="Rehabilitation & Therapy Fund">
+                  <i class="ph-fill ph-heart"></i> Sponsor Animal Therapy
+                </button>
+                <a href="404.html" class="btn btn-outline">Read Full Chronicle &rarr;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       NEW SECTION 3: The 24/7 Rescue Engine (Split Feature with Step Timeline)
+       ========================================================================= -->
+  <section class="section" style="padding: 85px 0;">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;">
+        
+        <!-- Left Image with Live Pulse Badge -->
+        <div class="slide-up" style="position: relative;">
+          <img src="assets/images/journey-ambulance.webp" alt="Veterinary Mobile Rescue Squad" style="border-radius: var(--radius-xl); box-shadow: var(--shadow-lg); width: 100%; object-fit: cover;">
+          
+          <!-- Floating Response Badge -->
+          <div class="floating" style="position: absolute; bottom: -20px; right: -15px; background: white; padding: 16px 24px; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); display: flex; align-items: center; gap: 14px; border: 1px solid var(--border-color);">
+            <div style="width: 44px; height: 44px; background: var(--emerald-soft); border-radius: 50%; display: flex; justify-content: center; align-items: center; color: var(--emerald-dark); font-size: 1.5rem;">
+              <i class="ph-fill ph-ambulance"></i>
+            </div>
+            <div>
+              <div style="display: flex; align-items: center; gap: 6px;">
+                <span class="dot" style="width: 8px; height: 8px; border-radius: 50%; background: #10B981; display: inline-block;"></span>
+                <span style="font-weight: 700; font-size: 0.95rem; color: var(--text-dark);">Avg Response: &lt; 32 Mins</span>
+              </div>
+              <span style="font-size: 0.8rem; color: var(--text-light);">Continuous GPS Mobile Triage</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Workflow Content -->
+        <div class="fade-in delay-200">
+          <div class="badge badge-emerald">
+            <i class="ph-fill ph-git-commit"></i> Full Chain of Compassion
+          </div>
+          <h2 style="font-size: 2.6rem; margin-bottom: 20px;">The 24/7 Rescue Engine: <span class="text-primary">How Lives Are Saved</span></h2>
+          <p style="font-size: 1.125rem; margin-bottom: 30px; line-height: 1.65;">
+            When a frantic call reaches our dispatch desk, our protocol triggers instantly. Here is the seamless four-step journey every rescued animal undergoes from distress to a joyful forever home:
+          </p>
+
+          <div style="display: flex; flex-direction: column; gap: 18px; margin-bottom: 32px;">
+            <div class="journey-step-item">
+              <div class="journey-step-num">1</div>
+              <div>
+                <h4 style="margin-bottom: 4px;">Rapid Ambulance Dispatch & Field Stabilization</h4>
+                <p style="margin: 0; font-size: 0.925rem; color: var(--text-light);">
+                  Our veterinary ambulances arrive equipped with portable oxygen, stretchers, thermal wraps, and emergency pain relief.
+                </p>
+              </div>
+            </div>
+
+            <div class="journey-step-item">
+              <div class="journey-step-num">2</div>
+              <div>
+                <h4 style="margin-bottom: 4px;">Immediate ICU Admission & Specialized Surgery</h4>
+                <p style="margin: 0; font-size: 0.925rem; color: var(--text-light);">
+                  Digital imaging, bloodwork, and surgical wound management take place immediately with zero financial wait times.
+                </p>
+              </div>
+            </div>
+
+            <div class="journey-step-item">
+              <div class="journey-step-num">3</div>
+              <div>
+                <h4 style="margin-bottom: 4px;">Sanctuary Healing & Behavioral Rehabilitation</h4>
+                <p style="margin: 0; font-size: 0.925rem; color: var(--text-light);">
+                  High-nutrition meals, warm heated suites, and positive-reinforcement behavioral therapy restore trust and health.
+                </p>
+              </div>
+            </div>
+
+            <div class="journey-step-item">
+              <div class="journey-step-num">4</div>
+              <div>
+                <h4 style="margin-bottom: 4px;">Lifetime Forever Home Adoption Match</h4>
+                <p style="margin: 0; font-size: 0.925rem; color: var(--text-light);">
+                  Rigorous home vetting, free lifetime medical records, and follow-up foster support guarantee every animal stays safe forever.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+            <button onclick="window.location.href='404.html'" class="btn btn-primary action-to-404" data-campaign-title="Emergency Ambulance & Rescue Squad">
+              <i class="ph-fill ph-heart"></i> Sponsor an Ambulance Unit
+            </button>
+            <button class="btn btn-outline action-to-404" onclick="window.location.href='404.html'" >
+              <i class="ph-fill ph-phone-call"></i> Report an Animal in Need
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Adopt & Sponsor Animals Spotlight Section -->
+  <section class="section section-alt" id="adopt">
+    <div class="container">
+      <div class="section-header fade-in">
+        <div>
+          <div class="badge badge-amber">
+            <i class="ph-fill ph-heart"></i> Sponsor or Adopt
+          </div>
+          <h2>Meet Our Sanctuary Residents</h2>
+          <p class="section-subtitle" style="margin: 0;">
+            Can't adopt right now? You can sponsor an animal's medical care and meals for as little as $15/month!
+          </p>
+        </div>
+        <!-- Filter Tabs -->
+        <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+          <button class="preset-pill pet-filter-btn active" data-pet-cat="all">All Animals</button>
+          <button class="preset-pill pet-filter-btn" data-pet-cat="dog">Dogs</button>
+          <button class="preset-pill pet-filter-btn" data-pet-cat="cat">Cats</button>
+          <button class="preset-pill pet-filter-btn" data-pet-cat="special">Special Care</button>
+        </div>
+      </div>
+
+      <div class="grid-4">
+        <!-- Pet 1: Milo -->
+        <div class="pet-card pet-card-item slide-up delay-100" data-pet-type="dog">
+          <div class="pet-image-wrap">
+            <img src="assets/images/community-volunteer.webp" alt="Milo">
+            <span class="pet-status-pill"><i class="ph-fill ph-heart text-danger"></i> Ready for Adoption</span>
+          </div>
+          <div class="pet-card-body">
+            <h4 style="font-size: 1.2rem; margin-bottom: 4px;">Milo</h4>
+            <p style="font-size: 0.85rem; color: var(--text-light); margin-bottom: 12px;">Husky Mix • 2.5 Years Old • Male</p>
+            <div class="pet-tags">
+              <span class="pet-tag">Energetic</span>
+              <span class="pet-tag">Good with Dogs</span>
+              <span class="pet-tag">Vaccinated</span>
+            </div>
+            <div style="margin-top: auto; display: flex; gap: 8px;">
+              <button onclick="window.location.href='404.html'" class="btn btn-outline btn-sm action-to-404" data-campaign-title="Sponsor Milo's Care ($15/mo)" data-donate-amount="15" style="flex: 1;">
+                Sponsor $15
+              </button>
+              <a href="404.html" class="btn btn-primary btn-sm" style="flex: 1;">Adopt</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pet 2: Cleo -->
+        <div class="pet-card pet-card-item slide-up delay-200" data-pet-type="cat">
+          <div class="pet-image-wrap">
+            <img src="assets/images/pet-cleo.webp" alt="Cleo">
+            <span class="pet-status-pill"><i class="ph-fill ph-shield-plus text-emerald"></i> Needs Sponsor</span>
+          </div>
+          <div class="pet-card-body">
+            <h4 style="font-size: 1.2rem; margin-bottom: 4px;">Cleo</h4>
+            <p style="font-size: 0.85rem; color: var(--text-light); margin-bottom: 12px;">Domestic Shorthair • 1 Year Old • Female</p>
+            <div class="pet-tags">
+              <span class="pet-tag">Gentle Cuddler</span>
+              <span class="pet-tag">Indoor Only</span>
+              <span class="pet-tag">Spayed</span>
+            </div>
+            <div style="margin-top: auto; display: flex; gap: 8px;">
+              <button onclick="window.location.href='404.html'" class="btn btn-outline btn-sm action-to-404" data-campaign-title="Sponsor Cleo's Care ($15/mo)" data-donate-amount="15" style="flex: 1;">
+                Sponsor $15
+              </button>
+              <a href="404.html" class="btn btn-primary btn-sm" style="flex: 1;">Adopt</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pet 3: Oliver -->
+        <div class="pet-card pet-card-item slide-up delay-300" data-pet-type="special">
+          <div class="pet-image-wrap">
+            <img src="assets/images/pet-oliver.webp" alt="Oliver">
+            <span class="pet-status-pill" style="color: #B45309;"><i class="ph-fill ph-wheelchair text-amber"></i> Wheelchair Hero</span>
+          </div>
+          <div class="pet-card-body">
+            <h4 style="font-size: 1.2rem; margin-bottom: 4px;">Oliver</h4>
+            <p style="font-size: 0.85rem; color: var(--text-light); margin-bottom: 12px;">Senior Hound • 7 Years Old • Special Needs</p>
+            <div class="pet-tags">
+              <span class="pet-tag">Wheels Master</span>
+              <span class="pet-tag">Sweet Soul</span>
+              <span class="pet-tag">Sanctuary Forever</span>
+            </div>
+            <div style="margin-top: auto; display: flex; gap: 8px;">
+              <button onclick="window.location.href='404.html'" class="btn btn-outline btn-sm action-to-404" data-campaign-title="Sponsor Oliver's Medical Care ($35/mo)" data-donate-amount="35" style="flex: 1;">
+                Sponsor $35
+              </button>
+              <a href="404.html" class="btn btn-primary btn-sm" style="flex: 1;">Foster</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pet 4: Daisy & Puppies -->
+        <div class="pet-card pet-card-item slide-up delay-400" data-pet-type="dog">
+          <div class="pet-image-wrap">
+            <img src="assets/images/pet-daisy.webp" alt="Daisy">
+            <span class="pet-status-pill"><i class="ph-fill ph-heart text-danger"></i> Ready for Adoption</span>
+          </div>
+          <div class="pet-card-body">
+            <h4 style="font-size: 1.2rem; margin-bottom: 4px;">Daisy</h4>
+            <p style="font-size: 0.85rem; color: var(--text-light); margin-bottom: 12px;">Golden Retriever Pup • 6 Months • Female</p>
+            <div class="pet-tags">
+              <span class="pet-tag">Playful</span>
+              <span class="pet-tag">Kid Friendly</span>
+              <span class="pet-tag">Microchipped</span>
+            </div>
+            <div style="margin-top: auto; display: flex; gap: 8px;">
+              <button onclick="window.location.href='404.html'" class="btn btn-outline btn-sm action-to-404" data-campaign-title="Sponsor Daisy's Training ($25/mo)" data-donate-amount="25" style="flex: 1;">
+                Sponsor $25
+              </button>
+              <a href="404.html" class="btn btn-primary btn-sm" style="flex: 1;">Adopt</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Community Photo Masonry (#PawsHavenHeroes) -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header text-center fade-in">
+        <div class="badge">
+          <i class="ph-fill ph-camera"></i> #PawsHavenHeroes
+        </div>
+        <h2>Heartfelt Moments From Our Community</h2>
+        <p class="section-subtitle">
+          From the rescue moment in our mobile clinic to joyful reunion days in loving homes.
+        </p>
+      </div>
+
+      <div class="masonry-grid slide-up">
+        <div class="masonry-item">
+          <img src="assets/images/community-vet.webp" alt="Veterinarian examining rescue dog">
+          <div class="masonry-overlay">
+            <p class="masonry-handle">@DrSarah_VetSquad</p>
+            <p class="masonry-caption">Post-surgery recovery smiling face!</p>
+          </div>
+        </div>
+
+        <div class="masonry-item delay-100">
+          <img src="assets/images/community-volunteer.webp" alt="Volunteer hugging rescued dog">
+          <div class="masonry-overlay">
+            <p class="masonry-handle">@PawsHavenVolunteers</p>
+            <p class="masonry-caption">Morning hugs at the zero-kill sanctuary.</p>
+          </div>
+        </div>
+
+        <div class="masonry-item delay-200">
+          <img src="assets/images/community-kittens.webp" alt="Bottle feeding newborn kittens">
+          <div class="masonry-overlay">
+            <p class="masonry-handle">@KittenNurseryHaven</p>
+            <p class="masonry-caption">3:00 AM bottle feeding round for neonates.</p>
+          </div>
+        </div>
+
+        <div class="masonry-item delay-300">
+          <img src="assets/images/community-running.webp" alt="Happy dog running free">
+          <div class="masonry-overlay">
+            <p class="masonry-handle">@BarnabyTheGoodBoy</p>
+            <p class="masonry-caption">First meadow run after 4 months of healing!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Donor & Adopter Testimonials Section -->
+  <section class="section section-cream">
+    <div class="container">
+      <div class="section-header text-center fade-in">
+        <div class="badge badge-emerald">
+          <i class="ph-fill ph-quotes"></i> Trusted Worldwide
+        </div>
+        <h2>Voices of Our Guardian Family</h2>
+        <p class="section-subtitle">
+          Read what our donors, volunteer fosters, and adopters say about our commitment to animal welfare transparency.
+        </p>
+      </div>
+
+      <div class="grid-3">
+        <div class="testimonial-card slide-up delay-100">
+          <div class="stars-row">
+            <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+          </div>
+          <p class="testimonial-quote">
+            "Knowing that 99.2% of donations directly fund veterinary surgeries and nutritious food gives me complete confidence. I set up a $50 monthly recurring gift and receiving the progress emails on Buster made me cry tears of joy."
+          </p>
+          <div class="donor-info">
+            <img src="assets/images/avatar-elena.webp" alt="Donor Elena" class="donor-avatar">
+            <div>
+              <p class="donor-name" style="margin: 0;">Elena Vance</p>
+              <span class="donor-badge">Monthly Guardian Angel since 2023</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card slide-up delay-200">
+          <div class="stars-row">
+            <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+          </div>
+          <p class="testimonial-quote">
+            "When I found an injured dog on highway 101, PawsHaven's emergency ambulance arrived within 35 minutes! They treated his broken leg and kept me updated every single step of the way until he found a forever home."
+          </p>
+          <div class="donor-info">
+            <img src="assets/images/avatar-marcus.webp" alt="Donor Marcus" class="donor-avatar">
+            <div>
+              <p class="donor-name" style="margin: 0;">Marcus Sterling</p>
+              <span class="donor-badge">Emergency Rescue Reporter & Donor</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card slide-up delay-300">
+          <div class="stars-row">
+            <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+          </div>
+          <p class="testimonial-quote">
+            "We adopted Barnaby after seeing his miracle recovery on the site. The medical records were impeccably documented and he is the gentlest, sweetest companion our children could ever dream of."
+          </p>
+          <div class="donor-info">
+            <img src="assets/images/avatar-sophia.webp" alt="Donor Sophia" class="donor-avatar">
+            <div>
+              <p class="donor-name" style="margin: 0;">Sophia & David Ross</p>
+              <span class="donor-badge">Adopter of Barnaby</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Frequently Asked Questions Accordion -->
+  <section class="section" id="faq">
+    <div class="container container-narrow">
+      <div class="section-header text-center fade-in">
+        <div class="badge">
+          <i class="ph-fill ph-question"></i> Questions & Answers
+        </div>
+        <h2>Everything You Need to Know</h2>
+        <p class="section-subtitle">
+          Have questions about your donation, tax deductions, or how our zero-kill sanctuary operates?
+        </p>
+      </div>
+
+      <div class="slide-up">
+        <!-- FAQ 1 -->
+        <div class="accordion-item active">
+          <div class="accordion-header">
+            <span>How much of my donation goes directly to animal care?</span>
+            <i class="ph-bold ph-caret-down accordion-icon"></i>
+          </div>
+          <div class="accordion-body">
+            <div class="accordion-content">
+              Over <strong>99.2% of all public contributions</strong> go directly to veterinary medicines, trauma surgeries, high-nutrition food, sanctuary heated kennels, and rescue operations. Administrative expenses are funded separately through our founding endowment board.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="accordion-item">
+          <div class="accordion-header">
+            <span>Is my donation tax-deductible?</span>
+            <i class="ph-bold ph-caret-down accordion-icon"></i>
+          </div>
+          <div class="accordion-body">
+            <div class="accordion-content">
+              Yes! PawsHaven is an officially registered 501(c)(3) non-profit public charity (EIN: 84-2947190). All donations made through this website are 100% tax-deductible to the fullest extent permitted by law. You will receive an instant official IRS-compliant receipt via email.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="accordion-item">
+          <div class="accordion-header">
+            <span>How can I report an animal in distress or injured stray?</span>
+            <i class="ph-bold ph-caret-down accordion-icon"></i>
+          </div>
+          <div class="accordion-body">
+            <div class="accordion-content">
+              If an animal is critically injured or in immediate danger, please click our red <strong>"24/7 Rescue Dispatch"</strong> button in the navigation or call our toll-free rescue emergency line at <strong>1-800-729-4357 (1-800-PAW-HELP)</strong>. Our mobile veterinary units are on standby 24 hours a day, 7 days a week.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="accordion-item">
+          <div class="accordion-header">
+            <span>What benefits do monthly "Guardian Angel" sponsors receive?</span>
+            <i class="ph-bold ph-caret-down accordion-icon"></i>
+          </div>
+          <div class="accordion-body">
+            <div class="accordion-content">
+              Monthly Guardian Angels form our reliable life-saving foundation! You receive personalized recovery video updates from the pets you fund, an annual impact photobook, VIP passes to our annual Sanctuary Open House, and a customized certificate of compassion.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="accordion-item">
+          <div class="accordion-header">
+            <span>Can I dedicate my donation in memory or honor of a pet?</span>
+            <i class="ph-bold ph-caret-down accordion-icon"></i>
+          </div>
+          <div class="accordion-body">
+            <div class="accordion-content">
+              Absolutely. During checkout, simply tick the "Dedicate this gift in memory or honor of someone special" box. You can enter their name and we will generate a commemorative tribute certificate that can be downloaded or shared.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Big Call to Action Banner -->
+  <section class="container">
+    <div class="cta-banner scale-in">
+      <div class="cta-content">
+        <div class="badge" style="background: rgba(255, 255, 255, 0.2); color: #FFFFFF; margin-bottom: 20px;">
+          <i class="ph-fill ph-paw-print"></i> Join 45,000+ Compassionate Guardians
+        </div>
+        <h2 class="cta-title">Be the Miracle an Innocent Animal is Praying For Tonight.</h2>
+        <p class="cta-desc">
+          A small gift of $25 provides two weeks of nutritious meals and medicine. Help us keep our mobile rescue ambulances on the road saving lives.
+        </p>
+        <div class="cta-btns">
+          <button onclick="window.location.href='404.html'" class="btn btn-white btn-lg action-to-404" data-campaign-title="Emergency Care General Fund">
+            <i class="ph-fill ph-heart" style="color: var(--primary);"></i> Make an Immediate Gift
+          </button>
+          <a href="404.html" class="btn btn-outline btn-lg" style="color: #FFFFFF; border-color: rgba(255, 255, 255, 0.5);">
+            View Urgent Cases <i class="ph ph-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Footer -->
+    <!-- Unified Website Dark Footer -->
+  <footer class="footer-dark">
+    <div class="container">
+      <div class="footer-grid-5">
+        <!-- Col 1: Brand & Mission -->
+        <div class="footer-col">
+          <div class="footer-logo mb-4">
+            <a href="index.html" style="display: inline-block;">
+              <img src="assets/logo.webp" alt="Stackly Pets Logo" style="height: 40px; width: auto;">
+            </a>
+          </div>
+          <p class="footer-desc">
+            PawsHaven is an internationally recognized 501(c)(3) animal rescue and rehabilitation charity committed to rescuing distressed animals, ending euthanasia in shelters, and providing lifetime sanctuary care.
+          </p>
+          <!-- Social media icons -> All render to 404.html -->
+          <div class="social-links">
+            <a href="404.html" class="social-btn" aria-label="Facebook"><i class="ph ph-facebook-logo"></i></a>
+            <a href="404.html" class="social-btn" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+            <a href="404.html" class="social-btn" aria-label="YouTube"><i class="ph ph-youtube-logo"></i></a>
+            <a href="404.html" class="social-btn" aria-label="LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation (Home, About, Campaigns, Stories, Donate, Contact) -->
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="campaigns.html">Campaigns</a></li>
+            <li><a href="stories.html">Stories</a></li>
+            <li><a href="donate.html">Donate</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Programs / Progress -> All render to 404.html -->
+        <div class="footer-col">
+          <h4>Our Programs</h4>
+          <ul class="footer-links-list">
+            <li><a href="404.html">Ambulance Dispatch</a></li>
+            <li><a href="404.html">Trauma Vet Surgery</a></li>
+            <li><a href="404.html">Winter Warmth Drive</a></li>
+            <li><a href="404.html">Monthly Guardian Club</a></li>
+            <li><a href="404.html">Foster & Adoption</a></li>
+            <li><a href="404.html">99.2% Transparency</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: 24/7 Rescue Center -> Contact items render to 404.html -->
+        <div class="footer-col">
+          <h4>24/7 Rescue Center</h4>
+          <div class="footer-contact-item">
+            <i class="ph-fill ph-phone-call" style="color: var(--danger);"></i>
+            <div>
+              <a href="404.html" style="color: #FFFFFF; font-weight: 700; text-decoration: none;">1-800-PAW-HELP</a>
+              <div style="font-size: 0.8rem; color: #94A3B8;">Toll-free 24/7 Dispatch</div>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="ph-fill ph-envelope"></i>
+            <div>
+              <a href="404.html" style="color: #94A3B8; text-decoration: none;">rescue@pawshaven.org</a>
+              <div style="font-size: 0.8rem; color: #94A3B8;">General Inquiries</div>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="ph-fill ph-map-pin"></i>
+            <div>
+              <a href="404.html" style="color: #94A3B8; text-decoration: none;">740 Haven Valley Rd, CA 95060</a>
+              <div style="font-size: 0.8rem; color: #94A3B8;">PawsHaven Sanctuary Park</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Col 5: Newsletter (Gmail is mandatory, then render to 404.html) -->
+        <div class="footer-col">
+          <h4>Rescue Updates</h4>
+          <p class="footer-desc" style="margin-bottom: 16px;">
+            Subscribe to receive real-time rescue video alerts, before/after stories, and impact receipts.
+          </p>
+          <form class="footer-newsletter-form" onsubmit="handleNewsletterSubmit(event)" novalidate>
+            <input type="email" class="footer-input" id="newsletter-email" placeholder="yourname@gmail.com" required autocomplete="off">
+            <div class="newsletter-error" id="newsletter-error" style="display: none; color: #F87171; font-size: 0.8rem; margin-top: -6px; font-weight: 600;">
+              Please enter a valid Gmail address (@gmail.com).
+            </div>
+            <button type="submit" class="btn btn-primary" style="border-radius: var(--radius-sm); width: 100%;">
+              Join the Guardian Circle
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <div>
+          <p style="margin: 0 0 6px 0;">&copy; <span id="current-year">2026</span> PawsHaven Animal Welfare & Rescue Fund. All rights reserved. Registered 501(c)(3) Non-Profit Charity #84-2947190.</p>
+          <div style="display: flex; gap: 16px;">
+            <a href="404.html" style="color: #64748B; font-size: 0.85rem; text-decoration: none;">Privacy Policy</a>
+            <a href="404.html" style="color: #64748B; font-size: 0.85rem; text-decoration: none;">Terms of Service</a>
+          </div>
+        </div>
+        <button id="scroll-top" class="scroll-top-btn" onclick="window.scrollTo({top:0, behavior:'smooth'})" aria-label="Scroll to top of page">
+          <i class="ph ph-caret-up"></i>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       MODAL 1: Interactive Quick Donation Modal with Confetti Celebration
+       ========================================================================= -->
+  <div class="modal-backdrop" id="donation-modal">
+    <div class="modal-window">
+      <button class="modal-close-btn" id="donation-modal-close" aria-label="Close Donation Modal">
+        <i class="ph ph-x"></i>
+      </button>
+
+      <!-- Form View -->
+      <div id="donation-form-view">
+        <div class="modal-header">
+          <div class="badge badge-emerald" style="margin-bottom: 6px;">
+            <i class="ph-fill ph-shield-check"></i> 100% Tax Deductible (501c3)
+          </div>
+          <h3 style="font-size: 1.45rem; margin-bottom: 4px;">Make a Life-Saving Gift</h3>
+          <p style="font-size: 0.88rem; color: var(--text-light); margin: 0;">
+            Supporting: <strong id="modal-cause-name" style="color: var(--primary);">Emergency Animal Rescue Fund</strong>
+          </p>
+        </div>
+
+        <div class="modal-body">
+          <form id="donation-form">
+            <!-- Frequency Switch -->
+            <div class="freq-toggle-container">
+              <button type="button" class="freq-btn active" data-freq="one-time">One-Time Gift</button>
+              <button type="button" class="freq-btn" data-freq="monthly">
+                Monthly Hero <span class="badge badge-emerald" id="matching-gift-badge" style="display: none; padding: 2px 6px; font-size: 0.7rem; margin: 0;">2X MATCH</span>
+              </button>
+            </div>
+
+            <!-- Preset Amount Buttons -->
+            <label class="form-label">Select Donation Amount</label>
+            <div class="donation-grid">
+              <button type="button" class="donation-choice-btn" data-amount="25">
+                $25
+                <span class="sub">10 Meals</span>
+              </button>
+              <button type="button" class="donation-choice-btn active" data-amount="50">
+                $50
+                <span class="sub">Vaccines</span>
+              </button>
+              <button type="button" class="donation-choice-btn" data-amount="100">
+                $100
+                <span class="sub">Wound Care</span>
+              </button>
+              <button type="button" class="donation-choice-btn" data-amount="250">
+                $250
+                <span class="sub">Surgery Aid</span>
+              </button>
+              <button type="button" class="donation-choice-btn" data-amount="500">
+                $500
+                <span class="sub">Full Kennel</span>
+              </button>
+              <button type="button" class="donation-choice-btn" data-amount="1000">
+                $1,000
+                <span class="sub">Rescue Hero</span>
+              </button>
+            </div>
+
+            <!-- Custom Amount Field -->
+            <div class="custom-amount-input-wrap">
+              <span class="symbol">$</span>
+              <input type="number" id="custom-donation-amount" class="custom-amount-input" placeholder="Other Amount" min="5" value="50">
+            </div>
+
+            <!-- Dedication Option -->
+            <div class="form-check">
+              <input type="checkbox" id="dedicate-gift">
+              <label for="dedicate-gift">Dedicate this donation in honor or memory of a beloved pet or person</label>
+            </div>
+
+            <div id="tribute-fields-wrapper" style="display: none; margin-bottom: 18px;">
+              <input type="text" id="tribute-name" class="form-input" placeholder="e.g. In memory of Rusty the Golden Retriever">
+            </div>
+
+            <!-- Donor Details -->
+            <div class="form-group">
+              <label class="form-label" for="donor-name">Your Full Name</label>
+              <input type="text" id="donor-name" class="form-input" placeholder="Sarah Jenkins" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="donor-email">Email Address (For Tax Receipt)</label>
+              <input type="email" id="donor-email" class="form-input" placeholder="sarah@example.com" required>
+            </div>
+
+            <!-- Payment Simulation Buttons -->
+            <label class="form-label">Payment Method</label>
+            <div style="display: flex; gap: 10px; margin-bottom: 22px;">
+              <button type="submit" class="btn btn-primary" style="flex: 2; padding: 14px;">
+                <i class="ph-fill ph-credit-card"></i> Donate Securely
+              </button>
+              <button type="submit" class="btn btn-secondary" style="flex: 1; padding: 14px; background: #0070BA; color: white;">
+                <i class="ph-fill ph-paypal-logo"></i> PayPal
+              </button>
+            </div>
+
+            <p style="text-align: center; font-size: 0.78rem; color: var(--text-light); margin: 0;">
+              <i class="ph-fill ph-lock-key"></i> 256-Bit SSL Encrypted • 100% Tax Deductible
+            </p>
+          </form>
+        </div>
+      </div>
+
+      <!-- Success View (After Simulated Payment) -->
+      <div id="donation-success-view" style="display: none; padding: 36px 32px; text-align: center;">
+        <div style="width: 72px; height: 72px; border-radius: 50%; background: var(--emerald-soft); color: var(--emerald); display: flex; align-items: center; justify-content: center; font-size: 2.5rem; margin: 0 auto 20px;">
+          <i class="ph-fill ph-check"></i>
+        </div>
+
+        <h3 style="font-size: 1.8rem; margin-bottom: 8px; color: var(--text-dark);">Thank You, Compassionate Guardian!</h3>
+        <p style="color: var(--text-light); margin-bottom: 24px;">
+          Your donation has been successfully processed and dispatched directly to the rescue center.
+        </p>
+
+        <!-- Simulated Tax Receipt Certificate Card -->
+        <div style="background: var(--bg-alt); border: 1.5px dashed var(--border-color); border-radius: var(--radius-md); padding: 24px; text-align: left; margin-bottom: 28px;">
+          <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border-color); padding-bottom: 12px; margin-bottom: 12px;">
+            <span style="font-weight: 700; color: var(--text-dark);">Official IRS Tax Receipt</span>
+            <span id="receipt-txid" style="font-family: monospace; font-weight: 700; color: var(--primary);">PH-492817</span>
+          </div>
+          <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+            <span style="color: var(--text-light);">Donor Name:</span>
+            <strong id="receipt-name" style="color: var(--text-dark);">Sarah Jenkins</strong>
+          </div>
+          <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+            <span style="color: var(--text-light);">Donation Amount:</span>
+            <strong id="receipt-amount" style="color: var(--emerald-dark); font-size: 1.2rem;">$50.00</strong>
+          </div>
+          <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+            <span style="color: var(--text-light);">Frequency:</span>
+            <span id="receipt-frequency">One-Time Contribution</span>
+          </div>
+          <div id="receipt-tribute-msg" style="display: none; margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--border-color); font-style: italic; color: var(--primary);"></div>
+        </div>
+
+        <button class="btn btn-primary" onclick="window.print()" style="margin-right: 10px;">
+          <i class="ph ph-printer"></i> Print Receipt
+        </button>
+        <button class="btn btn-outline" onclick="document.getElementById('donation-modal').classList.remove('active'); document.body.style.overflow = '';">
+          Close Window
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       MODAL 2: 24/7 Animal Emergency Distress Report Modal
+       ========================================================================= -->
+  <div class="modal-backdrop" id="emergency-modal">
+    <div class="modal-window">
+      <button class="modal-close-btn" aria-label="Close Emergency Modal">
+        <i class="ph ph-x"></i>
+      </button>
+
+      <div class="modal-header" style="background: var(--danger-soft);">
+        <div class="badge badge-danger" style="margin-bottom: 6px;">
+          <i class="ph-fill ph-siren"></i> 24/7 Rapid Vet Dispatch
+        </div>
+        <h3 style="color: #B91C1C; font-size: 1.45rem; margin-bottom: 4px;">Report an Animal in Distress</h3>
+        <p style="font-size: 0.88rem; color: #7F1D1D; margin: 0;">
+          Our emergency ambulance unit will immediately deploy. For critical trauma call <strong>1-800-PAW-HELP</strong>.
+        </p>
+      </div>
+
+      <div class="modal-body">
+        <form id="emergency-form">
+          <div class="form-group">
+            <label class="form-label">Type of Animal in Need</label>
+            <select class="form-select" required>
+              <option value="">Select Animal Type...</option>
+              <option value="dog">Injured or Trapped Dog / Puppy</option>
+              <option value="cat">Injured or Trapped Cat / Kitten</option>
+              <option value="wildlife">Injured Wildlife (Deer, Bird, Raccoon)</option>
+              <option value="abuse">Suspected Cruelty or Abuse Case</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Incident Location or GPS Address</label>
+            <input type="text" class="form-input" placeholder="e.g. Near Exit 42 on Route 9, or Street Address" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Condition & Injuries Description</label>
+            <textarea class="form-textarea" rows="3" placeholder="Describe visible injuries, if animal can walk, collar status, behavior..." required></textarea>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Your Contact Phone Number</label>
+            <input type="tel" class="form-input" placeholder="+1 (555) 000-0000" required>
+          </div>
+
+          <button type="submit" class="btn btn-emergency btn-lg" style="width: 100%;">
+            <i class="ph-fill ph-paper-plane-tilt"></i> Dispatch Rescue Team Now
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript Libraries & Modules -->
+  <!-- GSAP Animation Library & ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <!-- Confetti Library -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+  <!-- Custom Scripts -->
+  <script src="js/animations.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/donation.js"></script>
+  <script src="js/campaigns.js"></script>
+
+  <!-- Instant Modal Safety Reset on Navigation / BFCache -->
+  <script>
+    function forceCloseModals() {
+      var dModal = document.getElementById('donation-modal');
+      if (dModal) dModal.classList.remove('active');
+      var eModal = document.getElementById('emergency-modal');
+      if (eModal) eModal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+    window.addEventListener('pageshow', forceCloseModals);
+    window.addEventListener('DOMContentLoaded', forceCloseModals);
+    window.addEventListener('load', forceCloseModals);
+  </script>
+  <!-- Newsletter Validation & 404 Render Script -->
+  <script>
+    function handleNewsletterSubmit(e) {
+      e.preventDefault();
+      var form = e.target;
+      var input = form.querySelector('input[type="email"]') || document.getElementById('newsletter-email');
+      var errorEl = form.querySelector('.newsletter-error') || document.getElementById('newsletter-error');
+      var val = input ? input.value.trim().toLowerCase() : '';
+      var gmailRegex = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
+
+      if (!val || !gmailRegex.test(val)) {
+        if (errorEl) errorEl.style.display = 'block';
+        if (input) input.style.borderColor = '#EF4444';
+        return false;
+      }
+
+      if (errorEl) errorEl.style.display = 'none';
+      window.location.href = '404.html';
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('.footer-input').forEach(function(inp) {
+        inp.addEventListener('input', function() {
+          this.style.borderColor = '';
+          var err = this.parentElement.querySelector('.newsletter-error') || document.getElementById('newsletter-error');
+          if (err) err.style.display = 'none';
+        });
+      });
+    });
+  </script>
+</body>
+</html>
