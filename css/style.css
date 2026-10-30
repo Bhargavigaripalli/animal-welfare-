@@ -1467,6 +1467,11 @@ p {
   transition: transform var(--transition-normal);
 }
 
+.product-image img[src*="supply-incubator"],
+.product-image img.dog-img-aligned {
+  object-position: center 15%;
+}
+
 .product-card:hover .product-image img {
   transform: scale(1.05);
 }
@@ -1555,6 +1560,11 @@ p {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.before-box img[src*="luna-before"],
+.before-box img.dog-img-aligned {
+  object-position: center 18%;
 }
 
 .state-badge {
@@ -2211,6 +2221,49 @@ p {
   font-weight: 600;
   color: var(--text-dark);
   margin-bottom: 6px;
+}
+
+/* Contact Form Aligned Input Fields */
+.contact-fields-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-bottom: 18px;
+  align-items: stretch;
+}
+
+.contact-field-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+}
+
+.contact-aligned-label {
+  min-height: 44px;
+  margin-bottom: 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  line-height: 1.35;
+}
+
+.contact-aligned-label .label-title {
+  display: inline-block;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.contact-aligned-label .label-hint {
+  font-size: 0.75rem;
+  color: var(--text-light);
+  font-weight: normal;
+  display: inline-block;
+  margin-top: 2px;
+}
+
+.contact-field-group .form-input {
+  margin-top: auto;
 }
 
 .form-input, .form-select, .form-textarea {

@@ -19,14 +19,50 @@
 
   <!-- Go Back Navigation Handler -->
   <script>
-    function handleGoBack() {
-      if (window.history.length > 1) {
-        window.history.back();
-      } else if (document.referrer && !document.referrer.includes('404')) {
-        window.location.href = document.referrer;
-      } else {
-        window.location.href = 'index.html';
+    var isGoBackNavigating = false;
+    function handleGoBack(e) {
+      if (e) {
+        if (typeof e.preventDefault === 'function') e.preventDefault();
+        if (typeof e.stopPropagation === 'function') e.stopPropagation();
       }
+      if (isGoBackNavigating) return false;
+      isGoBackNavigating = true;
+
+      // 1. Check document.referrer (must not be 404 and should be from same origin)
+      if (document.referrer && !document.referrer.includes('404')) {
+        try {
+          var refUrl = new URL(document.referrer, window.location.href);
+          if (refUrl.origin === window.location.origin) {
+            window.location.href = document.referrer;
+            return false;
+          }
+        } catch (err) {
+          window.location.href = document.referrer;
+          return false;
+        }
+      }
+
+      // 2. Check sessionStorage recorded previous page
+      try {
+        var storedPrev = sessionStorage.getItem('pawshaven_last_page');
+        if (storedPrev && !storedPrev.includes('404') && storedPrev !== window.location.href) {
+          window.location.href = storedPrev;
+          return false;
+        }
+      } catch (err) {}
+
+      // 3. Fallback to history.back() with guaranteed timeout
+      if (window.history && window.history.length > 1) {
+        window.history.back();
+        setTimeout(function() {
+          window.location.href = 'index.html';
+        }, 300);
+        return false;
+      }
+
+      // 4. Default fallback: Home
+      window.location.href = 'index.html';
+      return false;
     }
   </script>
 </head>
@@ -61,7 +97,7 @@
 
         <!-- Two Required Buttons: Go Back and Back to Home -->
         <div class="error-actions-group" style="margin-bottom: 0;">
-          <button type="button" class="btn btn-outline btn-lg" id="go-back-btn" onclick="handleGoBack()">
+          <button type="button" class="btn btn-outline btn-lg" id="go-back-btn" onclick="handleGoBack(event)" style="cursor: pointer;">
             <i class="ph ph-arrow-left"></i> Go Back
           </button>
           <a href="index.html" class="btn btn-primary btn-lg pulse-glow">
@@ -78,7 +114,11 @@
   <script src="js/animations.js"></script>
   <script src="js/main.js"></script>
   <script>
-    document.getElementById('go-back-btn')?.addEventListener('click', handleGoBack);
+    // Ensure button click is bound
+    var gbBtn = document.getElementById('go-back-btn');
+    if (gbBtn && !gbBtn.onclick) {
+      gbBtn.onclick = handleGoBack;
+    }
   </script>
 </body>
 </html>

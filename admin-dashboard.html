@@ -891,6 +891,10 @@
 
   <!-- SCRIPT LOGIC: Dedicated Admin Tab Switching -->
   <script>
+    try {
+      sessionStorage.setItem('pawshaven_last_page', window.location.href);
+    } catch (e) {}
+
     const adminSubTitles = {
       'overview': 'Rapid Vet Fleet: ACTIVE • 4 Units Deployed in Meadowview & Mountain Sectors',
       'dispatch': 'Real-time telemetry and GPS tracking for mobile veterinary ambulances 1 through 4.',

@@ -164,14 +164,20 @@
             <span class="field-error-msg" id="reason-error" style="display: none; color: var(--danger); font-size: 0.8rem; margin-top: 4px;">Please select a reason for contact.</span>
           </div>
 
-          <div class="grid-2" style="gap: 16px; margin-bottom: 18px;">
-            <div>
-              <label class="form-label" for="contact-name">Your Name <span style="color: var(--danger);">*</span> <span style="font-size: 0.75rem; color: var(--text-light); font-weight: normal;">(Alphabets only, no spaces, max 16)</span></label>
+          <div class="grid-2 contact-fields-grid" style="gap: 16px; margin-bottom: 18px;">
+            <div class="contact-field-group">
+              <label class="form-label contact-aligned-label" for="contact-name">
+                <span class="label-title">Your Name <span style="color: var(--danger);">*</span></span>
+                <span class="label-hint">(Alphabets only, no spaces, max 16)</span>
+              </label>
               <input type="text" class="form-input" id="contact-name" name="name" placeholder="AlexMorgan" maxlength="16" pattern="^[A-Za-z]{1,16}$" title="Only alphabets allowed, no spaces, maximum 16 letters" required>
               <span class="field-error-msg" id="name-error" style="display: none; color: var(--danger); font-size: 0.8rem; margin-top: 4px;">Only alphabets allowed, no spaces, max 16 letters.</span>
             </div>
-            <div>
-              <label class="form-label" for="contact-phone">Phone Number <span style="color: var(--danger);">*</span> <span style="font-size: 0.75rem; color: var(--text-light); font-weight: normal;">(10 digits only)</span></label>
+            <div class="contact-field-group">
+              <label class="form-label contact-aligned-label" for="contact-phone">
+                <span class="label-title">Phone Number <span style="color: var(--danger);">*</span></span>
+                <span class="label-hint">(10 digits only)</span>
+              </label>
               <input type="tel" class="form-input" id="contact-phone" name="phone" placeholder="9876543210" maxlength="10" pattern="^[0-9]{10}$" inputmode="numeric" title="Please enter exactly 10 digits (numbers only)" required>
               <span class="field-error-msg" id="phone-error" style="display: none; color: var(--danger); font-size: 0.8rem; margin-top: 4px;">Must be exactly 10 digits (numbers only).</span>
             </div>

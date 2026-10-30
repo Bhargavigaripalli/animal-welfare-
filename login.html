@@ -405,6 +405,10 @@
 
   <!-- Script Logic -->
   <script>
+    try {
+      sessionStorage.setItem('pawshaven_last_page', window.location.href);
+    } catch (e) {}
+
     let currentRole = 'user';
 
     // Role selection toggle - Keep inputs empty by default!

@@ -1,6 +1,13 @@
 /**
  * PAWSHAVEN - Main Application Scripts
  */
+// Track previous non-404 page for seamless Go Back on 404 page
+try {
+  if (typeof window !== 'undefined' && window.location && !window.location.pathname.includes('404')) {
+    sessionStorage.setItem('pawshaven_last_page', window.location.href);
+  }
+} catch (e) {}
+
 document.addEventListener('DOMContentLoaded', () => {
   // 1. Mobile Menu Drawer
   const hamburger = document.getElementById('hamburger');
@@ -199,7 +206,7 @@ document.addEventListener('DOMContentLoaded', () => {
                      window.location.pathname.endsWith('index.html') || 
                      window.location.pathname.endsWith('/') || 
                      window.location.pathname === '' || 
-                     (!window.location.pathname.includes('.html') && !window.location.pathname.includes('about') && !window.location.pathname.includes('campaigns') && !window.location.pathname.includes('stories') && !window.location.pathname.includes('donate') && !window.location.pathname.includes('contact'));
+                     (!window.location.pathname.includes('.html') && !window.location.pathname.includes('about') && !window.location.pathname.includes('campaigns') && !window.location.pathname.includes('stories') && !window.location.pathname.includes('donate') && !window.location.pathname.includes('contact') && !window.location.pathname.includes('404'));
 
   function resetAllActiveModals() {
     const dModal = document.getElementById('donation-modal');

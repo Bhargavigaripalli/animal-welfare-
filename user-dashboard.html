@@ -894,6 +894,10 @@
 
   <!-- SCRIPT LOGIC: Dedicated Tab Switching -->
   <script>
+    try {
+      sessionStorage.setItem('pawshaven_last_page', window.location.href);
+    } catch (e) {}
+
     const subTitles = {
       'overview': 'Your monthly Guardian Angel pledge is actively saving 3 critical animal lives this week.',
       'animals': 'Direct veterinary tracking and hydrotherapy recovery milestones for your sponsored rescues.',

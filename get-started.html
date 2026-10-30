@@ -398,6 +398,10 @@
 
   <!-- Script Logic -->
   <script>
+    try {
+      sessionStorage.setItem('pawshaven_last_page', window.location.href);
+    } catch (e) {}
+
     // 1. Name Input: Strictly English alphabets ONLY, maximum 16 letters, NO SPACES allowed
     const nameInput = document.getElementById('regName');
     const nameError = document.getElementById('nameError');

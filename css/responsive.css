@@ -346,6 +346,15 @@
   .emergency-hotline-pill span.hotline-text {
     display: none;
   }
+
+  .contact-fields-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .contact-aligned-label {
+    min-height: auto;
+  }
 }
 
 
