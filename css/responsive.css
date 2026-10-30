@@ -470,6 +470,10 @@
     gap: 12px;
   }
 
+  .pillar-card-about h4 {
+    min-height: auto;
+  }
+
   .before-box, .after-box {
     height: 210px;
   }
